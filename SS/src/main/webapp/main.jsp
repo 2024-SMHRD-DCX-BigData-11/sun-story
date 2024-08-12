@@ -56,7 +56,7 @@
                               </div>
                          </div>
                     </div>
-                    <img class="icon1" alt="" src="./순토리1.png">
+                    <img class="icon1" alt="" src="static/images/순토리1.png">
                     
                </div>
           </div>
