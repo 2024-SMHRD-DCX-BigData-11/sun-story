@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.smhrd</groupId>
-	<artifactId>SpringBoot02</artifactId>
+	<artifactId>Sun-Story</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>SpringBoot02</name>
+	<name>Sun-Story</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
