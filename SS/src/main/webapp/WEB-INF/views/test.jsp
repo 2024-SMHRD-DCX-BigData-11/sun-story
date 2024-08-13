@@ -8,12 +8,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 <title>마커 클러스터</title>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"
-	integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-	crossorigin="anonymous"></script>
-<script type="text/javascript"
-	src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=gd84en4c8l"></script>
-<script type="text/javascript" src="assets/js/MarkerClustering.js"></script>
+
 <style type="text/css">
 html, body {
 	width: 100%;
@@ -39,16 +34,16 @@ li {
 </head>
 
 <body>
-	<div style="display: flex;">
+	<div style="display: flex; width: 100%; height: 100%;">
 		<div
-			style="width: 40%; height: 800px; display: flex; flex-direction: column;">
+			style="width: 40%; height: 100%; display: flex; flex-direction: column;">
 			<div
 				style="width: 100%; height: 50px; display: flex; flex-direction: row">
 				<button id="show">전체 관광지</button>
 				<button id="change">주요 관광지</button>
 				<button id="tag">태그</button>
 			</div>
-			<ul style="overflow-y:scroll">
+			<ul style="overflow-y: scroll">
 				<c:forEach var="trip" items="${list}">
 					<li
 						style="width: 100%; height: 100px; display: flex; flex-direction: row;">
@@ -64,11 +59,15 @@ li {
 				</c:forEach>
 			</ul>
 		</div>
-
-		<div id="map"
-			style="width: 60%; height: 800px; padding: 0; margin: 0;"></div>
+		<div id="map" style="width: 60%; height: 100%; padding: 0; margin: 0;"></div>
 	</div>
-
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+		crossorigin="anonymous"></script>
+	<script type="text/javascript"
+		src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=gd84en4c8l"></script>
+	<script type="text/javascript" src="assets/js/MarkerClustering.js"></script>
 	<script type="text/javascript" src="assets/js/navermap.js"></script>
+
 </body>
 </html>
