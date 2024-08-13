@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
- <link rel="stylesheet" type="text/css" href="static/assets/css/detail.css">
+ <link rel="stylesheet" type="text/css" href="assets/css/detail.css">
 <title>Detail page</title>
 </head>
 <body>
@@ -67,9 +67,9 @@
                     <p class="xx">XX 한 사람들에게 추천드려요~~~</p>
                </div>
                <div class="div">스토리텔링 보기</div>
-               <img class="close-icon" alt="" src="static/images/close.svg">
+               <img class="close-icon" alt="" src="assets/images/close.svg">
                
-               <img class="headphones-icon" alt="" src="static/images/Headphones.svg">
+               <img class="headphones-icon" alt="" src="assets/images/Headphones.svg">
                
           </div>
           
