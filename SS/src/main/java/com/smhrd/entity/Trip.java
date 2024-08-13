@@ -65,4 +65,8 @@ public class Trip {
 		@Column(nullable = false, columnDefinition = "TEXT")
 		private String use_hour;
 		
+		private int resultCode;
+		private String result;
+		
+		
 }
