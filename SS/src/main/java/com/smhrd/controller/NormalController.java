@@ -10,4 +10,10 @@ public class NormalController {
 public String goMain() {
 	return "main";
 }
+
+@RequestMapping("/test")
+public String goTest() {
+	return "test";
+}
+
 }
