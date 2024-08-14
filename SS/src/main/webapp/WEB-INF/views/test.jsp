@@ -39,8 +39,8 @@ li {
 			style="width: 40%; height: 100%; display: flex; flex-direction: column;">
 			<div
 				style="width: 100%; height: 50px; display: flex; flex-direction: row">
-				<button id="show">전체 관광지</button>
-				<button id="change">주요 관광지</button>
+				<button id="all">전체 관광지</button>
+				<button id="major">주요 관광지</button>
 				<button id="tag">태그</button>
 			</div>
 			<ul style="overflow-y: scroll">
