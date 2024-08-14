@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+ <link rel="shortcut icon" href="#">
 <title>Sun-Story</title>
 </head>
 <body>
