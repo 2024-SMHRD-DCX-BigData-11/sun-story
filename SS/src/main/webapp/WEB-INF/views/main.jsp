@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+ <link rel="shortcut icon" href="#">
 <title>Sun-Story</title>
 </head>
 <body>
@@ -144,36 +145,36 @@
      <script src="assets/js/main.js"></script>
      
      <script>
-     var audio;	
+     var audio;   
      
      $( document ).ready( function( event ) {
-    	 var AudioContext;
-    	 var audioContext;
+        var AudioContext;
+        var audioContext;
 
-    	 window.onload = function() {
-    	     navigator.mediaDevices.getUserMedia({ audio: true }).then(() => {
-    	         AudioContext = window.AudioContext || window.webkitAudioContext;
-    	         audioContext = new AudioContext();
-    	         audioPlay(1);
-    	     }).catch(e => {
-    	         console.error(`Audio permissions denied: ${e}`);
-    	     });
-    	 }
+        window.onload = function() {
+            navigator.mediaDevices.getUserMedia({ audio: true }).then(() => {
+                AudioContext = window.AudioContext || window.webkitAudioContext;
+                audioContext = new AudioContext();
+                audioPlay(1);
+            }).catch(e => {
+                console.error(`Audio permissions denied: ${e}`);
+            });
+        }
      });
-     	async function audioPlay( idx ) {
-     		$.ajax({
-     			url : "audio",
-     			data : { idx : idx },
-     			type : "post"
-     		}).done( function( response ) {
-     			if( response.resultCode == 200 ) {
-     				audio = new Audio( response.result );
-         			audio.play();
-     			} else {
-     				
-     			}
-     		});
-     	}
+        async function audioPlay( idx ) {
+           $.ajax({
+              url : "audio",
+              data : { idx : idx },
+              type : "post"
+           }).done( function( response ) {
+              if( response.resultCode == 200 ) {
+                 audio = new Audio( response.result );
+                  audio.play();
+              } else {
+                 
+              }
+           });
+        }
      </script>
 </body>
 </html>
