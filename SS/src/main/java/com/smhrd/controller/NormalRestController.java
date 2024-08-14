@@ -19,7 +19,6 @@ import com.smhrd.entity.Trip;
 import com.smhrd.repository.NormalRepository;
 
 @RestController
-@RequestMapping("/rest/normal/")
 public class NormalRestController {
 
 	@Autowired

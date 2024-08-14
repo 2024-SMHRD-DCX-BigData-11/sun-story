@@ -106,7 +106,7 @@
                <div class="detail-child">
                </div>
                <div class="pay-text">요금</div>
-               <img class="image-icon1" alt="" src="Image.png">
+               <img class="image-icon1" alt="" src="assets/images/Image.png">
                
                <div class="content-title">장소 1</div>
                <div class="subtitle">
@@ -117,7 +117,7 @@
                     <p class="p"> 장소 1은 순천시의 관광지로서 추천할만한 장소로, XX해서 XX한 장소이다.</p>
                     <p class="p">당신이 순천에 방문한다면 한번쯤은 방문해보는 것을 추천한다.</p>
                </div>
-               <img class="close-icon" alt="" src="close.svg">
+               <img class="close-icon" alt="" src="assets/images/close.svg">
                
                <div class="more-info"><!--추가정보조회 버튼-->
                     <div class="more-info-state-layer">
@@ -128,7 +128,7 @@
                <div class="rectangle-using-info">
                     <div class="frame-child">
                     </div>
-                    <img class="headphones-icon" alt="" src="Headphones.svg">
+                    <img class="headphones-icon" alt="" src="assets/images/Headphones.svg">
                     
                     <div class="show-storytelling"><!--스토리텔링 보기(스토리텔링 장소 리스트 토글버튼)-->
                          <div class="show-storytelling-text">스토리텔링 보기</div>
@@ -162,7 +162,7 @@
      });
      	async function audioPlay( idx ) {
      		$.ajax({
-     			url : "http://localhost:8096/boot/rest/normal/audio",
+     			url : "audio",
      			data : { idx : idx },
      			type : "post"
      		}).done( function( response ) {
