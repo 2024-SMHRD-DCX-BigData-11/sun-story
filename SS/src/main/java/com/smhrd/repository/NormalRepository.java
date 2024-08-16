@@ -12,4 +12,6 @@ import com.smhrd.entity.Trip;
 public interface NormalRepository extends JpaRepository<Trip, Integer> {
 
 	public List<Trip> findById(int trip_id);
+	public List<Trip> findByNameIn(List<String> name);
+	public List<Trip> findByTagLike(String name);
 }
