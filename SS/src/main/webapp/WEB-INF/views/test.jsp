@@ -43,7 +43,7 @@ li {
 				<button id="major">주요 관광지</button>
 				<button id="tag">태그</button>
 			</div>
-			<ul style="overflow-y: scroll">
+			<ul id="list" style="overflow-y: scroll">
 				<c:forEach var="trip" items="${list}">
 					<li
 						style="width: 100%; height: 100px; display: flex; flex-direction: row;">

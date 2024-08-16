@@ -43,7 +43,7 @@ public class NormalRestController {
 			result = repo.findByNameIn(names);
 			break;
 		case 3:
-			String s = "#관광지";
+			String s = "#역사";
 			result = repo.findByTagLike("%"+s+"%");
 		}
 		return result;

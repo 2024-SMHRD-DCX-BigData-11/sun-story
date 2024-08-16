@@ -85,7 +85,9 @@ function getData(type) {
 		url: "data",
 		data: { type },
 		success: function(res) {
+			$("#list").html("");
 			for (let i = 0, ii = res.length; i < ii; i++) {
+				
 				let spot = res[i],
 					latlng = new naver.maps.LatLng(spot.lat, spot.lon),
 					marker = new naver.maps.Marker({
@@ -94,6 +96,18 @@ function getData(type) {
 						draggable: false
 					});
 				markers.push(marker);
+				let list = `<li
+						style="width: 100%; height: 100px; display: flex; flex-direction: row;">
+						<div>
+							<img style="width: 100px; height: 100px;"
+								src="assets/images/관광지/${spot.name }.jpg">
+						</div>
+						<div style="width: 100%; text-align: center">
+							<h2>${spot.name }</h2>
+							<h3>${spot.address }</h3>
+						</div>
+					</li>`
+				$("#list").append(list);
 			}
 
 			let clickedmarker = null;
