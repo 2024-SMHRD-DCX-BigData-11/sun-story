@@ -62,6 +62,7 @@ $("#all").on("click", function() {
 	getData(1);
 })
 
+
 $("#major").on("click", function() {
 	remove();
 	getData(2);
@@ -178,7 +179,7 @@ function getData(type) {
 				let text = $(title).text()
 				for (let i = 0; i < markers.length; i++) {
 					if (text == markers[i].title) {
-						if(audio != null){
+						if (audio != null) {
 							audio.pause();
 						}
 						TTS(res[i].trip_id);
