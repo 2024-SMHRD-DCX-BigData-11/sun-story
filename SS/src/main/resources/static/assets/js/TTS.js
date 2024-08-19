@@ -27,7 +27,3 @@ async function audioPlay(idx) {
 		}
 	});
 }
-
-async function audioStop() {
-	audio.stop();
-}
