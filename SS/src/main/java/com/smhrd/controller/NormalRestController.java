@@ -62,7 +62,7 @@ public class NormalRestController {
 		if( mem != null ) {
 			text = "1";
 			if( text != null && !text.equals("") ) {
-				text = "안녕하세요 여기는 스마트 인재개발원 순천점입니다. 앞으로 열릴 개강은 9월 10일 빅데이터 과정입니다.";
+				text = repo.getdetail(idx);
 				
 				String result = URLEncoder.encode(text, "UTF-8")
 		        .replaceAll("\\+", "%20")

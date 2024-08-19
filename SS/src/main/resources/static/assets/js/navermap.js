@@ -1,3 +1,5 @@
+document.write('<script src="assets/js/TTS.js"></script>');
+
 let map = new naver.maps.Map("map", {
 	zoom: 10,
 	minZoom: 10,
@@ -50,6 +52,11 @@ let markerClustering = new MarkerClustering({
 	}
 });
 
+var audio;
+var AudioContext;
+var audioContext;
+
+console.log(audio);
 $("#all").on("click", function() {
 	remove();
 	getData(1);
@@ -83,7 +90,7 @@ function getData(type) {
 		data: { type },
 		success: function(res) {
 			map.setOptions('zoom', 11);
-			map.setOptions('center',new naver.maps.LatLng(34.95057, 127.4874))
+			map.setOptions('center', new naver.maps.LatLng(34.95057, 127.4874))
 			$("#list").html("");
 			for (let i = 0, ii = res.length; i < ii; i++) {
 
@@ -119,7 +126,7 @@ function getData(type) {
 				});
 				infowindows.push(infowindow)
 			}
-			
+
 
 
 			for (let i = 0; i < markers.length; i++) {
@@ -171,6 +178,10 @@ function getData(type) {
 				let text = $(title).text()
 				for (let i = 0; i < markers.length; i++) {
 					if (text == markers[i].title) {
+						if(audio != null){
+							audio.pause();
+						}
+						TTS(res[i].trip_id);
 						clickedmarker = markers[i]
 						if (selectedmarker != clickedmarker) {
 							if (selectedmarker == null) {
@@ -202,17 +213,17 @@ function getData(type) {
 
 			});
 
-			
+
 			naver.maps.Event.addListener(map, 'zoom_changed', function(zoom) {
-				for(let i = 0; i<infowindows.length; i++){
-				if (zoom<13) {
-					if(infowindows[i].getMap()){
-					selectedmarker.setIcon(null)
-					infowindows[i].close();
-					selectedmarker = null
-					clickedmarker = null
+				for (let i = 0; i < infowindows.length; i++) {
+					if (zoom < 13) {
+						if (infowindows[i].getMap()) {
+							selectedmarker.setIcon(null)
+							infowindows[i].close();
+							selectedmarker = null
+							clickedmarker = null
+						}
 					}
-				}
 				}
 			});
 

@@ -145,36 +145,38 @@
      <script src="assets/js/main.js"></script>
      
      <script>
-     var audio;	
-     
-     $( document ).ready( function( event ) {
-    	 var AudioContext;
-    	 var audioContext;
+     var audio;
+     var AudioContext;
+     var audioContext;
 
-    	 window.onload = function() {
-    	     navigator.mediaDevices.getUserMedia({ audio: true }).then(() => {
-    	         AudioContext = window.AudioContext || window.webkitAudioContext;
-    	         audioContext = new AudioContext();
-    	         audioPlay(1);
-    	     }).catch(e => {
-    	         console.error(`Audio permissions denied: ${e}`);
-    	     });
-    	 }
+     $(document).ready(function(event) {
+         navigator.mediaDevices.getUserMedia({ audio: true })
+             .then(() => {
+                 AudioContext = window.AudioContext || window.webkitAudioContext;
+                 audioContext = new AudioContext();
+                 audioPlay(1);
+             })
+             .catch(e => {
+                 console.error(`Audio permissions denied: ${e}`);
+                 alert("Audio permissions were denied. Please allow microphone access and try again.");
+             });
      });
-     	async function audioPlay( idx ) {
-     		$.ajax({
-     			url : "audio",
-     			data : { idx : idx },
-     			type : "post"
-     		}).done( function( response ) {
-     			if( response.resultCode == 200 ) {
-     				audio = new Audio( response.result );
-         			audio.play();
-     			} else {
-     				
-     			}
-     		});
-     	}
+
+     async function audioPlay(idx) {
+         $.ajax({
+             url: "audio",
+             data: { idx: idx },
+             type: "post"
+         }).done(function(response) {
+             if (response.resultCode == 200) {
+                 audio = new Audio(response.result);
+                 audio.play();
+             } else {
+                 // Error handling
+             }
+         });
+     }
+
      </script>
 </body>
 </html>
