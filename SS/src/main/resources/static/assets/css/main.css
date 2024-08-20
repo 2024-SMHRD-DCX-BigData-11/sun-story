@@ -3,65 +3,37 @@
     letter-spacing: 0.1px;
     line-height: 1.25rem;
 }
-.state-layer {
-    align-self: stretch;
-    flex: 1;
+
+.button-common {
     display: flex;
-    flex-direction: row;
+    border-radius: 100px;
+    background-color: #ff7a00;
+    top: 0rem;
+    width: 6.925rem;
+    height: 2.5rem;
+    overflow: hidden;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0.625rem 1.5rem;
-    white-space: nowrap;
 }
-.button-tag {
-    display: flex;
-    top: 0rem;
+
+.tag {
     left: 15.577rem;
-    border-radius: 100px;
-    background-color: #ff7a00;
-    width: 6.925rem;
-    height: 2.5rem;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
-.button-repre {
-    display: flex;
-    top: 0rem;
+
+.repre {
     left: 7.665rem;
-    border-radius: 100px;
-    background-color: #ff7a00;
-    width: 6.925rem;
-    height: 2.5rem;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
-.button-lookall {
-    display: flex;
-    top: 0rem;
+
+.lookall {
     left: 0rem;
-    border-radius: 100px;
-    background-color: #ff7a00;
-    width: 6.925rem;
-    height: 2.5rem;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
+
 .category {
     display: flex;
-    top: 7.375rem;
-    left: 7.813rem;
-    width: 22.5rem;
-    height: 2.5rem;
-    justify-content: space-evenly;
+    gap: 0.5rem; /* 버튼들 간의 간격 */
+    flex-wrap: wrap; /* 작은 화면에서 버튼이 줄바꿈되도록 함 */
+    justify-content: center; /* 버튼들을 화면 가운데 정렬 */
 }
 .supporting-text {
     position: relative;
@@ -83,26 +55,11 @@
     position: relative;
     height: 1.5rem;
 }
-.state-layer4 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem;
-}
 .container {
     border-radius: 100px;
     overflow: hidden;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-.st-trailing-icon {
-    width: 3rem;
-    height: 3rem;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -255,6 +212,7 @@
     font-family: Inter;
 }
 .searchbar {
+	display: flex;
     width: 32.688rem;
     position: relative;
     background-color: #fff;
@@ -274,15 +232,7 @@
     font-weight: 500;
     font-size: 25px;
 }
-.state-layer5 {
-    align-self: stretch;
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 1.25rem 1rem 1rem;
-}
+
 .qrbutton {
     display: flex;
     top: 57.5rem;

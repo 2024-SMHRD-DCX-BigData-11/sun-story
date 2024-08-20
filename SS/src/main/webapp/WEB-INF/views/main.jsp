@@ -1,12 +1,28 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
- <link rel="stylesheet" type="text/css" href="assets/css/main.css">
- <link rel="shortcut icon" href="#">
+
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">	
+<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+<link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/images/순토리1.png">
 <title>Sun-Story</title>
+
+<style type="text/css">
+	ul {
+		margin: 0;
+		padding: 5px;
+	}
+	
+	li {
+		list-style: none;
+	}
+</style>
 </head>
 <body>
    <div class="mainpage">
@@ -15,70 +31,58 @@
                    <img class="logo_sunstory" alt="순토리" src="assets/images/순토리1.png">
                    <div class="three">
                    		<div class="two">
-		                    <div class="search-bar" id="searchBarContainer"><!--검색창-->
+		                    <div class="search-bar"><!--검색창-->
 		                         <form action="#" method="post">
 		                            <div class="state-layer3">
 		                              <div class="content">
 		                                   <input class="supporting-text" type="text" placeholder="검색어를 입력하세요"> 
 		                              </div>
 		                              <div class="trailing-elements">
-		                                   <div class="st-trailing-icon">
-		                                        <div class="container">
-		                                             <div class="state-layer4">
-		                                                  <button type="button" class="button_search"><img class="search-icon" alt="검색" src="assets/images/Icon.svg"></button>
-
-		                                                  
-		                                             </div>
-		                                        </div>
-		                                   </div>
+		                                <div class="container">
+		                                  <button type="button" class="button_search" id="searchBarContainer">
+		                                    <img class="search-icon" alt="검색" src="assets/images/Icon.svg">
+		                                  </button>
+		                                 </div>
 		                              </div>
 		                         </div>
 		                        </form>
 		                    </div>
 		                    <div class="qrbutton"><!--QR버튼-->
-			                    <div class="state-layer5">
-			                         <div class="label-text3">QR</div>
-			                    </div>
+			                  <div class="label-text3">QR</div>
 	               			</div>
                    	</div>
-                    <div class="category"><!--카테고리 버튼들-->
-                                    <div class="button-tag">
-                              <div class="state-layer">
-                                   <b class="category-text">태그별로</b>
-                              </div>
-                         </div>
-                         <div class="button-repre">
-                              <div class="state-layer">
-                                   <b class="category-text">대표 관광지</b>
-                              </div>
-                         </div>
-                         <div class="button-lookall">
-                              <div class="state-layer">
-                                   <b class="category-text">전체보기</b>
-                              </div>
-                         </div>
-                    </div>
+						<div class="category">
+						    <div class="button-common lookall">
+						        <b class="category-text">전체</b>
+						    </div>
+						    <div class="button-common repre">
+						        <b class="category-text">대표 관광지</b>
+						    </div>
+						    <div class="button-common tag">
+						        <b class="category-text">태그별</b>
+						    </div>
+						</div>
                    </div>
                   
                </div>
-               <div class="spotlist-bar"><!--검색결과 리스트창-->
-                    <div class="all-list"> <!--전체보기-->
-                         <div class="spot" id="spotContainer"><!--리스트내의 각 검색결과 항목들-->
-                              <img class="image-icon" alt="장소 사진" src="assets/images/순토리1.png">
-                              <div class="spot-details">
-	                              <div class="spot-tag">장소1</div>
-	                              <div class="spot-subtitle">끝내주는 장소 1</div>
-	                              <div class="spot-address">순천시 XX면  XX길</div>
-	                              <div class="spot-name">#끝내주는곳</div>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-          </div>
+				<ul id="list" style="overflow-y: scroll">
+					<c:forEach var="trip" items="${list}">
+						<li
+							style="width: 100%; height: 100px; display: flex; flex-direction: row;">
+							<div>
+								<img style="width: 100px; height: 100px;"
+									src="assets/images/관광지/${trip.name }.jpg">
+							</div>
+							<div style="width: 100%; text-align: center">
+								<h2>${trip.name }</h2>
+								<h3>${trip.address }</h3>
+							</div>
+						</li>
+					</c:forEach>
+				</ul>
+          </div><!-- 좌측 배너 div 끝 부분 -->
           <div class="map"><!--우측 지도창-->
-               <img class="map-frame-icon" alt="지도 부분을 사진으로 표현해놓음" src="assets/images/순토리1.png">
-               
-               
+			<div id="map" style="width: 100%; height: 100%; padding: 0; margin: 0;"></div>
           </div>
      </div>
      
@@ -153,6 +157,13 @@
           
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
      <script src="assets/js/main.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+		crossorigin="anonymous"></script>
+	<script type="text/javascript"
+		src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=gd84en4c8l"></script>
+	<script type="text/javascript" src="assets/js/MarkerClustering.js"></script>
+	<script type="text/javascript" src="assets/js/navermap.js"></script>
 
 	<script>
      var audio;
