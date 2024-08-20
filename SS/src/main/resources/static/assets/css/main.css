@@ -323,6 +323,7 @@
 
 
 .detail-child {
+
     display: flex;
     height: 100%;
     width: 100%;
@@ -333,9 +334,10 @@
     border-radius: 20px;
     background-color: #fff;
     flex-direction: column;
-    /* align-items: center; */
-    justify-content: space-between;
-    padding-left: 40px;
+    align-items: center;
+    justify-content: space-around;
+    /* padding-left: 40px; */
+    font-size: 19px;
 }
 .pay-text {
     display: flex;
@@ -366,7 +368,7 @@
     height: 2.25rem;
 }
 .p {
-    margin-block-start: 0;
+    /* margin-block-start: 0; */
     margin-block-end: 4px;
 }
 
@@ -387,16 +389,18 @@
     left: 3.563rem;
     letter-spacing: 0.5px;
     line-height: 1.5rem;
-    display: inline-block;
+    /* display: inline-block; */
     width: 31.5rem;
-    height: 6.313rem;
+    /* height: 6.313rem; */
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.5;
 }
 .close-icon {
-    display: flex;
-    top: 1rem;
-    left: 36.188rem;
-    width: 2.188rem;
-    height: 2.188rem;
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    cursor: pointer;
 }
 .button-text {
     position: relative;
@@ -443,7 +447,7 @@
 .frame-child {
     display: flex;
     height: 77.5%;
-    width: 100%;
+    width: 60%;
     top: 22.5%;
     right: 0%;
     bottom: 0%;
@@ -497,9 +501,10 @@
     width: 39.563rem;
     position: relative;
     height: 65rem;
-    max-width: 90%;
+    max-width: 100%;
     max-height: 90%;
-    overflow: auto;
+    /* overflow-x: auto;
+    overflow-y: auto; */
     text-align: left;
     font-size: 1.375rem;
     color: #000;
@@ -594,7 +599,7 @@
 }
 
 .popup-overlay {
-    position: fixed;
+     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -604,20 +609,33 @@
     align-items: center;
     justify-content: center;
     z-index: 1000;
+    overflow: hidden; /* 팝업 바깥쪽의 스크롤 방지 */
 }
 
 .popup-content {
     background-color: white;
-    /* padding: 20px; */
     border-radius: 10px;
-    width: 700px;
+    width: 90%; /* 화면 크기에 맞게 조정 */
+    max-width: 600px; /* 최대 넓이 설정 */
+    max-height: 80vh; /* 화면 높이의 80%로 제한 */
     text-align: center;
+    position: relative; /* 상대적 위치 설정 */
+    overflow-y: auto; /* 세로 스크롤바 표시 */
+    overflow-x: auto; /* 가로 스크롤바 표시 */
+    padding: 20px; /* 팝업 내부에 여백 추가 */
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px;
 }
-
+.popup-content::-webkit-scrollbar {
+  display: none;
+}
 .close-popup {
     position: absolute;
     top: 10px;
     right: 10px;
     font-size: 24px;
     cursor: pointer;
+}
+.content-title, .subtitle, .content-text, .using-info, .more-info {
+    width: 100%; /* 내용이 팝업 폭에 맞도록 조정 */
+    box-sizing: border-box; /* padding 포함 폭 계산 */
 }

@@ -25,7 +25,8 @@
 		                                   <div class="st-trailing-icon">
 		                                        <div class="container">
 		                                             <div class="state-layer4">
-		                                                  <img class="search-icon" alt="검색" src="assets/images/Icon.svg">
+		                                                  <button type="button" class="button_search"><img class="search-icon" alt="검색" src="assets/images/Icon.svg"></button>
+
 		                                                  
 		                                             </div>
 		                                        </div>
@@ -109,7 +110,7 @@
      
      <div id="detailContainer" class="popup-overlay" style="display:none"> <!--장소 상세보기-->
     	<div class="popup-content">
-        	<span class="close-popup">&times;</span>
+        	<!-- <span class="close-popup">&times;</span> -->
 	          <div class="detail">
 	               <div class="detail-child">
 	               	  <div class="x">
