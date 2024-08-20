@@ -79,7 +79,7 @@ li {
 									src="assets/images/관광지/${trip.name }.jpg">
 							</div>
 							<div style="width: 100%; text-align: left">
-								<h2>${trip.name }</h3>
+								<h3>${trip.name }</h3>
 								<h3>${trip.address }</h3>
 							</div>
 						</li>
