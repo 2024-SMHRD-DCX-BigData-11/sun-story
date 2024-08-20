@@ -14,14 +14,20 @@
 <title>Sun-Story</title>
 
 <style type="text/css">
-	ul {
-		margin: 0;
-		padding: 5px;
-	}
-	
-	li {
-		list-style: none;
-	}
+html, body {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+ul {
+	margin: 0;
+	padding: 5px;
+}
+
+li {
+	list-style: none;
+}
 </style>
 </head>
 <body>
@@ -63,8 +69,7 @@
 						    </div>
 						</div>
                    </div>
-                  
-               </div>
+                  	 <div style="height: 75%; display: flex; flex-direction: column;">
 				<ul id="list" style="overflow-y: scroll">
 					<c:forEach var="trip" items="${list}">
 						<li
@@ -73,13 +78,16 @@
 								<img style="width: 100px; height: 100px;"
 									src="assets/images/관광지/${trip.name }.jpg">
 							</div>
-							<div style="width: 100%; text-align: center">
-								<h2>${trip.name }</h2>
+							<div style="width: 100%; text-align: left">
+								<h2>${trip.name }</h3>
 								<h3>${trip.address }</h3>
 							</div>
 						</li>
 					</c:forEach>
 				</ul>
+				</div>
+               </div>
+              
           </div><!-- 좌측 배너 div 끝 부분 -->
           <div class="map"><!--우측 지도창-->
 			<div id="map" style="width: 100%; height: 100%; padding: 0; margin: 0;"></div>
@@ -155,7 +163,6 @@
 	    </div>
 	</div>
           
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
      <script src="assets/js/main.js"></script>
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js"
 		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="

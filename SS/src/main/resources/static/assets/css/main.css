@@ -114,10 +114,9 @@
     left: 0rem;
     background-color: #fff;
     width: 32.688rem;
-    height: 11rem;
     flex-wrap: wrap;
     margin-top: 20px;
-    
+   height: 100%;
 }
 .image-icon {
     display: flex;
@@ -216,7 +215,7 @@
     width: 32.688rem;
     position: relative;
     background-color: #fff;
-    height: 67.5rem;
+    height: 100%;
 }
 .map-frame-icon {
     display: flex;
@@ -252,14 +251,13 @@
 .map {
     width: 87.313rem;
     position: relative;
-    height: 67.5rem;
-    font-size: 2.813rem;
+    height: 100%;
 }
 .mainpage {
     width: 100%;
     position: relative;
     background-color: #fff;
-    height: 67.5rem;
+    height: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: row;
@@ -276,7 +274,6 @@
 
     display: flex;
     height: 100%;
-    width: 100%;
     top: 0%;
     right: 0%;
     bottom: 0%;
@@ -588,4 +585,14 @@
 .content-title, .subtitle, .content-text, .using-info, .more-info {
     width: 100%; /* 내용이 팝업 폭에 맞도록 조정 */
     box-sizing: border-box; /* padding 포함 폭 계산 */
+}
+
+
+.info{
+ font-weight:bold;
+ color: black;
+}
+
+#list{
+	color:black;
 }

@@ -57,18 +57,18 @@ var AudioContext;
 var audioContext;
 
 console.log(audio);
-$("#all").on("click", function() {
+$(".lookall").on("click", function() {
 	remove();
 	getData(1);
 })
 
 
-$("#major").on("click", function() {
+$(".repre").on("click", function() {
 	remove();
 	getData(2);
 })
 
-$("#tag").on("click", function() {
+$(".tag").on("click", function() {
 	remove();
 	getData(3);
 });
@@ -109,8 +109,8 @@ function getData(type) {
 							<img style="width: 100px; height: 100px;"
 								src="assets/images/관광지/${spot.name}.jpg">
 						</div>
-						<div style="width: 100%; text-align: center">
-							<h2>${spot.name}</h2>
+						<div style="width: 100%; text-align: left">
+							<h3>${spot.name}</h3>
 							<h3>${spot.address}</h3>
 						</div>
 					</li>`
@@ -123,7 +123,7 @@ function getData(type) {
 			let infowindows = []
 			for (let i = 0; i < markers.length; i++) {
 				let infowindow = new naver.maps.InfoWindow({
-					content: `<div width : 20px; heigth:20px;><span font-size: 30px; font-weight : bold;>${markers[i].title}</span></div>`
+					content: `<div class="info-box"><span class="info">${markers[i].title}</span></div>`
 				});
 				infowindows.push(infowindow)
 			}
@@ -175,7 +175,7 @@ function getData(type) {
 			});
 			$('ul#list li').click(function() {
 				let box = $(this).children("div")[1];
-				let title = $(box).children("h2")[0];
+				let title = $(box).children("h3")[0];
 				let text = $(title).text()
 				for (let i = 0; i < markers.length; i++) {
 					if (text == markers[i].title) {
