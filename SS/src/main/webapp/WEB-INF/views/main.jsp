@@ -25,9 +25,6 @@ ul {
 	padding: 5px;
 }
 
-li {
-	list-style: none;
-}
 </style>
 </head>
 <body>
@@ -41,7 +38,7 @@ li {
 		                         <form action="#" method="post">
 		                            <div class="state-layer3">
 		                              <div class="content">
-		                                   <input class="supporting-text" type="text" placeholder="검색어를 입력하세요"> 
+		                                   <input class="supporting-text" type="search" placeholder="검색어를 입력하세요" title="검색어를 입력하세요"> 
 		                              </div>
 		                              <div class="trailing-elements">
 		                                <div class="container">
@@ -72,15 +69,17 @@ li {
                   	 <div style="height: 75%; display: flex; flex-direction: column;">
 				<ul id="list" style="overflow-y: scroll">
 					<c:forEach var="trip" items="${list}">
-						<li
-							style="width: 100%; height: 100px; display: flex; flex-direction: row;">
+						<li id="popupContainer"
+							style="width: 100%; height: 100px; display: flex; flex-direction: row; align-items: center;">
 							<div>
-								<img style="width: 100px; height: 100px;"
+								<img class="img" style="width: 100px; height: 100px;"
 									src="assets/images/관광지/${trip.name }.jpg">
 							</div>
-							<div style="width: 100%; text-align: left">
-								<h3>${trip.name }</h3>
-								<h3>${trip.address }</h3>
+							<div style="width: 100%; text-align: left; padding:10px;">
+								<h3 style="margin-bottom: 5px; margin-top: 0;">${trip.name }</h3>
+								<p style="margin: 0;">${trip.simple_name}</p>
+								<p style="margin: 0;">${trip.address }</p>
+								<p style="margin: 0; color:gray;">${trip.tag }</p>
 							</div>
 						</li>
 					</c:forEach>
@@ -125,9 +124,7 @@ li {
         	<!-- <span class="close-popup">&times;</span> -->
 	          <div class="detail">
 	               <div class="detail-child">
-	               	  <div class="x">
 		               <img class="close-icon" alt="x" src="assets/images/close.svg">
-	               	  </div>
 		               <img class="image-icon1" alt="장소 이미지" src="assets/images/Image.png">
 		               
 		               <div class="content-title">장소 1</div>
@@ -163,7 +160,7 @@ li {
 	    </div>
 	</div>
           
-     <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js"
 		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
 		crossorigin="anonymous"></script>
@@ -206,7 +203,7 @@ li {
      }
      </script>
      <script>
-	  // 팝업 열기
+	  /* // 팝업 열기
 	     function openPopup() {
 	         document.getElementById('popupContainer').style.display = 'flex';
 	     }
@@ -220,7 +217,49 @@ li {
 	     document.querySelector('.close-popup').addEventListener('click', closePopup);
 	
 	     // 예시: 특정 버튼을 클릭하면 팝업이 열리도록 설정
-	     document.querySelector('.button-tag').addEventListener('click', openPopup);
+	     document.querySelector('.button-tag').addEventListener('click', openPopup); */
+
+	  // 팝업을 토글하는 함수
+	     function togglePopup(popupId) {
+	         var popup = document.getElementById(popupId);
+	         if (!popup) return;
+
+	         var popupStyle = popup.style;
+	         if (popupStyle.display === "none" || popupStyle.display === "") {
+	             popupStyle.display = "flex"; // 팝업 열기
+	         } else {
+	             popupStyle.display = "none"; // 팝업 닫기
+	         }
+
+	         popupStyle.zIndex = 100;
+	         popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
+	         popupStyle.alignItems = "center";
+	         popupStyle.justifyContent = "center";
+	         popup.setAttribute("closable", "");
+
+	         // 팝업 외부 클릭 시 닫기
+	         popup.onclick = function (e) {
+	             if (e.target === popup && popup.hasAttribute("closable")) {
+	                 popupStyle.display = "none";
+	             }
+	         };
+
+	         // 팝업 닫기 아이콘 클릭 시 닫기
+	         var closeIcon = popup.querySelector(".close-icon");
+	         if (closeIcon) {
+	             closeIcon.onclick = function () {
+	                 popupStyle.display = "none";
+	             };
+	         }
+	     }
+
+	     // 모든 li 요소에 이벤트 리스너 추가
+	     document.querySelectorAll("#popupContainer").forEach(function (item) {
+	         item.addEventListener("click", function () {
+	             togglePopup("detailContainer");
+	         });
+	     });
+
 
      </script>
 </body>
