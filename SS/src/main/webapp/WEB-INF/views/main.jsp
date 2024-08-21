@@ -53,9 +53,9 @@ li {
 		                         </div>
 		                        </form>
 		                    </div>
-		                    <div class="qrbutton"><!--QR버튼-->
+		                    <a href="QrPage"><div class="qrbutton"><!--QR버튼-->
 			                  <div class="label-text3">QR</div>
-	               			</div>
+	               			</div></a>
                    	</div>
 						<div class="category">
 						    <div class="button-common lookall">

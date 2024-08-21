@@ -15,6 +15,7 @@ flex-direction: column;
 </style>
 </head>
 <body>
+<a href="test"><div style="width: 100px; height: 100px; background: yellow"></div></a>
 <div>
 <c:forEach var="trip" items="${list}">
 						<div style="width: 100%; text-align: center">

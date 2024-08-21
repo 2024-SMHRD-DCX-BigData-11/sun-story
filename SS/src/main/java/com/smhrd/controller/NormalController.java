@@ -12,26 +12,31 @@ import com.smhrd.repository.NormalRepository;
 
 @Controller
 public class NormalController {
-	
-@Autowired
-private NormalRepository repo;
 
-@RequestMapping("/main")
-public String goMain(Model model) {
-	
-	List<Trip> list = repo.findAll();
-	model.addAttribute("list", list);
-	
-	return "main";
-}
+	@Autowired
+	private NormalRepository repo;
 
-@RequestMapping("/test")
-public String goTest(Model model) {
-	
-	List<Trip> list = repo.findAll();
-	model.addAttribute("list", list);
-	
-	return "test";
-}
+	@RequestMapping("/main")
+	public String goMain(Model model) {
+
+		List<Trip> list = repo.findAll();
+		model.addAttribute("list", list);
+
+		return "main";
+	}
+
+	@RequestMapping("/test")
+	public String goTest(Model model) {
+
+		List<Trip> list = repo.findAll();
+		model.addAttribute("list", list);
+
+		return "test";
+	}
+
+	@RequestMapping("/QrPage")
+	public String goQrPage() {
+		return "QrPage";
+	}
 
 }
