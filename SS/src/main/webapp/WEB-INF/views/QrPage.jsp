@@ -64,12 +64,12 @@ canvas {
 	</div>
 
 	<script type="text/javascript">
-		var video;
 		var frame = document.getElementById("frame");
 		var loadingMessage = document.getElementById("loadingMessage");
 		var canvasElement = document.getElementById("canvas");
 		var canvas = canvasElement.getContext("2d");
-		var ani = null
+		var video;
+		var ani;
 		
 		// 스캔
 		function startScan() {
@@ -78,8 +78,7 @@ canvas {
 			var outputMessage = document.getElementById("outputMessage");
 			var outputData = document.getElementById("outputData");
 			var close = document.getElementById("close");
-			var con = document.getElementById("con");
-			var ani = null;
+
 			function drawLine(begin, end, color) {
 				canvas.beginPath();
 				canvas.moveTo(begin.x, begin.y);
@@ -102,8 +101,6 @@ canvas {
 			});
 
 			function tick() {
-				
-
 				if (video.readyState === video.HAVE_ENOUGH_DATA) {
 					loadingMessage.hidden = true;
 					canvasElement.hidden = false;
@@ -151,7 +148,7 @@ canvas {
 						outputData.parentElement.hidden = true;
 					}
 				}
-				requestAnimationFrame(tick);
+				ani = requestAnimationFrame(tick);
 			}
 		}
 
@@ -161,13 +158,16 @@ canvas {
 		}
 
 		function closeCamera() {
-			video.pause();
-			var track = video.srcObject.getTracks();
-			console.log(track)
-			track[0].stop()
-			video.srcObject = null;
-			loadingMessage.hidden = false;
-			canvas.clearRect(0, 0, canvasElement.width, canvasElement.height);
+		
+			if (video != null) {
+				var track = video.srcObject.getTracks();
+				track[0].stop()
+				video = null;
+				loadingMessage.hidden = false;
+				canvas.clearRect(0, 0, canvasElement.width,
+						canvasElement.height);
+				
+			}
 		}
 	</script>
 </body>
