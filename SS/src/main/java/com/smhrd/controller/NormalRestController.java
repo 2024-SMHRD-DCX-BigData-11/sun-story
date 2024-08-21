@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.smhrd.NormalClass.response;
 import com.smhrd.entity.Trip;
 import com.smhrd.repository.NormalRepository;
 
@@ -50,11 +51,11 @@ public class NormalRestController {
 	}
 	
 	@RequestMapping("/audio")
-	public Trip audio(
+	public response audio(
 			@RequestParam( value="idx" ) int idx
 			) throws IOException{
 		
-		Trip response = new Trip();
+		response response = new response();
 		String text = "";
 		int resultCode = 0;
 		String mem = "1";
