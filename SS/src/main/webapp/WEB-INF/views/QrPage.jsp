@@ -47,7 +47,9 @@ canvas {
 			</div>
 
 			<br /> <input type="button" id="button1" onclick="openCamera();"
-				value="카메라 열기" style="width: 97%; height: 30px" /> <br />
+				value="카메라 열기" style="width: 97%; height: 30px" /> <br /> <br />
+			<input type="button" id="close" value="카메라 닫기"
+				onclick="closeCamera();" style="width: 97%; height: 30px" /> <br />
 			<div></div>
 			<div id="test" width="100%">
 				<h1>QR 코드 스캔 결과</h1>
@@ -62,15 +64,20 @@ canvas {
 	</div>
 
 	<script type="text/javascript">
+		var frame = document.getElementById("frame");
+		var loadingMessage = document.getElementById("loadingMessage");
+		var canvasElement = document.getElementById("canvas");
+		var canvas = canvasElement.getContext("2d");
+		var video;
+		var ani;
+		
 		// 스캔
 		function startScan() {
-			var video = document.createElement("video");
-			var canvasElement = document.getElementById("canvas");
-			var canvas = canvasElement.getContext("2d");
-			var loadingMessage = document.getElementById("loadingMessage");
+			video = document.createElement("video");
 			var outputContainer = document.getElementById("output");
 			var outputMessage = document.getElementById("outputMessage");
 			var outputData = document.getElementById("outputData");
+			var close = document.getElementById("close");
 
 			function drawLine(begin, end, color) {
 				canvas.beginPath();
@@ -94,8 +101,6 @@ canvas {
 			});
 
 			function tick() {
-				loadingMessage.innerText = "⌛ 스캔 기능을 활성화 중입니다."
-
 				if (video.readyState === video.HAVE_ENOUGH_DATA) {
 					loadingMessage.hidden = true;
 					canvasElement.hidden = false;
@@ -143,13 +148,26 @@ canvas {
 						outputData.parentElement.hidden = true;
 					}
 				}
-				requestAnimationFrame(tick);
+				ani = requestAnimationFrame(tick);
 			}
 		}
 
 		// 카메라 열기
 		function openCamera() {
 			startScan();
+		}
+
+		function closeCamera() {
+		
+			if (video != null) {
+				var track = video.srcObject.getTracks();
+				track[0].stop()
+				video = null;
+				loadingMessage.hidden = false;
+				canvas.clearRect(0, 0, canvasElement.width,
+						canvasElement.height);
+				
+			}
 		}
 	</script>
 </body>
