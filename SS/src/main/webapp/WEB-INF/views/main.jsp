@@ -25,9 +25,6 @@ ul {
 	padding: 5px;
 }
 
-li {
-	list-style: none;
-}
 </style>
 </head>
 <body>
@@ -73,14 +70,16 @@ li {
 				<ul id="list" style="overflow-y: scroll">
 					<c:forEach var="trip" items="${list}">
 						<li id="popupContainer"
-							style="width: 100%; height: 100px; display: flex; flex-direction: row;">
+							style="width: 100%; height: 100px; display: flex; flex-direction: row; align-items: center;">
 							<div>
-								<img style="width: 100px; height: 100px;"
+								<img class="img" style="width: 100px; height: 100px;"
 									src="assets/images/관광지/${trip.name }.jpg">
 							</div>
-							<div style="width: 100%; text-align: left">
-								<h3 style="font-weight: bold;">${trip.name }</h3>
-								<h3>${trip.address }</h3>
+							<div style="width: 100%; text-align: left; padding:10px;">
+								<h3 style="margin-bottom: 5px; margin-top: 0;">${trip.name }</h3>
+								<p style="margin: 0;">${trip.simple_name}</p>
+								<p style="margin: 0;">${trip.address }</p>
+								<p style="margin: 0; color:gray;">${trip.tag }</p>
 							</div>
 						</li>
 					</c:forEach>

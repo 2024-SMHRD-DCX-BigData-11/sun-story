@@ -104,14 +104,16 @@ function getData(type) {
 					});
 				markers.push(marker);
 				let list = `<li
-						style="width: 100%; height: 100px; display: flex; flex-direction: row;">
+						style="width: 100%; height: 100px; display: flex; flex-direction: row; align-items: center;">
 						<div>
-							<img style="width: 100px; height: 100px;"
+							<img style="width: 100px; height: 100px; border-radius: 5px;"
 								src="assets/images/관광지/${spot.name}.jpg">
 						</div>
-						<div style="width: 100%; text-align: left">
-							<h3>${spot.name}</h3>
-							<h3>${spot.address}</h3>
+						<div style="width: 100%; text-align: left; padding: 10px;">
+								<h3 style="margin-bottom: 5px; margin-top: 0;">${spot.name }</h3>
+								<p style="margin: 0;">${spot.simple_name}</p>
+								<p style="margin: 0;">${spot.address }</p>
+								<p style="margin: 0; color:gray;">${spot.tag }</p>
 						</div>
 					</li>`
 				$("#list").append(list);

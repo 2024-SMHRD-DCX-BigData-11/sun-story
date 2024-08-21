@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'KOTRA_GOTHIC';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/KOTRA_GOTHIC.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+p, h1, h2, h3, h4, h5, h6, b, input, label-text3{
+	font-family: 'KOTRA_GOTHIC';
+}
+
+p{
+	font-size: 14px;
+}
+
 .category-text {
     position: relative;
     letter-spacing: 0.1px;
@@ -231,8 +246,9 @@
     position: relative;
     letter-spacing: 0.1px;
     line-height: 1.25rem;
-    font-weight: 500;
+    font-weight: 550;
     font-size: 25px;
+    
 }
 
 .qrbutton {
@@ -545,12 +561,8 @@
 	margin-left: 11px;
 }
 
-.x{
-	display: flex;
-}
-
 .popup-overlay {
-     position: fixed;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -609,4 +621,18 @@ button{
 input:focus {
  outline: none; /* 기본 테두리 제거 */
  border: 2px solid #e8e8e8; /* 클릭 시 테두리 색상 변경 */
+ }
+ 
+ a{
+ 	text-decoration: none;
+ 	color:white;
+ }
+ 
+ li{
+ 	padding:10px;
+ 	list-style: none;
+ }
+ 
+ .img{
+ 	border-radius: 5px;
  }
