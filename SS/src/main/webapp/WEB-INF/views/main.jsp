@@ -116,8 +116,8 @@ ul {
 		               
 		               <div class="content-title">장소 1</div>
 		               <div class="subtitle">
-		                    <p class="p">추천할만한 장소 1</p>
-		                    <p class="p">전남 순천시 XX면 XX로 XXX번길 </p>
+		                    <p class="p" id = "subtitle">추천할만한 장소 1</p>
+		                    <p class="p" id = "address">전남 순천시 XX면 XX로 XXX번길 </p>
 		               </div>
 		               <div class="content-text">
 		                    <p class="p"> 장소 1은 순천시의 관광지로서 추천할만한 장소로, XX해서 XX한 장소이다.</p>
@@ -232,10 +232,7 @@ ul {
 	    	        var popupStyle = popup.style;
 	    	        if (popupStyle.display === "none" || popupStyle.display === "") {
 	    	            popupStyle.display = "flex"; // 팝업 열기
-	    	            popup.querySelector('.content-title').textContent = data.tripname;
-	    	            popup.querySelector('.subtitle .p:nth-child(1)').textContent = data.simpleName;
-	    	            popup.querySelector('.subtitle .p:nth-child(2)').textContent = data.address;
-	    	            popup.querySelector('.content-text .p:nth-child(1)').textContent = data.tag;
+	    	            
 	    	        } else {
 	    	            popupStyle.display = "none"; // 팝업 닫기
 	    	        }

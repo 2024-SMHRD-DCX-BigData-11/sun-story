@@ -21,7 +21,7 @@ async function audioPlay(idx) {
 		if (response.resultCode == 200) {
 			audio = new Audio(response.result);
 			audio.play();
-			console.log(audio);
+
 		} else {
 			// Error handling
 		}

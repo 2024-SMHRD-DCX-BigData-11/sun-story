@@ -111,10 +111,11 @@ function getData(type) {
 								src="assets/images/관광지/${spot.name}.jpg">
 						</div>
 						<div style="width: 100%; text-align: left; padding: 10px;">
-								<h3 style="margin-bottom: 5px; margin-top: 0;">${spot.name }</h3>
+								<h3 style="margin-bottom: 5px; margin-top: 0;">${spot.name}</h3>
 								<p style="margin: 0;">${spot.simple_name}</p>
-								<p style="margin: 0;">${spot.address }</p>
-								<p style="margin: 0; color:gray;">${spot.tag }</p>
+								<p style="margin: 0;">${spot.address}</p>
+								<p style="margin: 0; color:gray;">${spot.tag}</p>
+								<span style="display:none">${spot.trip_id}</span>
 						</div>
 					</li>`
 				$("#list").append(list);
@@ -179,7 +180,25 @@ function getData(type) {
 			$('ul#list li').click(function() {
 				let box = $(this).children("div")[1];
 				let title = $(box).children("h3")[0];
-				let text = $(title).text()
+				let text = $(title).text();
+				let idx_box = $(box).children("span")[0];
+				let idx = $(idx_box).text();
+
+				console.log(idx)
+				for (let i = 0; i < res.length; i++) {
+					if (idx == res[i].trip_id) {
+						$(".image-icon1").attr("src", `assets/images/관광지/${res[i].name}.jpg`);
+						console.log();
+						$(".content-title").text(`${res[i].name}`);
+						console.log(res[i]);
+						$(".subtitle .p:nth-child(1)").text(`${res[i].simple_name}`);
+						$(".subtitle .p:nth-child(2)").text(`${res[i].address}`);
+						$(".content-text .p").text(`${res[i].detail}`);
+						$(".use-time").text(`${res[i].use_hour}`);
+						$(".pay-text").text(`${res[i].fare}`);
+					}
+				}
+
 				for (let i = 0; i < markers.length; i++) {
 					if (text == markers[i].title) {
 						if (audio != null) {
