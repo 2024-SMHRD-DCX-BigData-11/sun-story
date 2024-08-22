@@ -18,10 +18,6 @@ public class NormalController {
 
 	@RequestMapping("/main")
 	public String goMain(Model model) {
-
-		List<Trip> list = repo.findAll();
-		model.addAttribute("list", list);
-
 		return "main";
 	}
 
