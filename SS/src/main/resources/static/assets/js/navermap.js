@@ -56,7 +56,8 @@ var audio;
 var AudioContext;
 var audioContext;
 
-console.log(audio);
+getData(1);
+
 $(".lookall").on("click", function() {
 	remove();
 	getData(1);
