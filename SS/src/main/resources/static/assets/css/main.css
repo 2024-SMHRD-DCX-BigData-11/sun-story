@@ -5,10 +5,13 @@
     font-style: normal;
 }
 
-p, h1, h2, h3, h4, h5, h6, b, input, label-text3{
+p, h1, h2, h3, h4, h5, h6, b, input, label-text3, div{
 	font-family: 'KOTRA_GOTHIC';
 }
 
+html{
+	font-family: 'KOTRA_GOTHIC';
+}
 p{
 	font-size: 14px;
 }
@@ -155,6 +158,7 @@ p{
     max-height: 100%;
     object-fit: cover;
     min-width: 10rem;
+    border-radius: 5px;
 }
 .spot-name {
     display: flex;
@@ -328,6 +332,7 @@ p{
     overflow: hidden;
     object-fit: cover;
     min-width: 10rem;
+    border-radius: 5px;
 }
 .content-title {
     display: flex;
@@ -336,12 +341,13 @@ p{
     font-size: 2.25rem;
     letter-spacing: 0.5px;
     line-height: 1.5rem;
-    display: inline-block;
+/*     display: inline-block; */
     width: 30.938rem;
-    height: 2.25rem;
+    /* height: 2.25rem; */
     font-family: 'KOTRA_GOTHIC';
     font-weight: bold;
-    padding-left: 20px;
+    /* padding-left: 20px; */
+    padding-top: 20px;
 }
 .p {
     /* margin-block-start: 0; */
@@ -358,7 +364,7 @@ p{
     display: inline-block;
     width: 31.5rem;
     height: 5.563rem;
-    padding-left: 20px;
+    /* padding-left: 20px; */
 }
 .content-text {
     display: flex;
@@ -372,7 +378,7 @@ p{
     flex-direction: column;
     justify-content: center;
     line-height: 1.5;
-    padding-left: 20px;
+    /* padding-left: 20px; */
 }
 .close-icon {
     position: absolute;
@@ -576,7 +582,7 @@ p{
     position: fixed;
     top: 0;
     left: 0;
-    width: 35%;
+    width: 40%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
@@ -654,3 +660,16 @@ input:focus {
             background-color: #ffb868; /* 선택된 버튼의 배경색 */
             color: white; /* 선택된 버튼의 글자색 */
         }
+        
+.content-top{
+	display:flex;
+	flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.content-buttom{
+	display:flex;
+	flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
