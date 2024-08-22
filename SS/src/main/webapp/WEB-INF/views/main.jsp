@@ -253,6 +253,9 @@ ul {
 	    	        if (closeIcon) {
 	    	            closeIcon.onclick = function () {
 	    	                popupStyle.display = "none";
+	    	                console.log("닫음.");
+	    	                console.log(audio);
+	    	                audio.pause();
 	    	            };
 	    	        }
 	    	    }
