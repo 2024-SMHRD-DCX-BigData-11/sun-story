@@ -19,6 +19,7 @@ html, body {
 	height: 100%;
 	padding: 0;
 	margin: 0;
+	
 } 
 ul {
 	margin: 0;
@@ -111,6 +112,7 @@ ul {
         	<!-- <span class="close-popup">&times;</span> -->
 	          <div class="detail">
 	               <div class="detail-child">
+	               	<div class="content-top">
 		               <img class="close-icon" alt="x" src="assets/images/close.svg">
 		               <img class="image-icon1" alt="장소 이미지" src="assets/images/${trip.name }.png">
 		               
@@ -131,8 +133,10 @@ ul {
 		                    <div class="frame-child">
 		                    </div>
 		                    <img class="headphones-icon" alt="스토리텔링 듣기" src="assets/images/Headphones.svg">
+	               	</div>
 		                    
 		               </div>
+		               <div class="content-buttom">
 			               <div class="using-info">이용정보</div>
 			               <div class="use-time">운영시간</div>
 			               <div class="pay-text">요금</div>
@@ -141,7 +145,7 @@ ul {
 			                         <div class="button-text">더 많은 정보를 보고싶다면 클릭!</div>
 			                    </div>
 			               </div>
-		               
+		               </div>
 	               </div>
 	          </div>
 	    </div>
