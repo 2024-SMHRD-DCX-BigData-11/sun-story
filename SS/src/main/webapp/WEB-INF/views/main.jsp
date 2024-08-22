@@ -55,35 +55,40 @@ ul {
 	               			</div></a>
                    	</div>
 						<div class="category">
-						    <div class="button-common lookall">
+						    <div class="button-common lookall" id="button-common-lookall">
 						        <b class="category-text">전체</b>
 						    </div>
-						    <div class="button-common repre">
+						    <div class="button-common repre" id="button-common-repre">
 						        <b class="category-text">대표 관광지</b>
 						    </div>
-						    <div class="button-common tag">
+						    <div class="button-common tag" id="button-common-tag">
 						        <b class="category-text">태그별</b>
 						    </div>
 						</div>
                    </div>
                   	 <div style="height: 75%; display: flex; flex-direction: column;">
-				<ul id="list" style="overflow-y: scroll">
-					<c:forEach var="trip" items="${list}">
-						<li id="popupContainer"
-							style="width: 100%; height: 100px; display: flex; flex-direction: row; align-items: center;">
-							<div>
-								<img class="img" style="width: 100px; height: 100px;"
-									src="assets/images/관광지/${trip.name }.jpg">
-							</div>
-							<div style="width: 100%; text-align: left; padding:10px;">
-								<h3 style="margin-bottom: 5px; margin-top: 0;">${trip.name }</h3>
-								<p style="margin: 0;">${trip.simple_name}</p>
-								<p style="margin: 0;">${trip.address }</p>
-								<p style="margin: 0; color:gray;">${trip.tag }</p>
-							</div>
-						</li>
-					</c:forEach>
+				<ul id="list">
+				    <c:forEach var="trip" items="${list}">
+				        <li class="popupContainer"
+				            data-tripname="${trip.name}"
+				            data-simple-name="${trip.simple_name}"
+				            data-address="${trip.address}"
+				            data-tag="${trip.tag}"
+				            style="width: 100%; height: 100px; display: flex; flex-direction: row; align-items: center;">
+				            <div>
+				                <img class="img" style="width: 100px; height: 100px;"
+				                    src="assets/images/관광지/${trip.name }.jpg">
+				            </div>
+				            <div style="width: 100%; text-align: left; padding:10px;">
+				                <h3 style="margin-bottom: 5px; margin-top: 0;">${trip.name }</h3>
+				                <p style="margin: 0;">${trip.simple_name}</p>
+				                <p style="margin: 0;">${trip.address }</p>
+				                <p style="margin: 0; color:gray;">${trip.tag }</p>
+				            </div>
+				        </li>
+				    </c:forEach>
 				</ul>
+
 				</div>
                </div>
               
@@ -203,64 +208,78 @@ ul {
      }
      </script>
      <script>
-	  /* // 팝업 열기
-	     function openPopup() {
-	         document.getElementById('popupContainer').style.display = 'flex';
-	     }
+	     document.addEventListener("DOMContentLoaded", function() {
+	    	    // 기존 코드 유지
+	    	    
+	    	    document.body.addEventListener('click', function(event) {
+	    	        if (event.target.closest('#button-common-lookall')) {
+	    	            document.querySelectorAll('.button-common').forEach(function(btn) {
+	    	                btn.classList.remove('active');
+	    	            });
+	    	            event.target.closest('.button-common').classList.add('active');
+	    	        } else if (event.target.closest('#button-common-repre')) {
+	    	            document.querySelectorAll('.button-common').forEach(function(btn) {
+	    	                btn.classList.remove('active');
+	    	            });
+	    	            event.target.closest('.button-common').classList.add('active');
+	    	        } else if (event.target.closest('#button-common-tag')) {
+	    	            document.querySelectorAll('.button-common').forEach(function(btn) {
+	    	                btn.classList.remove('active');
+	    	            });
+	    	            event.target.closest('.button-common').classList.add('active');
+	    	        }
 	
-	     // 팝업 닫기
-	     function closePopup() {
-	         document.getElementById('popupContainer').style.display = 'none';
-	     }
+	    	        // 이벤트 위임을 이용해 동적으로 추가된 li 태그도 이벤트를 잡을 수 있게 함
+	    	        if (event.target.closest('.popupContainer') || event.target.closest('li')) {
+	    	            var target = event.target.closest('.popupContainer') || event.target.closest('li');
+	    	            var data = {
+	    	                tripname: target.getAttribute('data-tripname'),
+	    	                simpleName: target.getAttribute('data-simple-name'),
+	    	                address: target.getAttribute('data-address'),
+	    	                tag: target.getAttribute('data-tag')
+	    	            };
+	    	            togglePopup("detailContainer", data);
+	    	        }
+	    	    });
 	
-	     // 팝업 닫기 버튼 클릭 이벤트
-	     document.querySelector('.close-popup').addEventListener('click', closePopup);
+	    	    // 팝업 관련 함수 유지
+	    	    function togglePopup(popupId, data) {
+	    	        var popup = document.getElementById(popupId);
+	    	        if (!popup) return;
 	
-	     // 예시: 특정 버튼을 클릭하면 팝업이 열리도록 설정
-	     document.querySelector('.button-tag').addEventListener('click', openPopup); */
+	    	        var popupStyle = popup.style;
+	    	        if (popupStyle.display === "none" || popupStyle.display === "") {
+	    	            popupStyle.display = "flex"; // 팝업 열기
+	    	            popup.querySelector('.content-title').textContent = data.tripname;
+	    	            popup.querySelector('.subtitle .p:nth-child(1)').textContent = data.simpleName;
+	    	            popup.querySelector('.subtitle .p:nth-child(2)').textContent = data.address;
+	    	            popup.querySelector('.content-text .p:nth-child(1)').textContent = data.tag;
+	    	        } else {
+	    	            popupStyle.display = "none"; // 팝업 닫기
+	    	        }
+	
+	    	        popupStyle.zIndex = 100;
+	    	        popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
+	    	        popupStyle.alignItems = "center";
+	    	        popupStyle.justifyContent = "center";
+	    	        popup.setAttribute("closable", "");
+	
+	    	        popup.onclick = function (e) {
+	    	            if (e.target === popup && popup.hasAttribute("closable")) {
+	    	                popupStyle.display = "none";
+	    	            }
+	    	        };
+	
+	    	        var closeIcon = popup.querySelector(".close-icon");
+	    	        if (closeIcon) {
+	    	            closeIcon.onclick = function () {
+	    	                popupStyle.display = "none";
+	    	            };
+	    	        }
+	    	    }
+	    	});
+	
 
-	  // 팝업을 토글하는 함수
-	     function togglePopup(popupId) {
-	         var popup = document.getElementById(popupId);
-	         if (!popup) return;
-
-	         var popupStyle = popup.style;
-	         if (popupStyle.display === "none" || popupStyle.display === "") {
-	             popupStyle.display = "flex"; // 팝업 열기
-	         } else {
-	             popupStyle.display = "none"; // 팝업 닫기
-	         }
-
-	         popupStyle.zIndex = 100;
-	         popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
-	         popupStyle.alignItems = "center";
-	         popupStyle.justifyContent = "center";
-	         popup.setAttribute("closable", "");
-
-	         // 팝업 외부 클릭 시 닫기
-	         popup.onclick = function (e) {
-	             if (e.target === popup && popup.hasAttribute("closable")) {
-	                 popupStyle.display = "none";
-	             }
-	         };
-
-	         // 팝업 닫기 아이콘 클릭 시 닫기
-	         var closeIcon = popup.querySelector(".close-icon");
-	         if (closeIcon) {
-	             closeIcon.onclick = function () {
-	                 popupStyle.display = "none";
-	             };
-	         }
-	     }
-
-	     // 모든 li 요소에 이벤트 리스너 추가
-	     document.querySelectorAll("#popupContainer").forEach(function (item) {
-	         item.addEventListener("click", function () {
-	             togglePopup("detailContainer");
-	         });
-	     });
-
-
-     </script>
+    </script>
 </body>
 </html>

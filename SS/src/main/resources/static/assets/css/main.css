@@ -32,6 +32,12 @@ p{
     justify-content: center;
 }
 
+ .button-common:hover {
+        background-color:#ffb868;
+        transition: 0.2s;
+        cursor: pointer;
+    }
+
 .tag {
     left: 15.577rem;
 }
@@ -133,7 +139,7 @@ p{
     background-color: #fff;
     width: 32.688rem;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 30px;
    height: 100%;
 }
 .image-icon {
@@ -333,6 +339,9 @@ p{
     display: inline-block;
     width: 30.938rem;
     height: 2.25rem;
+    font-family: 'KOTRA_GOTHIC';
+    font-weight: bold;
+    padding-left: 20px;
 }
 .p {
     /* margin-block-start: 0; */
@@ -349,6 +358,7 @@ p{
     display: inline-block;
     width: 31.5rem;
     height: 5.563rem;
+    padding-left: 20px;
 }
 .content-text {
     display: flex;
@@ -362,6 +372,7 @@ p{
     flex-direction: column;
     justify-content: center;
     line-height: 1.5;
+    padding-left: 20px;
 }
 .close-icon {
     position: absolute;
@@ -611,6 +622,8 @@ p{
 
 #list{
 	color:black;
+	overflow-x: hidden;
+	overflow-y: scroll;
 }
 
 button{
@@ -636,3 +649,8 @@ input:focus {
  .img{
  	border-radius: 5px;
  }
+ 
+ .active {
+            background-color: #ffb868; /* 선택된 버튼의 배경색 */
+            color: white; /* 선택된 버튼의 글자색 */
+        }
