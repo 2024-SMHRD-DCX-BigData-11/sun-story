@@ -20,7 +20,7 @@ height: 100%;
 
 .main {
 	width: 100%;
-	height: 100%;
+	height: calc(100%-60px);
 	display:flex;
 	flex-direction : column;
 	text-align: center;
@@ -38,7 +38,7 @@ div#outputLayer {
 }
 
 canvas {
-	width: 60%;
+	width: 75%;
 }
 </style>
 </head>
@@ -53,11 +53,12 @@ canvas {
 					<canvas id="canvas"></canvas>
 				</div>
 			</div>
-
-			<br /> <input type="button" id="button1" onclick="openCamera();"
-				value="카메라 열기" style="width: 100%; height: 30px" /> <br /> <br />
+			<div style="width: 100%; height: 60px;">
+			<input type="button" id="button1" onclick="openCamera();"
+				value="카메라 열기" style="width: 100%; height: 30px" />
 			<input type="button" id="close" value="카메라 닫기"
-				onclick="closeCamera();" style="width: 100%; height: 30px" /> <br />
+				onclick="closeCamera();" style="width: 100%; height: 30px" />
+			</div>
 		</div>
 	</div>
 
