@@ -68,25 +68,7 @@ ul {
                    </div>
                   	 <div style="height: 75%; display: flex; flex-direction: column;">
 				<ul id="list">
-				    <c:forEach var="trip" items="${list}">
-				        <li class="popupContainer"
-				            data-tripname="${trip.name}"
-				            data-simple-name="${trip.simple_name}"
-				            data-address="${trip.address}"
-				            data-tag="${trip.tag}"
-				            style="width: 100%; height: 100px; display: flex; flex-direction: row; align-items: center;">
-				            <div>
-				                <img class="img" style="width: 100px; height: 100px;"
-				                    src="assets/images/관광지/${trip.name }.jpg">
-				            </div>
-				            <div style="width: 100%; text-align: left; padding:10px;">
-				                <h3 style="margin-bottom: 5px; margin-top: 0;">${trip.name }</h3>
-				                <p style="margin: 0;">${trip.simple_name}</p>
-				                <p style="margin: 0;">${trip.address }</p>
-				                <p style="margin: 0; color:gray;">${trip.tag }</p>
-				            </div>
-				        </li>
-				    </c:forEach>
+				   
 				</ul>
 
 				</div>
@@ -130,7 +112,7 @@ ul {
 	          <div class="detail">
 	               <div class="detail-child">
 		               <img class="close-icon" alt="x" src="assets/images/close.svg">
-		               <img class="image-icon1" alt="장소 이미지" src="assets/images/Image.png">
+		               <img class="image-icon1" alt="장소 이미지" src="assets/images/${trip.name }.png">
 		               
 		               <div class="content-title">장소 1</div>
 		               <div class="subtitle">
