@@ -221,7 +221,7 @@ function getData(type) {
 						$(".content-text .p").text(`${res[i].detail}`);
 						$(".use-time").text(`${res[i].use_hour}`);
 						$(".pay-text").text(`${res[i].fare}`);
-						if (audio != null) {
+						if (!audio.paused) {
 							audio.pause();
 						}
 						TTS(res[i].trip_id);
