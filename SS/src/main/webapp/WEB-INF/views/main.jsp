@@ -144,6 +144,7 @@ ul {
 			                    <div class="more-info-state-layer">
 			                         <div class="button-text">더 많은 정보를 보고싶다면 클릭!</div>
 			                    </div>
+			                <div id = "submap"></div>
 			               </div>
 		               </div>
 	               </div>
