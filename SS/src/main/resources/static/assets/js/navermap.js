@@ -207,13 +207,11 @@ function getData(type) {
 				let idx_box = $(box).children("span")[0];
 				let idx = $(idx_box).text();
 
-				console.log(idx)
 				let data;
 				for (let i = 0; i < res.length; i++) {
 					if (idx == res[i].touridx) {
 						data = res[i];
 						$(".image-icon1").attr("src", `assets/images/관광지/${res[i].tourphoto}.jpg`);
-						console.log();
 						$(".content-title").text(`${res[i].toursite}`);
 						console.log(res[i]);
 						$(".subtitle .p:nth-child(1)").text(`${res[i].tourtitle}`);
@@ -224,10 +222,9 @@ function getData(type) {
 						if (!audio.paused) {
 							audio.pause();
 						}
-						TTS(res[i].trip_id);
+						TTS(res[i].touridx);
 					}
 				}
-				console.log(data)
 				submarker.setMap(null);
 				submarker.setIcon({
 							content: [
@@ -245,8 +242,6 @@ function getData(type) {
 				submarker.setPosition(new naver.maps.LatLng(data.lat, data.lon));
 				submarker.setTitle(data.name);
 				submarker.setMap(submap);
-				
-
 				
 				console.log(submarker)
 				submap.setCenter(submarker.position);
