@@ -125,7 +125,7 @@ function getData(type) {
 				let spot = res[i],
 					latlng = new naver.maps.LatLng(spot.lat, spot.lon),
 					marker = new naver.maps.Marker({
-						title: spot.name,
+						title: spot.toursite,
 						position: latlng,
 						draggable: false
 					});
@@ -134,11 +134,11 @@ function getData(type) {
 						style="width: 100%; height: 100px; display: flex; flex-direction: row; align-items: center;">
 						<div>
 							<img style="width: 100px; height: 100px; border-radius: 5px;"
-								src="assets/images/관광지/${spot.name}.jpg">
+								src="assets/images/관광지/${spot.tourphoto}.jpg">
 						</div>
 						<div style="width: 100%; text-align: left; padding: 10px;">
-								<h3 style="margin-bottom: 5px; margin-top: 0;">${spot.name}</h3>
-								<span style="display:none">${spot.trip_id}</span>
+								<h3 style="margin-bottom: 5px; margin-top: 0;">${spot.toursite}</h3>
+								<span style="display:none">${spot.touridx}</span>
 						</div>
 					</li>`
 				$(".list").append(list);
@@ -210,16 +210,16 @@ function getData(type) {
 				console.log(idx)
 				let data;
 				for (let i = 0; i < res.length; i++) {
-					if (idx == res[i].trip_id) {
+					if (idx == res[i].touridx) {
 						data = res[i];
-						$(".image-icon1").attr("src", `assets/images/관광지/${res[i].name}.jpg`);
+						$(".image-icon1").attr("src", `assets/images/관광지/${res[i].tourphoto}.jpg`);
 						console.log();
-						$(".content-title").text(`${res[i].name}`);
+						$(".content-title").text(`${res[i].toursite}`);
 						console.log(res[i]);
-						$(".subtitle .p:nth-child(1)").text(`${res[i].simple_name}`);
-						$(".subtitle .p:nth-child(2)").text(`${res[i].address}`);
-						$(".content-text .p").text(`${res[i].detail}`);
-						$(".use-time").text(`${res[i].use_hour}`);
+						$(".subtitle .p:nth-child(1)").text(`${res[i].tourtitle}`);
+						$(".subtitle .p:nth-child(2)").text(`${res[i].touraddr}`);
+						$(".content-text .p").text(`${res[i].tourdesc}`);
+						$(".use-time").text(`${res[i].tourtime}`);
 						$(".pay-text").text(`${res[i].fare}`);
 						if (!audio.paused) {
 							audio.pause();
@@ -233,7 +233,7 @@ function getData(type) {
 							content: [
 								`<div style="display: flex; flex-direction: column; align-items: center; width: 50px; height: 50px;">`,
 								` <div style="display: flex; justify-content: center; align-items: center; width: 50px; height: 50px;">`,
-								` <img src="assets/images/관광지/${data.name}.jpg" style="width: 50px; background-color: white; height: 50px; border-radius: 50%;"/>`,
+								` <img src="assets/images/관광지/${data.tourphoto}.jpg" style="width: 50px; background-color: white; height: 50px; border-radius: 50%;"/>`,
 								` </div>`,
 								`</div>`
 							].join(''),

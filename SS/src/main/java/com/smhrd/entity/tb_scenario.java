@@ -15,16 +15,16 @@ public class tb_scenario {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(insertable = false,updatable = false ) 
-	private int scenario_idx;
+	private int scenarioidx;
 	
 	@OneToOne
-	private tb_tour_site tour_idx;
+	private tb_tour_site touridx;
 	
 	@Column(nullable = false, columnDefinition = "TEXT")
 	private String scenario;
 	
 	@Column(nullable = true, length = 1500)
-	private String scenario_voice;
+	private String scenariovoice;
 	public String toString() {
 		return "tb_scenario";
 	}

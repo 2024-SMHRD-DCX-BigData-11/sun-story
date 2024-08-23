@@ -14,40 +14,40 @@ public class tb_tour_site {
 	// Id는 제일 상단에 선언.
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(insertable = false,updatable = false ) 
-	private int tour_idx;
+	private int touridx;
 	
 	@Column(nullable = false, length = 100)
-	private String tour_site;
+	private String toursite;
 	
 	@Column(nullable = false, length = 300)
-	private String tour_title;
+	private String tourtitle;
 	
 	@Column(nullable = false, columnDefinition = "TEXT")
-	private String tour_desc;
-	
-	@Column(nullable = false, length = 20)
-	private String tour_guide;
+	private String tourdesc;
 	
 	@Column(nullable = false, length = 500)
-	private String tour_url;
+	private String tourguide;
+	
+	@Column(nullable = false, length = 500)
+	private String toururl;
 	
 	@Column(nullable = false, length = 600)
-	private String tour_addr;
+	private String touraddr;
 	
-	@Column(nullable = false, length = 100)
-	private String tour_time;
+	@Column(nullable = false, length = 500)
+	private String tourtime;
 	
-	@Column(nullable = false, length = 100)
-	private String tour_holiday;
+	@Column(nullable = false, length = 500)
+	private String tourholiday;
 	
-	@Column(nullable = false, length = 100)
-	private String tour_park;
+	@Column(nullable = false, length = 500)
+	private String tourpark;
 	
-	@Column(nullable = false, length = 300)
-	private String tour_fare;
+	@Column(nullable = false, length = 500)
+	private String tourfare;
 	
 	@Column(nullable = false, length = 600)
-	private String tour_tag;
+	private String tourtag;
 	
 	@Column(nullable = false, columnDefinition = "DECIMAL(17,14)")
 	private double lat;
@@ -56,7 +56,9 @@ public class tb_tour_site {
 	private double lon;
 	
 	@Column(nullable = false, length = 1500)
-	private String tour_photo;
+	private String tourphoto;
+	
+	
 	
 	
 	

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.smhrd.entity.Trip;
+import com.smhrd.entity.tb_tour_site;
 import com.smhrd.repository.NormalRepository;
 
 @Controller
@@ -24,7 +24,7 @@ public class NormalController {
 	@RequestMapping("/test")
 	public String goTest(Model model) {
 
-		List<Trip> list = repo.findAll();
+		List<tb_tour_site> list = repo.findAll();
 		model.addAttribute("list", list);
 
 		return "test";
