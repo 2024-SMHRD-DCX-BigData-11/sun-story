@@ -256,7 +256,9 @@ ul {
 	    	                popupStyle.display = "none";
 	    	                console.log("닫음.");
 	    	                console.log(audio);
-	    	                audio.pause();
+	    	                if (!audio.paused) {
+								audio.pause();
+							}
 	    	            };
 	    	        }
 	    	    }

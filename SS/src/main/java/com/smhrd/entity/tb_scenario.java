@@ -23,6 +23,8 @@ public class tb_scenario {
 	@Column(nullable = false, columnDefinition = "TEXT")
 	private String scenario;
 	
+	@Column(nullable = true, length = 1500)
+	private String scenario_voice;
 	public String toString() {
 		return "tb_scenario";
 	}
