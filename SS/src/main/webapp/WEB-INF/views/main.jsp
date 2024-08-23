@@ -122,7 +122,7 @@ ul {
 		                    <p class="p" id = "address">전남 순천시 XX면 XX로 XXX번길 </p>
 		               </div>
 		               <div class="content-text">
-		                    <p class="p"> 장소 1은 순천시의 관광지로서 추천할만한 장소로, XX해서 XX한 장소이다.</p>
+		                    <p class="p" id="content-p"> 장소 1은 순천시의 관광지로서 추천할만한 장소로, XX해서 XX한 장소이다.</p>
 		               </div>
 		               <div id="submap"></div>
 		               <div class="rectangle-using-info">
