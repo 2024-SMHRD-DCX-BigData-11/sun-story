@@ -125,7 +125,7 @@ ul {
 		                    <p class="p"> 장소 1은 순천시의 관광지로서 추천할만한 장소로, XX해서 XX한 장소이다.</p>
 		                    <p class="p">당신이 순천에 방문한다면 한번쯤은 방문해보는 것을 추천한다.</p>
 		               </div>
-		               <div id = "submap"></div> 
+		               <div id="submap"></div>
 		               <div class="rectangle-using-info">
 		                    <div class="show-storytelling"><!--스토리텔링 보기(스토리텔링 장소 리스트 토글버튼)-->
 		                         <div class="show-storytelling-text">스토리텔링 보기</div>
@@ -135,17 +135,18 @@ ul {
 		                    <img class="headphones-icon" alt="스토리텔링 듣기" src="assets/images/Headphones.svg">
 	               	</div>
 		               </div>
+		               
 		               <div class="content-buttom">
 			               <div class="using-info">이용정보</div>
 			               <div class="use-time">운영시간</div>
 			               <div class="pay-text">요금</div>
-			                
 			               <div class="more-info"><!--추가정보조회 버튼-->
 			                    <div class="more-info-state-layer">
 			                         <div class="button-text">더 많은 정보를 보고싶다면 클릭!</div>
 			                    </div>
 			               </div>
 		               </div>
+		               
 	               </div>
 	          </div>
 	    </div>
