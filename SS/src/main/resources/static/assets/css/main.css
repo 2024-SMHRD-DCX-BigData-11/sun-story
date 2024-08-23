@@ -135,7 +135,7 @@ p{
     margin-right: 10px;
     margin-left: 10px;
 }
-.header {
+/* .header {
     display: flex;
     top: 0rem;
     left: 0rem;
@@ -143,7 +143,25 @@ p{
     width: 32.688rem;
     flex-wrap: wrap;
     margin-top: 30px;
-   height: 100%;
+    height: 100%;
+    gap: 1.875rem;
+} */
+.header {
+    top: 0rem;
+    left: 0rem;
+    background-color: #fff;
+    border-bottom: 1px solid #d9d9d9;
+    box-sizing: border-box;
+    width: 30.375rem;
+    height: 7.5rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.625rem;
+    gap: 1.875rem;
+    color: #474747;
 }
 .image-icon {
     display: flex;
@@ -171,43 +189,56 @@ p{
     display: inline-block;
     white-space: nowrap;
 }
-.spot-address {
-    display: flex;
-    height: 18.5%;
-    width: 57.04%;
-    top: 47.69%;
-    left: 39.78%;
-    line-height: 140%;
-    font-weight: 600;
-    white-space: pre-wrap;
-    display: inline-block;
-    white-space: nowrap;
-    margin-bottom: 5px;
+.image-icon {
+    width: 5rem;
+    border-radius: 100px;
+    height: 5rem;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
 }
-.spot-subtitle {
-    display: flex;
-    height: 18.5%;
-    width: 57.04%;
-    top: 29.17%;
-    left: 39.78%;
+.spot-name {
+    width: 10rem;
+    position: relative;
     line-height: 140%;
     font-weight: 600;
     display: inline-block;
-    white-space: nowrap;
-    margin-bottom: 5px;
+    height: 2.625rem;
+    flex-shrink: 0;
 }
-.spot-tag {
+.spot {
+    width: 22.125rem;
+    background-color: #fff;
+    border-bottom: 1px solid #ebebeb;
+    box-sizing: border-box;
+    height: 6.5rem;
     display: flex;
-    height: 20.83%;
-    width: 57.02%;
-    top: 8.33%;
-    left: 39.77%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.625rem;
+    gap: 1.25rem;
+}
+.spot-list {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 22.125rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.spotlist-frame {
+    position: absolute;
+    top: 7.5rem;
+    left: 8.25rem;
+    background-color: #fff;
+    width: 22.125rem;
+    height: 60rem;
+    overflow-y: auto;
     font-size: 2rem;
-    line-height: 140%;
-    font-weight: 600;
-    display: inline-block;
-    white-space: nowrap;
-    margin-bottom: 20px;
+    font-family: Inter;
 }
 .spot {
     display: flex;
@@ -501,69 +532,8 @@ p{
 }
 
 
-.result-child {
-    width: 100%;
-    display: flex;
-    margin: 0 !important;
-    height: 100%;
-    top: 0%;
-    right: 0%;
-    bottom: 0%;
-    left: 0%;
-    background-color: #fff;
-    z-index: 0;
-}
-.result-name {
-    width: 23.75rem;
-    position: relative;
-    letter-spacing: 0.5px;
-    line-height: 1.5rem;
-    display: flex;
-    align-items: center;
-    height: 3.563rem;
-    flex-shrink: 0;
-    z-index: 1;
-}
-.address {
-    width: 23.938rem;
-    position: relative;
-    font-size: 1.25rem;
-    letter-spacing: 0.5px;
-    line-height: 1.5rem;
-    color: #757070;
-    display: flex;
-    align-items: center;
-    height: 3.5rem;
-    flex-shrink: 0;
-    z-index: 2;
-}
-.result {
-    align-self: stretch;
-    height: 7.063rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0rem 0.625rem;
-    box-sizing: border-box;
-    position: relative;
-}
-.searchlist {
-    width: 25rem;
-    position: relative;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    max-width: 90%;
-    max-height: 90%;
-    overflow: auto;
-    text-align: left;
-    font-size: 1.5rem;
-    color: #000;
-    font-family: Roboto;
-}
+
+
 .spot-details{
 	display: flex;
 	flex-direction: column;
@@ -703,3 +673,213 @@ input:focus {
 	width:500px;
 	height: 200px;
 }
+
+
+.pr-text {
+    position: relative;
+    letter-spacing: 0.1px;
+    line-height: 1.25rem;
+    font-weight: 500;
+}
+.qr-state {
+    align-self: stretch;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.25rem 1rem 1rem;
+}
+.qrbutton {
+    width: 6.25rem;
+    border-radius: 16px;
+    background-color: #f95700;
+    height: 3.125rem;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.875rem;
+}
+.label-text {
+    position: relative;
+    letter-spacing: 0.1px;
+    line-height: 1.25rem;
+}
+.state-layer {
+    align-self: stretch;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
+.button-lookall {
+    width: 6.25rem;
+    border-radius: 16px;
+    background-color: #f95700;
+    height: 3.125rem;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.categorybutton {
+    align-self: stretch;
+    height: 16.875rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.625rem;
+    box-sizing: border-box;
+    gap: 0.937rem;
+}
+.hashtag {
+    width: 6.25rem;
+    border-radius: 16px;
+    background-color: #f77f00;
+    height: 3.125rem;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.p {
+    margin: 0;
+}
+.tags {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 8.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.625rem 0rem;
+    box-sizing: border-box;
+    gap: 0.625rem;
+}
+.tag-list {
+    align-self: stretch;
+    position: relative;
+    height: 43.25rem;
+    overflow-y: auto;
+    flex-shrink: 0;
+}
+.sidebar {
+    position: absolute;
+    top: 7.375rem;
+    left: 0rem;
+    background-color: #fff;
+    border-right: 1px solid #d9d9d9;
+    box-sizing: border-box;
+    width: 8.25rem;
+    height: 60.125rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    color: #fff;
+}
+.icon {
+    width: 6.25rem;
+    position: relative;
+    height: 6.25rem;
+    object-fit: cover;
+}
+.supporting-text {
+    position: relative;
+    letter-spacing: 0.5px;
+    line-height: 1.5rem;
+}
+.content {
+    align-self: stretch;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0rem 1.25rem;
+}
+.icon1 {
+    width: 1.5rem;
+    position: relative;
+    height: 1.5rem;
+}
+.icon-layer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+.container {
+    border-radius: 100px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.st-trailing-icon {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.trailing-elements {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+.search-layer18 {
+    align-self: stretch;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.25rem;
+    gap: 0.25rem;
+}
+.search-bar {
+    width: 18.75rem;
+    border-radius: 28px;
+    background-color: #e8e8e8;
+    height: 3.125rem;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* .searchbar {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    height: 67.5rem;
+    text-align: left;
+    font-size: 1rem;
+    color: #000;
+    font-family: Roboto;
+} */
+
+/* .two{
+	  border-bottom: 1px solid #d9d9d9;
+} */

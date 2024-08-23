@@ -30,125 +30,183 @@ ul {
 </head>
 <body>
 	<div class="mainpage">
-		<div class="searchbar">
-			<!--좌측 검색배너-->
-			<div class="header">
-				<!--좌상단 헤더부분-->
-				<img class="logo_sunstory" alt="순토리" src="assets/images/순토리1.png">
-				<div class="three">
-					<div class="two">
-						<div class="search-bar">
-							<!--검색창-->
-							<div class="state-layer3">
-								<div class="content">
-									<input class="supporting-text" type="search"
-										placeholder="검색어를 입력하세요" title="검색어를 입력하세요">
+     <div class="searchbar">
+          <div class="spotlist-frame">
+               <div class="spot-list">
+				<!-- <ul class="list"> 부분 -->
+                    <div class="spot">
+                         <img class="image-icon" alt="장소사진" src="Image.png">
+                         <div class="spot-name">장소1</div>
+                    </div>
+               </div>
+          </div>
+          <div class="sidebar">
+               <div class="categorybutton">
+                    <a href="QrPage"><div class="qrbutton">
+							<!--QR버튼-->
+							<div class="label-text3">QR</div>
+						</div></a>
+                    <div class="button-lookall">
+                         <div class="state-layer">
+                              <b class="label-text">전체보기</b>
+                         </div>
+                    </div>
+                    <div class="button-lookall">
+                         <div class="state-layer">
+                              <b class="label-text">대표 관광지</b>
+                         </div>
+                    </div>
+                    <div class="button-lookall">
+                         <div class="state-layer">
+                              <b class="label-text">태그별로</b>
+                         </div>
+                    </div>
+               </div>
+               <div class="tag-list">
+                    <div class="tags">
+                         <div class="hashtag">
+                              <div class="state-layer">
+                                   <b class="label-text">#관광지</b>
+                              </div>
+                         </div>
+                         <div class="hashtag">
+                              <div class="state-layer">
+                                   <b class="label-text">#대표관광지</b>
+                              </div>
+                         </div>
+                         <div class="hashtag">
+                              <div class="state-layer">
+                                   <b class="label-text">#자연</b>
+                              </div>
+                         </div>
+                         <div class="hashtag">
+                              <div class="state-layer">
+                                   <b class="label-text">#체험</b>
+                              </div>
+                         </div>
+                         <div class="hashtag">
+                              <div class="state-layer">
+                                   <b class="label-text">
+                                        <p class="p">#사진찍기</p>
+                                        <p class="p">좋은곳</p>
+                                   </b>
+                              </div>
+                         </div>
+                         <div class="hashtag">
+                              <div class="state-layer">
+                                   <b class="label-text">
+                                        <p class="p">#산책하기</p>
+                                        <p class="p">좋은곳</p>
+                                   </b>
+                              </div>
+                         </div>
+                         <div class="hashtag">
+                              <div class="state-layer">
+                                   <b class="label-text">#가족여행</b>
+                              </div>
+                         </div>
+                         <div class="hashtag">
+                              <div class="state-layer">
+                                   <b class="label-text">#역사</b>
+                              </div>
+                         </div>
+                         <div class="hashtag">
+                              <div class="state-layer">
+                                   <b class="label-text">#문화</b>
+                              </div>
+                         </div>
+                         <div class="hashtag">
+                              <div class="state-layer">
+                                   <b class="label-text">#힐링</b>
+                              </div>
+                         </div>
+                         <div class="hashtag">
+                              <div class="state-layer">
+                                   <b class="label-text">#불교</b>
+                              </div>
+                         </div>
+                         <div class="hashtag">
+                              <div class="state-layer">
+                                   <b class="label-text">#경치좋은곳</b>
+                              </div>
+                         </div>
+                         <div class="hashtag">
+                              <div class="state-layer">
+                                   <b class="label-text">#반려동물</b>
+                              </div>
+                         </div>
+                         <div class="hashtag">
+                              <div class="state-layer">
+                                   <b class="label-text">#맛집</b>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <div class="header">
+               <img class="logo_sunstory" alt="순토리" src="assets/images/순토리1.png">
+
+	           				<div class="search-bar">
+									<!--검색창-->
+									<div class="state-layer3">
+										<div class="content">
+											<input class="supporting-text" type="search"
+													placeholder="검색어를 입력하세요" title="검색어를 입력하세요">
+										</div>
+										<div class="trailing-elements">
+											<div class="container">
+			                                    <button type="button" class="button_search" id="searchBarContainer">
+													<img class="search-icon" alt="검색" src="assets/images/Icon.svg">
+												</button>
+			                                </div>
+			                            </div>
+			                       </div>
+	                        </div>
+	               
+          	</div>
+           </div>
+
+			<!-- 좌측 배너 div 끝 부분 -->
+			<div class="map">
+				<!--우측 지도창-->
+				<div id="map" style="width: 100%; height: 100%; padding: 0; margin: 0;"></div>
+			</div>
+
+			<div id="detailContainer" class="popup-overlay" style="display: none">
+				<!--장소 상세보기-->
+				<div class="popup-content">
+					<!-- <span class="close-popup">&times;</span> -->
+					<div class="detail">
+						<div class="detail-child">
+							<div class="content-top">
+								<img class="close-icon" alt="x" src="assets/images/close.svg">
+								<img class="image-icon1" alt="장소 이미지"
+									src="assets/images/${trip.name }.png">
+		
+								<div class="content-title">장소 1</div>
+								<div class="subtitle">
+									<p class="p" id="subtitle">추천할만한 장소 1</p>
+									<p class="p" id="address">전남 순천시 XX면 XX로 XXX번길</p>
 								</div>
-								<div class="trailing-elements">
-									<div class="container">
-										<button type="button" class="button_search"
-											id="searchBarContainer">
-											<img class="search-icon" alt="검색"
-												src="assets/images/Icon.svg">
-										</button>
+								<div class="content-text">
+									<p class="p" id="content-p">장소 1은 순천시의 관광지로서 추천할만한 장소로, XX해서
+										XX한 장소이다.</p>
+								</div>
+								<div id="submap"></div>
+								<div class="rectangle-using-info">
+									<div class="show-storytelling">
+										<!--스토리텔링 보기(스토리텔링 장소 리스트 토글버튼)-->
+										<div class="show-storytelling-text">스토리텔링 보기</div>
 									</div>
+									<div class="frame-child"></div>
+									<img class="headphones-icon" alt="스토리텔링 듣기"
+										src="assets/images/Headphones.svg">
 								</div>
 							</div>
 						</div>
-						<a href="QrPage"><div class="qrbutton">
-								<!--QR버튼-->
-								<div class="label-text3">QR</div>
-							</div></a>
-					</div>
-					<div class="category">
-						<div class="button-common lookall" id="button-common-lookall">
-							<b class="category-text">전체</b>
-						</div>
-						<div class="button-common repre" id="button-common-repre">
-							<b class="category-text">대표 관광지</b>
-						</div>
-						<div class="button-common tag" id="button-common-tag">
-							<b class="category-text">태그별</b>
-						</div>
-					</div>
-				</div>
-				<div
-					style="width: 100%; height: 75%; display: flex; flex-direction: column;">
-					<ul class="list">
-
-					</ul>
-
-				</div>
-			</div>
-
-		</div>
-		<!-- 좌측 배너 div 끝 부분 -->
-		<div class="map">
-			<!--우측 지도창-->
-			<div id="map"
-				style="width: 100%; height: 100%; padding: 0; margin: 0;"></div>
-		</div>
-	</div>
-
-	<div id="searchlistContainer" class="popup-overlay"
-		style="display: none">
-		<!--검색창의 검색어 자동완성 토글-->
-
-		<div class="searchlist">
-			<div class="result">
-				<div class="result-child"></div>
-				<b class="result-name">검색결과 1</b>
-				<div class="address">순천시 XX면 XXX길</div>
-			</div>
-			<div class="result">
-				<div class="result-child"></div>
-				<b class="result-name">검색결과 1</b>
-				<div class="address">순천시 XX면 XXX길</div>
-			</div>
-			<div class="result">
-				<div class="result-child"></div>
-				<b class="result-name">검색결과 1</b>
-				<div class="address">순천시 XX면 XXX길</div>
-			</div>
-		</div>
-
-
-	</div>
-
-	<div id="detailContainer" class="popup-overlay" style="display: none">
-		<!--장소 상세보기-->
-		<div class="popup-content">
-			<!-- <span class="close-popup">&times;</span> -->
-			<div class="detail">
-				<div class="detail-child">
-					<div class="content-top">
-						<img class="close-icon" alt="x" src="assets/images/close.svg">
-						<img class="image-icon1" alt="장소 이미지"
-							src="assets/images/${trip.name }.png">
-
-						<div class="content-title">장소 1</div>
-						<div class="subtitle">
-							<p class="p" id="subtitle">추천할만한 장소 1</p>
-							<p class="p" id="address">전남 순천시 XX면 XX로 XXX번길</p>
-						</div>
-						<div class="content-text">
-							<p class="p" id="content-p">장소 1은 순천시의 관광지로서 추천할만한 장소로, XX해서
-								XX한 장소이다.</p>
-						</div>
-						<div id="submap"></div>
-						<div class="rectangle-using-info">
-							<div class="show-storytelling">
-								<!--스토리텔링 보기(스토리텔링 장소 리스트 토글버튼)-->
-								<div class="show-storytelling-text">스토리텔링 보기</div>
-							</div>
-							<div class="frame-child"></div>
-							<img class="headphones-icon" alt="스토리텔링 듣기"
-								src="assets/images/Headphones.svg">
-						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 	</div>
 
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js"
