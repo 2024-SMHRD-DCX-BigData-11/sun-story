@@ -11,6 +11,13 @@ let map = new naver.maps.Map("map", {
 		style: naver.maps.ZoomControlStyle.SMALL
 	}
 });
+
+let submap = new naver.maps.Map("submap", {
+	zoom: 15,
+	minZoom: 15,
+	maxZoom: 15,
+	center: new naver.maps.LatLng(34.95057, 127.4874)
+});
 let markers = [];
 let htmlMarker1 = {
 	content: '<div style="cursor:pointer;width:40px;height:40px;line-height:42px;font-size:10px;color:white;text-align:center;font-weight:bold;background:url(assets/images/cluster-marker-1.png);background-size:contain;"></div>',
@@ -185,8 +192,10 @@ function getData(type) {
 				let idx = $(idx_box).text();
 
 				console.log(idx)
+				let data;
 				for (let i = 0; i < res.length; i++) {
 					if (idx == res[i].trip_id) {
+						data = res[i];
 						$(".image-icon1").attr("src", `assets/images/관광지/${res[i].name}.jpg`);
 						console.log();
 						$(".content-title").text(`${res[i].name}`);
@@ -196,44 +205,35 @@ function getData(type) {
 						$(".content-text .p").text(`${res[i].detail}`);
 						$(".use-time").text(`${res[i].use_hour}`);
 						$(".pay-text").text(`${res[i].fare}`);
-					}
-				}
-
-				for (let i = 0; i < markers.length; i++) {
-					if (text == markers[i].title) {
 						if (audio != null) {
 							audio.pause();
 						}
 						TTS(res[i].trip_id);
-						clickedmarker = markers[i]
-						if (selectedmarker != clickedmarker) {
-							if (selectedmarker == null) {
-								selectedmarker = clickedmarker
-							}
-							selectedmarker.setIcon(null)
-							infowindows[i].close();
-							selectedmarker = clickedmarker
-							infowindows[i].open(map, clickedmarker);
-							selectedmarker.setIcon({
-
-								content: [
-									`<div style="display: flex; flex-direction: column; align-items: center; width: 50px; height: 50px;">`,
-									` <div style="display: flex; justify-content: center; align-items: center; width: 50px; height: 50px;">`,
-									` <img src="assets/images/관광지/${clickedmarker.title}.jpg" style="width: 50px; background-color: white; height: 50px; border-radius: 50%;"/>`,
-									` </div>`,
-									`</div>`
-								].join(''),
-								// url: 'resources/img/marker.png', //아이콘 경로 
-								size: new naver.maps.Size(50, 50),
-								scaledSize: new naver.maps.Size(50, 50),
-								origin: new naver.maps.Point(0, 0),
-							})
-							map.setOptions('zoom', 15)
-							map.panTo(markers[i].position);
-						}
 					}
 				}
+				console.log(data)
 
+
+				let submarker = new naver.maps.Marker({
+					title: data.name,
+					position: new naver.maps.LatLng(data.lat, data.lon),
+					draggable: false,
+					icon: {
+						content: [
+							`<div style="display: flex; flex-direction: column; align-items: center; width: 50px; height: 50px;">`,
+							` <div style="display: flex; justify-content: center; align-items: center; width: 50px; height: 50px;">`,
+							` <img src="assets/images/관광지/${data.name}.jpg" style="width: 50px; background-color: white; height: 50px; border-radius: 50%;"/>`,
+							` </div>`,
+							`</div>`
+						].join(''),
+						// url: 'resources/img/marker.png', //아이콘 경로 
+						size: new naver.maps.Size(50, 50),
+						scaledSize: new naver.maps.Size(50, 50),
+						origin: new naver.maps.Point(0, 0)
+					},
+					map: submap
+				});
+				submap.setCenter(submarker.position);
 			});
 
 
