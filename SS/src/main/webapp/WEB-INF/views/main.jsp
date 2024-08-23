@@ -68,7 +68,7 @@ ul {
 						</div>
                    </div>
                   	 <div style="height: 75%; display: flex; flex-direction: column;">
-				<ul id="list">
+				<ul class="list">
 				   
 				</ul>
 
@@ -207,10 +207,7 @@ ul {
 	    	        if (event.target.closest('.popupContainer') || event.target.closest('li')) {
 	    	            var target = event.target.closest('.popupContainer') || event.target.closest('li');
 	    	            var data = {
-	    	                tripname: target.getAttribute('data-tripname'),
-	    	                simpleName: target.getAttribute('data-simple-name'),
-	    	                address: target.getAttribute('data-address'),
-	    	                tag: target.getAttribute('data-tag')
+	    	                tripname: target.getAttribute('data-tripname')
 	    	            };
 	    	            togglePopup("detailContainer", data);
 	    	        }

@@ -597,7 +597,7 @@ p{
     border-radius: 10px;
     width: 90%; /* 화면 크기에 맞게 조정 */
     max-width: 600px; /* 최대 넓이 설정 */
-    max-height: 80vh; /* 화면 높이의 80%로 제한 */
+    max-height: 93vh; /* 화면 높이의 80%로 제한 */
     text-align: center;
     position: relative; /* 상대적 위치 설정 */
     overflow-y: auto; /* 세로 스크롤바 표시 */
@@ -626,10 +626,26 @@ p{
  color: black;
 }
 
-#list{
+.list{
 	color:black;
 	overflow-x: hidden;
 	overflow-y: scroll;
+}
+
+/* 스크롤바의 폭 너비 */
+.list::-webkit-scrollbar {
+    width: 10px;  
+}
+
+.list::-webkit-scrollbar-thumb {
+    background: rgb(86, 83, 84); /* 스크롤바 색상 */
+    border-radius: 10px; /* 스크롤바 둥근 테두리 */
+    
+}
+
+.list::-webkit-scrollbar-track {
+    background: rgba(122, 109, 116, 0.1);  /*스크롤바 뒷 배경 색상*/
+    border-radius: 10px;
 }
 
 button{

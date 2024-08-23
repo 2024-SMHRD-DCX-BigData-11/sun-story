@@ -95,7 +95,7 @@ function getData(type) {
 		success: function(res) {
 			map.setOptions('zoom', 11);
 			map.setOptions('center', new naver.maps.LatLng(34.95057, 127.4874))
-			$("#list").html("");
+			$(".list").html("");
 			for (let i = 0, ii = res.length; i < ii; i++) {
 
 				let spot = res[i],
@@ -114,13 +114,10 @@ function getData(type) {
 						</div>
 						<div style="width: 100%; text-align: left; padding: 10px;">
 								<h3 style="margin-bottom: 5px; margin-top: 0;">${spot.name}</h3>
-								<p style="margin: 0;">${spot.simple_name}</p>
-								<p style="margin: 0;">${spot.address}</p>
-								<p style="margin: 0; color:gray;">${spot.tag}</p>
 								<span style="display:none">${spot.trip_id}</span>
 						</div>
 					</li>`
-				$("#list").append(list);
+				$(".list").append(list);
 			}
 
 			let clickedmarker = null;
@@ -179,7 +176,7 @@ function getData(type) {
 					$(clusterMarker.getElement()).find('div:first-child').text(count);
 				}
 			});
-			$('ul#list li').click(function() {
+			$('ul.list li').click(function() {
 				let box = $(this).children("div")[1];
 				let title = $(box).children("h3")[0];
 				let text = $(title).text();
