@@ -62,7 +62,7 @@
 <body>
     <div id="audioPlayer">
         <img id="coverImage" src="assets/images/순토리1.png" alt="Cover Image">
-        <audio id="audio" src="assets/images/징소리.mp3" preload="metadata" controls></audio>  
+        <audio id="audio" src="assets/mp3/긴배경음.mp3" preload="metadata" controls></audio>  
     </div>
 
     <script>
