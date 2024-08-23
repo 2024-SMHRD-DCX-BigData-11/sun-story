@@ -12,6 +12,13 @@ let map = new naver.maps.Map("map", {
 	}
 });
 
+$(".supporting-text").keypress(function(e){
+	if(e.keyCode == 13){
+		console.log($(".supporting-text").val());
+		$(".supporting-text").val("");
+	}
+});
+
 
 let submap = new naver.maps.Map("submap", {
 	zoom: 15,

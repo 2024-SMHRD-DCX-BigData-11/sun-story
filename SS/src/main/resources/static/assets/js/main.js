@@ -5,12 +5,6 @@ if (searchBarContainer) {
 		togglePopup("searchlistContainer");
 	});
 }
-$(".supporting-text").keypress(function(e){
-	if(e.keyCode == 13){
-		console.log($(".supporting-text").val());
-		$(".supporting-text").val("");
-	}
-});
 
 // 결과 리스트에서 항목 클릭 시 상세보기 페이지 팝업창
 var spotContainer = document.getElementById("spotContainer");
