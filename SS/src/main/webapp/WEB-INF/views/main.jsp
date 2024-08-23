@@ -67,7 +67,7 @@ ul {
 						    </div>
 						</div>
                    </div>
-                  	 <div style="height: 75%; display: flex; flex-direction: column;">
+                  	 <div style="width : 100%; height: 75%; display: flex; flex-direction: column;">
 				<ul class="list">
 				   
 				</ul>
