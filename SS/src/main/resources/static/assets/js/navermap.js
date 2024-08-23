@@ -24,6 +24,8 @@ let submap = new naver.maps.Map("submap", {
 	zoom: 15,
 	minZoom: 15,
 	maxZoom: 15,
+	draggable: false,
+	keyboardShortcuts : false,
 	center: new naver.maps.LatLng(34.95057, 127.4874)
 });
 
