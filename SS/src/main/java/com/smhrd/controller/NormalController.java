@@ -34,5 +34,9 @@ public class NormalController {
 	public String goQrPage() {
 		return "QrPage";
 	}
+	@RequestMapping("/audio1")
+	public String audio1() {
+		return "audio1";
+	}
 
 }
