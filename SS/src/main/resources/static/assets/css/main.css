@@ -664,9 +664,20 @@ input:focus {
 .content-top{
 	display:flex;
 	flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
+    justify-content: center; /* 세로 중앙 정렬 */
+    gap: 10px; /* 자식 요소 간의 간격 조정 */
+    width: 100%; /* 부모 요소의 폭에 맞춤 */
+    height: 100%; /* 부모 요소의 높이에 맞춤 */
+    box-sizing: border-box; /* padding을 포함한 폭 계산 */
 }
+.content-top > * {
+    margin: 0 auto; /* 자식 요소들을 중앙에 배치 */
+    padding: 10px; /* 자식 요소 간의 간격 */
+    width: 90%; /* 부모 요소에 맞게 조정 */
+    box-sizing: border-box; /* padding을 포함한 폭 계산 */
+}
+
 .content-buttom{
 	display:flex;
 	flex-direction: column;
