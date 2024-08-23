@@ -123,7 +123,6 @@ ul {
 		               </div>
 		               <div class="content-text">
 		                    <p class="p"> 장소 1은 순천시의 관광지로서 추천할만한 장소로, XX해서 XX한 장소이다.</p>
-		                    <p class="p">당신이 순천에 방문한다면 한번쯤은 방문해보는 것을 추천한다.</p>
 		               </div>
 		               <div id="submap"></div>
 		               <div class="rectangle-using-info">

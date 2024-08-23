@@ -18,7 +18,7 @@ public class tb_scenario {
 	private int scenario_idx;
 	
 	@OneToOne
-	private tb_poi poi_idx;
+	private tb_tour_site tour_idx;
 	
 	@Column(nullable = false, columnDefinition = "TEXT")
 	private String scenario;
