@@ -13,6 +13,21 @@ let map = new naver.maps.Map("map", {
 });
 
 
+let submap = new naver.maps.Map("submap", {
+	zoom: 15,
+	minZoom: 15,
+	maxZoom: 15,
+	center: new naver.maps.LatLng(34.95057, 127.4874)
+});
+
+let submarker = new naver.maps.Marker({
+					title: null,
+					position: new naver.maps.LatLng(34.95057, 127.4874),
+					draggable: false,
+					icon: null,
+					map: null
+				});
+				
 let markers = [];
 let htmlMarker1 = {
 	content: '<div style="cursor:pointer;width:40px;height:40px;line-height:42px;font-size:10px;color:white;text-align:center;font-weight:bold;background:url(assets/images/cluster-marker-1.png);background-size:contain;"></div>',
@@ -207,33 +222,28 @@ function getData(type) {
 					}
 				}
 				console.log(data)
+				submarker.setMap(null);
+				submarker.setIcon({
+							content: [
+								`<div style="display: flex; flex-direction: column; align-items: center; width: 50px; height: 50px;">`,
+								` <div style="display: flex; justify-content: center; align-items: center; width: 50px; height: 50px;">`,
+								` <img src="assets/images/관광지/${data.name}.jpg" style="width: 50px; background-color: white; height: 50px; border-radius: 50%;"/>`,
+								` </div>`,
+								`</div>`
+							].join(''),
+							// url: 'resources/img/marker.png', //아이콘 경로 
+							size: new naver.maps.Size(50, 50),
+							scaledSize: new naver.maps.Size(50, 50),
+							origin: new naver.maps.Point(0, 0),
+						})
+				submarker.setPosition(new naver.maps.LatLng(data.lat, data.lon));
+				submarker.setTitle(data.name);
+				submarker.setMap(submap);
+				
 
-				let submap = new naver.maps.Map("submap", {
-					zoom: 15,
-					minZoom: 15,
-					maxZoom: 15,
-					center: new naver.maps.LatLng(data.lat, data.lon)
-				});
-
-				let submarker = new naver.maps.Marker({
-					title: data.name,
-					position: new naver.maps.LatLng(data.lat, data.lon),
-					draggable: false,
-					icon: {
-						content: [
-							`<div style="display: flex; flex-direction: column; align-items: center; width: 50px; height: 50px;">`,
-							` <div style="display: flex; justify-content: center; align-items: center; width: 50px; height: 50px;">`,
-							` <img src="assets/images/관광지/${data.name}.jpg" style="width: 50px; background-color: white; height: 50px; border-radius: 50%;"/>`,
-							` </div>`,
-							`</div>`
-						].join(''),
-						// url: 'resources/img/marker.png', //아이콘 경로 
-						size: new naver.maps.Size(50, 50),
-						scaledSize: new naver.maps.Size(50, 50),
-						origin: new naver.maps.Point(0, 0)
-					},
-					map: submap
-				});
+				
+				console.log(submarker)
+				submap.setCenter(submarker.position);
 			});
 
 
