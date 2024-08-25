@@ -107,25 +107,6 @@ p{
     justify-content: flex-start;
     /* padding: 0rem 1.25rem; */
 }
-.search-bar {
-    display: flex;
-    top: 2.375rem;
-    left: 7.813rem;
-    border-radius: 28px;
-    background-color: #e8e8e8;
-    width: 12rem;
-    height: 3.125rem;
-    overflow: hidden;
-    justify-content: flex-end;
-    flex-direction: row;
-    align-items: center;
-    /* justify-content: flex-start; */
-    text-align: left;
-    color: #474747;
-    margin-bottom: 10px;
-    margin-right: 15px;
-    margin-top: 10px;
-}
 .logo_sunstory {
     display: flex;
     top: 2.375rem;
@@ -177,23 +158,6 @@ p{
     display: inline-block;
     white-space: nowrap;
 }
-.image-icon {
-    width: 5rem;
-    border-radius: 100px;
-    height: 5rem;
-    overflow: hidden;
-    flex-shrink: 0;
-    object-fit: cover;
-}
-.spot-name {
-    width: 10rem;
-    position: relative;
-    line-height: 140%;
-    font-weight: 600;
-    display: inline-block;
-    height: 2.625rem;
-    flex-shrink: 0;
-}
 .spot {
     width: 22.125rem;
     background-color: #fff;
@@ -227,15 +191,6 @@ p{
     overflow-y: auto;
     font-size: 2rem;
     font-family: Inter;
-}
-.spot {
-    display: flex;
-    top: 0rem;
-    left: 0rem;
-    background-color: #fff;
-    width: 32.688rem;
-    height: 11.25rem;
-    justify-content: space-evenly;
 }
 .alll-ist {
     display: flex;
@@ -334,13 +289,6 @@ p{
     justify-content: space-around;
     /* padding-left: 40px; */
     font-size: 19px;
-}
-.pay-text {
-    display: flex;
-    top: 56.188rem;
-    left: 3.625rem;
-    letter-spacing: 0.5px;
-    line-height: 1.5rem;
 }
 .image-icon1 {
     display: flex;
@@ -518,27 +466,6 @@ p{
     z-index: 20;
     border-radius: 10px;
 }
-
-
-
-
-.spot-details{
-	display: flex;
-	flex-direction: column;
-	margin: 10px;
-}
-
-.three{
-	display: flex;
-	flex-direction: column;
-}
-.two{
-	display: flex;
-	flex-direction: row;
-	margin-bottom: 15px;
-	margin-left: 11px;
-}
-
 .popup-overlay {
     position: fixed;
     top: 0;
@@ -552,7 +479,6 @@ p{
     z-index: 1000;
     overflow: hidden; /* 팝업 바깥쪽의 스크롤 방지 */
 }
-
 .popup-content {
     background-color: white;
     border-radius: 10px;
@@ -580,8 +506,6 @@ p{
     width: 100%; /* 내용이 팝업 폭에 맞도록 조정 */
     box-sizing: border-box; /* padding 포함 폭 계산 */
 }
-
-
 .info{
  font-weight:bold;
  color: black;
