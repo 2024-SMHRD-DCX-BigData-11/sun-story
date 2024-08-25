@@ -99,7 +99,7 @@ ul {
                                         <p class="p">좋은곳</p>
                                    </b>
                               </div>
-                         </div>
+                         </div> 
                          <div class="hashtag">
                               <div class="state-layer">
                                    <b class="label-text">#가족여행</b>
