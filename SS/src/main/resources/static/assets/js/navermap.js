@@ -119,7 +119,7 @@ function getData(type) {
 		success: function(res) {
 			map.setOptions('zoom', 11);
 			map.setOptions('center', new naver.maps.LatLng(34.95057, 127.4874))
-			$(".list").html("");
+			$(".spot-list").html("");
 			for (let i = 0, ii = res.length; i < ii; i++) {
 
 				let spot = res[i],
@@ -130,18 +130,11 @@ function getData(type) {
 						draggable: false
 					});
 				markers.push(marker);
-				let list = `<li
-						style="width: 100%; height: 100px; display: flex; flex-direction: row; align-items: center;">
-						<div>
-							<img style="width: 100px; height: 100px; border-radius: 5px;"
-								src="assets/images/관광지/${spot.tourphoto}.jpg">
-						</div>
-						<div style="width: 100%; text-align: left; padding: 10px;">
-								<h3 style="margin-bottom: 5px; margin-top: 0;">${spot.toursite}</h3>
-								<span style="display:none">${spot.touridx}</span>
-						</div>
-					</li>`
-				$(".list").append(list);
+				let list = ` <div class="spot">
+                         <img class="image-icon" alt="장소사진" src="assets/images/관광지/${spot.toursite}.jpg">
+                         <div class="spot-name">${spot.toursite}</div>
+                    </div>`;
+				$(".spot-list").append(list);
 			}
 
 			let clickedmarker = null;

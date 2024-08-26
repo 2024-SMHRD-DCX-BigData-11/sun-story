@@ -71,11 +71,6 @@ ul {
                          </div>
                          <div class="hashtag">
                               <div class="state-layer">
-                                   <b class="label-text">#대표관광지</b>
-                              </div>
-                         </div>
-                         <div class="hashtag">
-                              <div class="state-layer">
                                    <b class="label-text">#자연</b>
                               </div>
                          </div>
