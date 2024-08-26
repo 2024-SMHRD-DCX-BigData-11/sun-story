@@ -212,7 +212,7 @@ div.button-lookall:hover, div.button-lookall:hover button, .qrbutton:hover
 	left: 8.25rem;
 	background-color: #fff;
 	width: 24rem;
-	height: 34rem;
+	height: 36rem;
 	overflow-y: auto;
 	font-size: 2rem;
 	font-family: Inter;
@@ -740,7 +740,7 @@ li {
 	display : none;
 	align-self: stretch;
 	position: relative;
-	height: 17rem;
+	height: 19.2rem;
 	overflow-y: auto;
 	flex-shrink: 0;
 }
