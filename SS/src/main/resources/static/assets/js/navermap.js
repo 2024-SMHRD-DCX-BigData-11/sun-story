@@ -102,14 +102,16 @@ $(".tag").on("click", function() {
 	else if($(".tag-list").css("display") == "flex"){
 		$(".tag-list").css("display","none");
 	}
-}); 
+});
 
-$(".hashtag .label-text").on("click", function() {
+for (let i = 0; i<$(".hashtag").length; i++){
+$($(".hashtag")[i]).on("click", function() {
 	remove();
-	let text = $(this).text()
-	console.log(text);
+	let text = $($(".label-text")[i]).text();
+	console.log(text)
 	getData(3,text);
-})
+});
+}
 
 function remove() {
 	markerClustering.onRemove();
@@ -122,7 +124,7 @@ function remove() {
 }
 
 
-function getData(type, text) {
+function getData(type,text) {
 	$.ajax({
 		type: "get",
 		url: "data",
