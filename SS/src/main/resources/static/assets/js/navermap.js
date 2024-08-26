@@ -260,7 +260,7 @@ function getData(type, text) {
 					origin: new naver.maps.Point(0, 0),
 				})
 				submarker.setPosition(new naver.maps.LatLng(data.lat, data.lon));
-				submarker.setTitle(data.name);
+				submarker.setTitle(data.toursite);
 				submarker.setMap(submap);
 
 				submap.setCenter(new naver.maps.LatLng(data.lat, data.lon));
