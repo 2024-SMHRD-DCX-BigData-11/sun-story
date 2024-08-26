@@ -253,7 +253,8 @@ function getData(type, text) {
 				submarker.setTitle(data.name);
 				submarker.setMap(submap);
 
-				submap.setCenter(submarker.position);
+				submap.setCenter(new naver.maps.LatLng(data.lat, data.lon));
+				console.log(submap.getCenterPoint())
 				console.log("클릭");
 				togglePopup("detailContainer");
 			});
