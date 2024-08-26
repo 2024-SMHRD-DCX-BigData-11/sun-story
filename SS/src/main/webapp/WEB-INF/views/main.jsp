@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.5.1/uicons-regular-straight/css/uicons-regular-straight.css">
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +15,9 @@
 <link rel="shortcut icon"
 	href="${pageContext.request.contextPath}/assets/images/순토리1.png">
 	<link rel="stylesheet" href="path/to/font-awesome.css">
-<title>Sun-Story</title>
+	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-thin-straight/css/uicons-thin-straight.css'>
+	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+	<title>Sun-Story</title>
 
 <style type="text/css">
 html, body {
@@ -49,21 +53,21 @@ display : none;
                <div class="categorybutton">
                     <a href="QrPage"><div class="qrbutton">
 							<!--QR버튼-->
-							<div class="label-text3">QR</div>
+							<div class="label-text3"><i class="fi fi-rs-qr" ></i></div>
 						</div></a>
                     <div class="button-lookall">
                          <div class="state-layer">
-                              <button class="lookall"><b>전체보기</b></button>
+                              <button class="lookall"><i class="fi fi-tr-plane-alt" style="font-size: 18px"></i></button>
                          </div>
                     </div>
                     <div class="button-lookall">
                          <div class="state-layer">
-                              <button class="repre"><b>대표 관광지</b></button>
+                              <button class="repre"><i class="fi fi-ts-ranking-star" style="font-size: 18px"></i></button>
                          </div>
                     </div>
                     <div class="button-lookall">
                          <div class="state-layer">
-                              <button class="tag"><b>태그별로</b></button>
+                              <button class="tag"><i class="fi fi-tr-tags" style="font-size: 18px"></i></button>
                          </div>
                     </div>
                </div>
