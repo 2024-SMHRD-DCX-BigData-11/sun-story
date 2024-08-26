@@ -34,12 +34,17 @@ p{
     justify-content: center;
 }
 
- .button-common:hover {
-        background-color:#ffb868;
-        transition: 0.2s;
-        cursor: pointer;
-    }
-.categorybutton .button-lookall .state-layer button {
+div.button-lookall:hover,
+div.button-lookall:hover button,
+.qrbutton:hover
+{
+    background-color: #ffb868;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+    
+.state-layer button {
     background-color: #ff7a00;
     color: white; /* 글자색을 흰색으로 설정 (선택 사항) */
     border: none; /* 기본 테두리 제거 (선택 사항) */
@@ -47,6 +52,8 @@ p{
     cursor: pointer; /* 마우스 커서를 포인터로 변경 (선택 사항) */
     border-radius: 5px; /* 버튼 모서리를 둥글게 (선택 사항) */
 }
+
+
 
 .state-layer2{
 	background-color: #D3D3D3;
