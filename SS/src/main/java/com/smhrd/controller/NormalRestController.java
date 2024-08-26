@@ -46,6 +46,10 @@ public class NormalRestController {
 			break;
 		case 3:
 			result = repo.findByTourtagLike("%"+text+"%");
+			break;
+		case 4:
+			result = repo.findByToursiteLike("%"+text+"%");
+			break;
 		}
 		return result;
 	}

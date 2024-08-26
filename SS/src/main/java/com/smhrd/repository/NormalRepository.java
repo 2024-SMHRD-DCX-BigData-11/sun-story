@@ -21,5 +21,6 @@ public interface NormalRepository extends JpaRepository<tb_tour_site, Integer> {
 			where t.touridx= :trip_id
 			""")
 	public String getdetail(int trip_id);
+	public List<tb_tour_site> findByToursiteLike(String name);
 	
 }

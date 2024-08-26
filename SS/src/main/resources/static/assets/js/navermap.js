@@ -15,9 +15,18 @@ let map = new naver.maps.Map("map", {
 
 $(".supporting-text").keypress(function(e) {
 	if (e.keyCode == 13) {
-		console.log($(".supporting-text").val());
+		let text = $(".supporting-text").val();
+		remove();
+		getData(4,text);
 		$(".supporting-text").val("");
 	}
+});
+
+$(".search-icon").on("click",function() {
+		let text = $(".supporting-text").val();
+		remove();
+		getData(4,text);
+		$(".supporting-text").val("")
 });
 
 
