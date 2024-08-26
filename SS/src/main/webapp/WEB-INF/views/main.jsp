@@ -58,9 +58,10 @@ ul {
 					<a href="QrPage"><div class="qrbutton">
 							<!--QR버튼-->
 							<div class="label-text3">
-								<i class="fi fi-rs-qr"></i><p style="margin:0; font-size: 10px;">qr</p>
+								<i class="fi fi-rs-qr"></i><p style="margin:0; font-size: 10px;"></p>
 							</div>
-						</div></a>
+						</div>
+						<div class="info" style="padding-top:0.4rem;">QR</div></a>
 					<div class="button-lookall">
 						<div class="state-layer">
 							<button class="lookall">
@@ -68,6 +69,7 @@ ul {
 							</button>
 						</div>
 					</div>
+					<div class="info">ALL</div>
 					<div class="button-lookall">
 						<div class="state-layer">
 							<button class="repre">
@@ -75,6 +77,7 @@ ul {
 							</button>
 						</div>
 					</div>
+					<div class="info">TOP</div>
 					<div class="button-lookall">
 						<div class="state-layer">
 							<button class="tag">
@@ -82,6 +85,7 @@ ul {
 							</button>
 						</div>
 					</div>
+					<div class="info">TAG</div>
 				</div>
 				<div class="tag-list">
 					<div class="tags">
