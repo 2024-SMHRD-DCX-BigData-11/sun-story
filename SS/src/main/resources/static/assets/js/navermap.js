@@ -215,6 +215,7 @@ function getData(type, text) {
 
 
 			$('.spot').click(function() {
+				togglePopup("detailContainer");
 				let idx_box = $(this).children(".idx");
 				let idx = $(idx_box).val();
 				console.log(idx);
@@ -254,9 +255,8 @@ function getData(type, text) {
 				submarker.setMap(submap);
 
 				submap.setCenter(new naver.maps.LatLng(data.lat, data.lon));
-				console.log(submap.getCenterPoint())
 				console.log("클릭");
-				togglePopup("detailContainer");
+				
 			});
 
 

@@ -190,7 +190,6 @@ display : none;
 									<p class="p" id="content-p">장소 1은 순천시의 관광지로서 추천할만한 장소로, XX해서
 										XX한 장소이다.</p>
 								</div>
-								<div id="submap"></div>
 								<div class="rectangle-using-info">
 									<div class="show-storytelling">
 										<!--스토리텔링 보기(스토리텔링 장소 리스트 토글버튼)-->
@@ -203,6 +202,7 @@ display : none;
 							</div>
 						</div>
 					</div>
+					<div id="submap"></div>
 				</div>
 			</div>
 	</div>
