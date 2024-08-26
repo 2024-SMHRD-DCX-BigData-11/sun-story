@@ -8,7 +8,7 @@
 <head>
 <meta charset="UTF-8">
 
-<meta name="viewport"
+<meta name="viewport"ma
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 <link rel="icon" href="data:;base64,iVBORw0KGgo=">
 <link rel="stylesheet" type="text/css" href="assets/css/main.css">
@@ -44,6 +44,7 @@ display : none;
                <div class="spot-list">
 				<!-- <ul class="list"> 부분 -->
                     <div class="spot">
+                    	 <input class = "idx" type = "hidden"/>
                          <img class="image-icon" alt="장소사진" src="Image.png">
                          <div class="spot-name">장소1</div>
                     </div>
@@ -283,6 +284,7 @@ display : none;
 	    	    // 팝업 관련 함수 유지
 	    	    function togglePopup(popupId, data) {
 	    	        var popup = document.getElementById(popupId);
+	    	        console.log(popup)
 	    	        if (!popup) return;
 	
 	    	        var popupStyle = popup.style;

@@ -1,4 +1,5 @@
 document.write('<script src="assets/js/TTS.js"></script>');
+document.write('<script src="assets/js/main.js"></script>');
 
 let map = new naver.maps.Map("map", {
 	zoom: 10,
@@ -12,8 +13,8 @@ let map = new naver.maps.Map("map", {
 	}
 });
 
-$(".supporting-text").keypress(function(e){
-	if(e.keyCode == 13){
+$(".supporting-text").keypress(function(e) {
+	if (e.keyCode == 13) {
 		console.log($(".supporting-text").val());
 		$(".supporting-text").val("");
 	}
@@ -25,18 +26,18 @@ let submap = new naver.maps.Map("submap", {
 	minZoom: 15,
 	maxZoom: 15,
 	draggable: false,
-	keyboardShortcuts : false,
+	keyboardShortcuts: false,
 	center: new naver.maps.LatLng(34.95057, 127.4874)
 });
 
 let submarker = new naver.maps.Marker({
-					title: null,
-					position: new naver.maps.LatLng(34.95057, 127.4874),
-					draggable: false,
-					icon: null,
-					map: null
-				});
-				
+	title: null,
+	position: new naver.maps.LatLng(34.95057, 127.4874),
+	draggable: false,
+	icon: null,
+	map: null
+});
+
 let markers = [];
 let htmlMarker1 = {
 	content: '<div style="cursor:pointer;width:40px;height:40px;line-height:42px;font-size:10px;color:white;text-align:center;font-weight:bold;background:url(assets/images/cluster-marker-1.png);background-size:contain;"></div>',
@@ -82,34 +83,36 @@ var audio;
 var AudioContext;
 var audioContext;
 
-getData(1,"");
+getData(1, "");
 
 $(".lookall").on("click", function() {
 	remove();
-	getData(1,"");
+	getData(1, "");
 })
 
 
 $(".repre").on("click", function() {
 	remove();
-	getData(2,"");
+	getData(2, "");
 })
 
 $(".tag").on("click", function() {
-	if($(".tag-list").css("display") == "none"){
-		$(".tag-list").css("display","flex");
+	if ($(".tag-list").css("display") == "none") {
+		$(".tag-list").css("display", "flex");
 	}
-	else if($(".tag-list").css("display") == "flex"){
-		$(".tag-list").css("display","none");
+	else if ($(".tag-list").css("display") == "flex") {
+		$(".tag-list").css("display", "none");
 	}
-}); 
+});
 
-$(".hashtag .label-text").on("click", function() {
-	remove();
-	let text = $(this).text()
-	console.log(text);
-	getData(3,text);
-})
+for (let i = 0; i < $(".hashtag").length; i++) {
+	$($(".hashtag")[i]).on("click", function() {
+		remove();
+		let text = $($(".label-text")[i]).text();
+		console.log(text)
+		getData(3, text);
+	});
+}
 
 function remove() {
 	markerClustering.onRemove();
@@ -142,6 +145,7 @@ function getData(type, text) {
 					});
 				markers.push(marker);
 				let list = ` <div class="spot">
+						 <input class = "idx" type = "hidden" value = "${spot.touridx}"/>	
                          <img class="image-icon" alt="장소사진" src="assets/images/관광지/${spot.tourphoto}.jpg">
                          <div class="spot-name">${spot.toursite}</div>
                     </div>`;
@@ -164,6 +168,10 @@ function getData(type, text) {
 			for (let i = 0; i < markers.length; i++) {
 				naver.maps.Event.addListener(markers[i], "click", function() {
 					clickedmarker = markers[i]
+					let photo = "";
+					if (clickedmarker.title == res[i].toursite) {
+						photo = res[i].tourphoto;
+					}
 					if (selectedmarker != clickedmarker) {
 						if (selectedmarker == null) {
 							selectedmarker = clickedmarker
@@ -177,7 +185,7 @@ function getData(type, text) {
 							content: [
 								`<div style="display: flex; flex-direction: column; align-items: center; width: 50px; height: 50px;">`,
 								` <div style="display: flex; justify-content: center; align-items: center; width: 50px; height: 50px;">`,
-								` <img src="assets/images/관광지/${clickedmarker.title}.jpg" style="width: 50px; background-color: white; height: 50px; border-radius: 50%;"/>`,
+								` <img src="assets/images/관광지/${photo}.jpg" style="width: 50px; background-color: white; height: 50px; border-radius: 50%;"/>`,
 								` </div>`,
 								`</div>`
 							].join(''),
@@ -204,20 +212,18 @@ function getData(type, text) {
 					$(clusterMarker.getElement()).find('div:first-child').text(count);
 				}
 			});
-			$('ul.list li').click(function() {
-				let box = $(this).children("div")[1];
-				let title = $(box).children("h3")[0];
-				let text = $(title).text();
-				let idx_box = $(box).children("span")[0];
-				let idx = $(idx_box).text();
 
+
+			$('.spot').click(function() {
+				let idx_box = $(this).children(".idx");
+				let idx = $(idx_box).val();
+				console.log(idx);
 				let data;
 				for (let i = 0; i < res.length; i++) {
 					if (idx == res[i].touridx) {
 						data = res[i];
 						$(".image-icon1").attr("src", `assets/images/관광지/${res[i].tourphoto}.jpg`);
 						$(".content-title").text(`${res[i].toursite}`);
-						console.log(res[i]);
 						$(".subtitle .p:nth-child(1)").text(`${res[i].tourtitle}`);
 						$(".subtitle .p:nth-child(2)").text(`${res[i].touraddr}`);
 						$(".content-text .p").text(`${res[i].tourdesc}`);
@@ -231,24 +237,25 @@ function getData(type, text) {
 				}
 				submarker.setMap(null);
 				submarker.setIcon({
-							content: [
-								`<div style="display: flex; flex-direction: column; align-items: center; width: 50px; height: 50px;">`,
-								` <div style="display: flex; justify-content: center; align-items: center; width: 50px; height: 50px;">`,
-								` <img src="assets/images/관광지/${data.tourphoto}.jpg" style="width: 50px; background-color: white; height: 50px; border-radius: 50%;"/>`,
-								` </div>`,
-								`</div>`
-							].join(''),
-							// url: 'resources/img/marker.png', //아이콘 경로 
-							size: new naver.maps.Size(50, 50),
-							scaledSize: new naver.maps.Size(50, 50),
-							origin: new naver.maps.Point(0, 0),
-						})
+					content: [
+						`<div style="display: flex; flex-direction: column; align-items: center; width: 50px; height: 50px;">`,
+						` <div style="display: flex; justify-content: center; align-items: center; width: 50px; height: 50px;">`,
+						` <img src="assets/images/관광지/${data.tourphoto}.jpg" style="width: 50px; background-color: white; height: 50px; border-radius: 50%;"/>`,
+						` </div>`,
+						`</div>`
+					].join(''),
+					// url: 'resources/img/marker.png', //아이콘 경로 
+					size: new naver.maps.Size(50, 50),
+					scaledSize: new naver.maps.Size(50, 50),
+					origin: new naver.maps.Point(0, 0),
+				})
 				submarker.setPosition(new naver.maps.LatLng(data.lat, data.lon));
 				submarker.setTitle(data.name);
 				submarker.setMap(submap);
-				
-				console.log(submarker)
+
 				submap.setCenter(submarker.position);
+				console.log("클릭");
+				togglePopup("detailContainer");
 			});
 
 

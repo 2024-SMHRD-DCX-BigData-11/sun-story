@@ -7,7 +7,8 @@ if (searchBarContainer) {
 }
 
 // 결과 리스트에서 항목 클릭 시 상세보기 페이지 팝업창
-var spotContainer = document.getElementById("spotContainer");
+var spotContainer = document.getElementsByClassName("spot");
+console.log(spotContainer);
 if (spotContainer) {
 	spotContainer.addEventListener("click", function() {
 		togglePopup("detailContainer");
@@ -28,9 +29,15 @@ function togglePopup(popupId) {
 	popup.setAttribute("closable", "");
 
 	// 클릭 이벤트를 통해 팝업 닫기
-	popup.onclick = function(e) {
-		if (e.target === popup && popup.hasAttribute("closable")) {
+	var closeIcon = popup.querySelector(".close-icon");
+	if (closeIcon) {
+		closeIcon.onclick = function() {
 			popupStyle.display = "none";
-		}
-	};
-}
+			console.log("닫음.");
+			console.log(audio);
+			if (!audio.paused) {
+				audio.pause();
+			}
+		};
+	}
+};
