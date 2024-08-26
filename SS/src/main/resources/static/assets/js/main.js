@@ -23,7 +23,10 @@ $(".show-storytelling").off().on("click", function(e) {
 function togglePopup(popupId) {
 	var popup = document.getElementById(popupId);
 	if (!popup) return;
-
+	if ($("#audioPlayer").css("display") != "none") {
+				$("#audioPlayer").css("display", "none");
+			}
+	$(".popup-ovelay").scrollTop(0);
 	var popupStyle = popup.style;
 	popupStyle.display = "flex";
 	popupStyle.zIndex = 100;
@@ -42,9 +45,11 @@ function togglePopup(popupId) {
 			if (!audio.paused) {
 				audio.pause();
 			}
-			if($("#audioPlayer").css("display") != "none"){
-				$("#audioPlayer").css("display","none");
+			if ($("#audioPlayer").css("display") != "none") {
+				$("#audioPlayer").css("display", "none");
 			}
 		};
 	}
 };
+
+
