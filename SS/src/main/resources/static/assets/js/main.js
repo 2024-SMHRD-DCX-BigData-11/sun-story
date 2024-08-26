@@ -7,13 +7,7 @@ if (searchBarContainer) {
 }
 
 // 결과 리스트에서 항목 클릭 시 상세보기 페이지 팝업창
-var spotContainer = document.getElementsByClassName("spot");
-console.log(spotContainer);
-if (spotContainer) {
-	spotContainer.addEventListener("click", function() {
-		togglePopup("detailContainer");
-	});
-}
+
 
 // 팝업 토글 함수
 function togglePopup(popupId) {
