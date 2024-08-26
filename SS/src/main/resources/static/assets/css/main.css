@@ -307,7 +307,6 @@ div.button-lookall:hover, div.button-lookall:hover button, .qrbutton:hover
 
 .detail-child {
 	display: flex;
-	height: 100%;
 	top: 0%;
 	right: 0%;
 	bottom: 0%;
@@ -483,10 +482,9 @@ div.button-lookall:hover, div.button-lookall:hover button, .qrbutton:hover
 	top: 41.313rem;
 	left: 2.5rem;
 	width: 34.125rem;
-	height: 7.5rem;
 	font-size: 1.063rem;
 	font-family: Inter;
-	align-items: center;
+	justify-content: center;
 }
 
 .use-time {
@@ -501,7 +499,6 @@ div.button-lookall:hover, div.button-lookall:hover button, .qrbutton:hover
 	width: 39.563rem;
 	height: 65rem;
 	max-width: 100%;
-	max-height: 90%;
 	/* overflow-x: auto;*/
 	/*overflow-y: auto; */
 	text-align: left;
@@ -634,6 +631,7 @@ li {
 #submap {
 	width: 500px;
 	height: 150px;
+	margin: 20px;
 }
 
 .pr-text {
@@ -739,6 +737,7 @@ li {
 }
 
 .tag-list {
+	display : none;
 	align-self: stretch;
 	position: relative;
 	height: 15rem;
@@ -862,6 +861,7 @@ body {
 }
 
 #audioPlayer {
+	display : none;
 	background-color: #fff; /* 플레이어 배경색 */
 	border: 2px solid #ff7f50; /* 주황색 테두리 */
 	border-radius: 10px; /* 모서리 둥글게 */

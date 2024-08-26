@@ -219,6 +219,7 @@ ul {
 							</div>
 						</div>
 						<div id="submap"></div>
+						
 					</div>
 				</div>
 
@@ -234,113 +235,5 @@ ul {
 		src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=gd84en4c8l"></script>
 	<script type="text/javascript" src="assets/js/MarkerClustering.js"></script>
 	<script type="text/javascript" src="assets/js/navermap.js"></script>
-
-	<script>
-     var audio;
-     var AudioContext;
-     var audioContext;
-
-     $(document).ready(function(event) {
-         navigator.mediaDevices.getUserMedia({ audio: true })
-             .then(() => {
-                 AudioContext = window.AudioContext || window.webkitAudioContext;
-                 audioContext = new AudioContext();
-                 audioPlay(1);
-             })
-             .catch(e => {
-                 console.error(`Audio permissions denied: ${e}`);
-                 alert("Audio permissions were denied. Please allow microphone access and try again.");
-             });
-     });
-
-     async function audioPlay(idx) {
-         $.ajax({
-             url: "audio",
-             data: { idx: idx },
-             type: "post"
-         }).done(function(response) {
-             if (response.resultCode == 200) {
-                 audio = new Audio(response.result);
-                 audio.play();
-             } else {
-                 // Error handling
-             }
-         });
-     }
-     </script>
-	<script>
-	     document.addEventListener("DOMContentLoaded", function() {
-	    	    // 기존 코드 유지
-	    	    
-	    	    document.body.addEventListener('click', function(event) {
-	    	        if (event.target.closest('#button-common-lookall')) {
-	    	            document.querySelectorAll('.button-common').forEach(function(btn) {
-	    	                btn.classList.remove('active');
-	    	            });
-	    	            event.target.closest('.button-common').classList.add('active');
-	    	        } else if (event.target.closest('#button-common-repre')) {
-	    	            document.querySelectorAll('.button-common').forEach(function(btn) {
-	    	                btn.classList.remove('active');
-	    	            });
-	    	            event.target.closest('.button-common').classList.add('active');
-	    	        } else if (event.target.closest('#button-common-tag')) {
-	    	            document.querySelectorAll('.button-common').forEach(function(btn) {
-	    	                btn.classList.remove('active');
-	    	            });
-	    	            event.target.closest('.button-common').classList.add('active');
-	    	        }
-	
-	    	        // 이벤트 위임을 이용해 동적으로 추가된 li 태그도 이벤트를 잡을 수 있게 함
-	    	        if (event.target.closest('.popupContainer') || event.target.closest('li')) {
-	    	            var target = event.target.closest('.popupContainer') || event.target.closest('li');
-	    	            var data = {
-	    	                tripname: target.getAttribute('data-tripname')
-	    	            };
-	    	            togglePopup("detailContainer", data);
-	    	        }
-	    	    });
-	
-	    	    // 팝업 관련 함수 유지
-	    	    function togglePopup(popupId, data) {
-	    	        var popup = document.getElementById(popupId);
-	    	        console.log(popup)
-	    	        if (!popup) return;
-	
-	    	        var popupStyle = popup.style;
-	    	        if (popupStyle.display === "none" || popupStyle.display === "") {
-	    	            popupStyle.display = "flex"; // 팝업 열기
-	    	            
-	    	        } else {
-	    	            popupStyle.display = "none"; // 팝업 닫기
-	    	        }
-	
-	    	        popupStyle.zIndex = 100;
-	    	        popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
-	    	        popupStyle.alignItems = "center";
-	    	        popupStyle.justifyContent = "center";
-	    	        popup.setAttribute("closable", "");
-	
-	    	        popup.onclick = function (e) {
-	    	            if (e.target === popup && popup.hasAttribute("closable")) {
-	    	                popupStyle.display = "none";
-	    	            }
-	    	        };
-	
-	    	        var closeIcon = popup.querySelector(".close-icon");
-	    	        if (closeIcon) {
-	    	            closeIcon.onclick = function () {
-	    	                popupStyle.display = "none";
-	    	                console.log("닫음.");
-	    	                console.log(audio);
-	    	                if (!audio.paused) {
-								audio.pause();
-							}
-	    	            };
-	    	        }
-	    	    }
-	    	});
-	
-
-    </script>
 </body>
 </html>

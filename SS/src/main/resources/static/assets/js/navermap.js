@@ -88,7 +88,7 @@ let markerClustering = new MarkerClustering({
 	}
 });
 
-var audio;
+var audio = document.getElementById("audio");
 var AudioContext;
 var audioContext;
 
@@ -224,13 +224,14 @@ function getData(type, text) {
 
 
 			$('.spot').click(function() {
-				togglePopup("detailContainer");
 				let idx_box = $(this).children(".idx");
 				let idx = $(idx_box).val();
 				console.log(idx);
+				
 				let data;
 				for (let i = 0; i < res.length; i++) {
 					if (idx == res[i].touridx) {
+						console.log("123")
 						data = res[i];
 						$(".image-icon1").attr("src", `assets/images/관광지/${res[i].tourphoto}.jpg`);
 						$(".content-title").text(`${res[i].toursite}`);
@@ -239,12 +240,10 @@ function getData(type, text) {
 						$(".content-text .p").text(`${res[i].tourdesc}`);
 						$(".use-time").text(`${res[i].tourtime}`);
 						$(".pay-text").text(`${res[i].fare}`);
-						if (!audio.paused) {
-							audio.pause();
-						}
 						TTS(res[i].touridx);
 					}
 				}
+				
 				submarker.setMap(null);
 				submarker.setIcon({
 					content: [
@@ -265,6 +264,7 @@ function getData(type, text) {
 
 				submap.setCenter(new naver.maps.LatLng(data.lat, data.lon));
 				console.log("클릭");
+				togglePopup("detailContainer");
 				
 			});
 

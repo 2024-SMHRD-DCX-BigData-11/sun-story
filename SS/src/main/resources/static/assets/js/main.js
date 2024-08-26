@@ -8,6 +8,16 @@ if (searchBarContainer) {
 
 // 결과 리스트에서 항목 클릭 시 상세보기 페이지 팝업창
 
+$(".show-storytelling").off().on("click", function(e) {
+	console.log("클릭");
+	console.log($("#audioPlayer").css("display"));
+	if ($("#audioPlayer").css("display") == "none") {
+		$("#audioPlayer").css("display", "block");
+	} else if ($("#audioPlayer").css("display") == "block") {
+		$("#audioPlayer").css("display", "none");
+	}
+});
+
 
 // 팝업 토글 함수
 function togglePopup(popupId) {
@@ -31,6 +41,9 @@ function togglePopup(popupId) {
 			console.log(audio);
 			if (!audio.paused) {
 				audio.pause();
+			}
+			if($("#audioPlayer").css("display") != "none"){
+				$("#audioPlayer").css("display","none");
 			}
 		};
 	}
