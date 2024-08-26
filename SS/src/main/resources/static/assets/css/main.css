@@ -25,7 +25,6 @@ p{
 .button-common {
     display: flex;
     border-radius: 100px;
-    background-color: #ff7a00;
     top: 0rem;
     width: 6.925rem;
     height: 2.5rem;
@@ -49,7 +48,16 @@ p{
     border-radius: 5px; /* 버튼 모서리를 둥글게 (선택 사항) */
 }
 
-
+.state-layer2{
+	background-color: #D3D3D3;
+	color: white;
+	border: none;
+	
+}
+.icon {
+            font-size: 24px;
+            color: #000;
+        }
 .category {
     display: flex;
     gap: 0.5rem; /* 버튼들 간의 간격 */
@@ -652,7 +660,7 @@ input:focus {
 .hashtag {
     width: 6.25rem;
     border-radius: 16px;
-    background-color: #f77f00;
+    background-color: #D3D3D3;
     height: 3.125rem;
     overflow: hidden;
     flex-shrink: 0;
