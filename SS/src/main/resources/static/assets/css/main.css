@@ -147,7 +147,7 @@ div.button-lookall:hover button,
 .image-icon {
     display: flex;
     height: 100%;
-    width: 33.04%;
+    width: 33%;
     top: 8.33%;
     right: 63.6%;
     bottom: 8.33%;
@@ -156,7 +156,7 @@ div.button-lookall:hover button,
     overflow: hidden;
     max-height: 100%;
     object-fit: cover;
-    min-width: 10rem;
+
     border-radius: 5px;
 }
 .spot-name {
@@ -165,8 +165,10 @@ div.button-lookall:hover button,
     width: 57.04%;
     top: 66.2%;
     left: 39.78%;
+    color : black;
+    font-size:15px;
     line-height: 140%;
-    font-weight: 600;
+    font-weight: bold;
     display: inline-block;
     white-space: nowrap;
 }
@@ -198,7 +200,7 @@ div.button-lookall:hover button,
     top: 7.5rem;
     left: 8.25rem;
     background-color: #fff;
-    width: 22.125rem;
+    width: 24rem;
     height: 60rem;
     overflow-y: auto;
     font-size: 2rem;
