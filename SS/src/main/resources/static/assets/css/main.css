@@ -40,18 +40,15 @@ p{
         transition: 0.2s;
         cursor: pointer;
     }
-
-.tag {
-    left: 15.577rem;
+.categorybutton .button-lookall .state-layer button {
+    background-color: #ff7a00;
+    color: white; /* 글자색을 흰색으로 설정 (선택 사항) */
+    border: none; /* 기본 테두리 제거 (선택 사항) */
+    padding: 10px 20px; /* 버튼의 패딩 조정 (선택 사항) */
+    cursor: pointer; /* 마우스 커서를 포인터로 변경 (선택 사항) */
+    border-radius: 5px; /* 버튼 모서리를 둥글게 (선택 사항) */
 }
 
-.repre {
-    left: 7.665rem;
-}
-
-.lookall {
-    left: 0rem;
-}
 
 .category {
     display: flex;
@@ -605,7 +602,7 @@ input:focus {
 .qrbutton {
     width: 6.25rem;
     border-radius: 16px;
-    background-color: #f95700;
+    background-color: #f77f00;
     height: 3.125rem;
     overflow: hidden;
     flex-shrink: 0;
@@ -632,7 +629,7 @@ input:focus {
 .button-lookall {
     width: 6.25rem;
     border-radius: 16px;
-    background-color: #f95700;
+    background-color: #f77f00;
     height: 3.125rem;
     overflow: hidden;
     flex-shrink: 0;

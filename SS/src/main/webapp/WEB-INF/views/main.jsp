@@ -12,6 +12,7 @@
 <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 <link rel="shortcut icon"
 	href="${pageContext.request.contextPath}/assets/images/순토리1.png">
+	<link rel="stylesheet" href="path/to/font-awesome.css">
 <title>Sun-Story</title>
 
 <style type="text/css">
@@ -48,17 +49,17 @@ ul {
 						</div></a>
                     <div class="button-lookall">
                          <div class="state-layer">
-                              <b class="label-text">전체보기</b>
+                              <button class="lookall"><b>전체보기</b></button>
                          </div>
                     </div>
                     <div class="button-lookall">
                          <div class="state-layer">
-                              <b class="label-text">대표 관광지</b>
+                              <button class="repre"><b>대표 관광지</b></button>
                          </div>
                     </div>
                     <div class="button-lookall">
                          <div class="state-layer">
-                              <b class="label-text">태그별로</b>
+                              <button class="tag"><b>태그별로</b></button>
                          </div>
                     </div>
                </div>
@@ -144,26 +145,25 @@ ul {
                </div>
           </div>
           <div class="header">
-               <img class="logo_sunstory" alt="순토리" src="assets/images/순토리1.png">
+    <img class="logo_sunstory" alt="순토리" src="assets/images/순토리1.png">
+    
+    <div class="search-bar">
+        <!-- 검색창 -->
+        <div class="state-layer3">
+            <div class="content">
+                <input class="supporting-text" type="search" placeholder="검색어를 입력하세요" title="검색어를 입력하세요">
+            </div>
+            <div class="trailing-elements">
+                <div class="container">
+                    <button type="button" class="button_search" id="searchBarContainer">
+                        <img class="search-icon" alt="검색" src="assets/images/Icon.svg">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-	           				<div class="search-bar">
-									<!--검색창-->
-									<div class="state-layer3">
-										<div class="content">
-											<input class="supporting-text" type="search"
-													placeholder="검색어를 입력하세요" title="검색어를 입력하세요">
-										</div>
-										<div class="trailing-elements">
-											<div class="container">
-			                                    <button type="button" class="button_search" id="searchBarContainer">
-													<img class="search-icon" alt="검색" src="assets/images/Icon.svg">
-												</button>
-			                                </div>
-			                            </div>
-			                       </div>
-	                        </div>
-	               
-          	</div>
            </div>
 
 			<!-- 좌측 배너 div 끝 부분 -->
