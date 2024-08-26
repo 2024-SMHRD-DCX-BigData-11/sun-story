@@ -58,7 +58,7 @@ ul {
 					<a href="QrPage"><div class="qrbutton">
 							<!--QR버튼-->
 							<div class="label-text3">
-								<i class="fi fi-rs-qr"></i>
+								<i class="fi fi-rs-qr"></i><p style="margin:0; font-size: 10px;">qr</p>
 							</div>
 						</div></a>
 					<div class="button-lookall">
