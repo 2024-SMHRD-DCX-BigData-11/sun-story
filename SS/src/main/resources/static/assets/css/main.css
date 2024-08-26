@@ -201,7 +201,7 @@ div.button-lookall:hover button,
     left: 8.25rem;
     background-color: #fff;
     width: 24rem;
-    height: 60rem;
+    height: 34rem;
     overflow-y: auto;
     font-size: 2rem;
     font-family: Inter;
@@ -697,7 +697,7 @@ input:focus {
 .tag-list {
     align-self: stretch;
     position: relative;
-    height: 43.25rem;
+    height: 15rem;
     overflow-y: auto;
     flex-shrink: 0;
 }
