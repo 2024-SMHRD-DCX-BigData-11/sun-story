@@ -82,23 +82,34 @@ var audio;
 var AudioContext;
 var audioContext;
 
-getData(1);
+getData(1,"");
 
 $(".lookall").on("click", function() {
 	remove();
-	getData(1);
+	getData(1,"");
 })
 
 
 $(".repre").on("click", function() {
 	remove();
-	getData(2);
+	getData(2,"");
 })
 
 $(".tag").on("click", function() {
+	if($(".tag-list").css("display") == "none"){
+		$(".tag-list").css("display","flex");
+	}
+	else if($(".tag-list").css("display") == "flex"){
+		$(".tag-list").css("display","none");
+	}
+}); 
+
+$(".hashtag .label-text").on("click", function() {
 	remove();
-	getData(3);
-});
+	let text = $(this).text()
+	console.log(text);
+	getData(3,text);
+})
 
 function remove() {
 	markerClustering.onRemove();
@@ -111,11 +122,11 @@ function remove() {
 }
 
 
-function getData(type) {
+function getData(type, text) {
 	$.ajax({
 		type: "get",
 		url: "data",
-		data: { type },
+		data: { type, text },
 		success: function(res) {
 			map.setOptions('zoom', 11);
 			map.setOptions('center', new naver.maps.LatLng(34.95057, 127.4874))
@@ -131,7 +142,7 @@ function getData(type) {
 					});
 				markers.push(marker);
 				let list = ` <div class="spot">
-                         <img class="image-icon" alt="장소사진" src="assets/images/관광지/${spot.toursite}.jpg">
+                         <img class="image-icon" alt="장소사진" src="assets/images/관광지/${spot.tourphoto}.jpg">
                          <div class="spot-name">${spot.toursite}</div>
                     </div>`;
 				$(".spot-list").append(list);

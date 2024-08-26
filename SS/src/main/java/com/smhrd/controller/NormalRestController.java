@@ -27,7 +27,7 @@ public class NormalRestController {
 	private NormalRepository repo;
 	
 	@RequestMapping("/data")
-	public List<tb_tour_site> data(int type){
+	public List<tb_tour_site> data(int type, String text){
 		List<tb_tour_site> result = new ArrayList<tb_tour_site>();
 		switch(type) {
 		case 1:
@@ -45,8 +45,7 @@ public class NormalRestController {
 			result = repo.findByToursiteIn(names);
 			break;
 		case 3:
-			String s = "#역사";
-			result = repo.findByTourtagLike("%"+s+"%");
+			result = repo.findByTourtagLike("%"+text+"%");
 		}
 		return result;
 	}

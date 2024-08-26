@@ -27,6 +27,10 @@ ul {
 	margin: 0;
 	padding: 5px;
 }
+
+.tag-list{
+display : none;
+}
 </style>
 </head>
 <body>
@@ -82,22 +86,16 @@ ul {
                          </div>
                          <div class="hashtag">
                               <div class="state-layer">
-                                   <b class="label-text">
-                                        <p class="p">#사진찍기</p>
-                                        <p class="p">좋은곳</p>
-                                   </b>
+                                   <b class="label-text">#사진찍기좋은곳</b>
                               </div>
                          </div>
                          <div class="hashtag">
                               <div class="state-layer">
-                                   <b class="label-text">
-                                        <p class="p">#산책하기</p>
-                                        <p class="p">좋은곳</p>
-                                   </b>
+                                   <b class="label-text">#산책하기좋은곳</b>
                               </div>
                          </div> 
                          <div class="hashtag">
-                              <div class="state-layer">
+                              <div class="state-layer" >
                                    <b class="label-text">#가족여행</b>
                               </div>
                          </div>
