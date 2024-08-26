@@ -26,7 +26,7 @@ function togglePopup(popupId) {
 	if ($("#audioPlayer").css("display") != "none") {
 				$("#audioPlayer").css("display", "none");
 			}
-	$(".popup-ovelay").scrollTop(0);
+	$('.popup-content').scrollTop(0);
 	var popupStyle = popup.style;
 	popupStyle.display = "flex";
 	popupStyle.zIndex = 100;

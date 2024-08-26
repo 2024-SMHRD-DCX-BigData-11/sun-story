@@ -533,7 +533,7 @@ div.button-lookall:hover, div.button-lookall:hover button, .qrbutton:hover
 	/* 상대적 위치 설정 */
 	position: relative;
 	overflow-y: auto; /* 세로 스크롤바 표시 */
-	overflow-x: auto; /* 가로 스크롤바 표시 */
+	
 	padding: 20px; /* 팝업 내부에 여백 추가 */
 	box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px;
 }
