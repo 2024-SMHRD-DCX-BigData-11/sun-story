@@ -344,7 +344,7 @@ div.button-lookall:hover, div.button-lookall:hover button, .qrbutton:hover
 	display: flex;
 	top: 4.938rem;
 	left: 3.563rem;
-	width: 28rem;
+	width: 400px;
 	height: 19.938rem;
 	overflow: hidden;
 	object-fit: cover;
