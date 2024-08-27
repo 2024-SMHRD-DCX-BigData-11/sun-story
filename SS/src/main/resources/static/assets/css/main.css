@@ -50,12 +50,12 @@ p {
 	justify-content: center;
 }
 
-div.button-lookall:hover, div.button-lookall:hover button, .qrbutton:hover
+/* div.button-lookall:hover, div.button-lookall:hover button, .qrbutton:hover
 	{
 	background-color: #ffb868;
 	transition: background-color 0.2s;
 	cursor: pointer;
-}
+} */
 
 .state-layer button {
 	background-color: #ff7a00;
@@ -73,6 +73,13 @@ div.button-lookall:hover, div.button-lookall:hover button, .qrbutton:hover
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+}
+
+.state-layer button:hover,
+.state-layer button:active {
+	background-color: #ffb868;
+	transition: background-color 0.2s;
+	cursor: pointer;
 }
 
 .state-layer2 {
