@@ -548,6 +548,7 @@ p {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-left: 5px;
 	z-index: 1000;
 	overflow: hidden; /* 팝업 바깥쪽의 스크롤 방지 */
 	animation-duration: 1s;
@@ -561,7 +562,7 @@ p {
   }
 
   to {
-    margin-left: 0%;
+    margin-left: 5px;
     width: 32%;
   }
 }
