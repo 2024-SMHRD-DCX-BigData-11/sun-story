@@ -34,10 +34,6 @@ ul {
 	margin: 0;
 	padding: 5px;
 }
-
-.tag-list {
-	display: none;
-}
 </style>
 </head>
 <body>
@@ -65,7 +61,7 @@ ul {
 					<div class="button-lookall">
 						<div class="state-layer">
 							<button class="lookall">
-								<i class="fi fi-tr-plane-alt" style="font-size: 18px"></i>
+								<i class="fi fi-tr-plane-alt" style="font-size: 25px"></i>
 							</button>
 						</div>
 					</div>
@@ -73,7 +69,7 @@ ul {
 					<div class="button-lookall">
 						<div class="state-layer">
 							<button class="repre">
-								<i class="fi fi-ts-ranking-star" style="font-size: 18px"></i>
+								<i class="fi fi-ts-ranking-star" style="font-size: 25px"></i>
 							</button>
 						</div>
 					</div>
@@ -81,7 +77,7 @@ ul {
 					<div class="button-lookall">
 						<div class="state-layer">
 							<button class="tag">
-								<i class="fi fi-tr-tags" style="font-size: 18px"></i>
+								<i class="fi fi-tr-tags" style="font-size: 25px"></i>
 							</button>
 						</div>
 					</div>
@@ -195,6 +191,7 @@ ul {
 				<div class="detail">
 					<div class="detail-child">
 						<div class="content-top">
+						<h6 style="margin:3px;"></h6>
 							<img class="close-icon" alt="x" src="assets/images/close.svg">
 							<img class="image-icon1" alt="장소 이미지"
 								src="assets/images/${trip.name }.png">
