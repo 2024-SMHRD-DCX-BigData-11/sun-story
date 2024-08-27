@@ -40,7 +40,7 @@ function togglePopup(popupId) {
 	var popupStyle = popup.style;
 	popupStyle.display = "flex";
 	popupStyle.zIndex = 100;
-	popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
+	/*popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";*/
 	popupStyle.alignItems = "center";
 	popupStyle.justifyContent = "center";
 	popup.setAttribute("closable", "");
@@ -62,4 +62,24 @@ function togglePopup(popupId) {
 	}
 };
 
+// 클릭 시 색상 바뀜
+
+$(document).ready(function() {
+    // .button-lookall 요소를 클릭했을 때 배경색을 red로 변경
+    $('.state-layer button').on('click', function() {
+        console.log('lookall clicked');  // 콘솔 로그 추가
+		// 모든 .hashtag 요소의 배경색을 초기화 (원래 색상으로 되돌리기)
+        $('.state-layer button').css('background-color', '');
+        $(this).css('background-color', '#f94b00');
+    });
+
+    // .hashtag 요소를 클릭했을 때 해당 요소만 배경색을 blue로 변경
+    $('.hashtag').on('click', function() {
+        // 모든 .hashtag 요소의 배경색을 초기화 (원래 색상으로 되돌리기)
+        $('.hashtag').css('background-color', '');
+
+        // 클릭된 요소만 배경색을 blue로 변경
+        $(this).css('background-color', '#00877c');
+    });
+});
 
