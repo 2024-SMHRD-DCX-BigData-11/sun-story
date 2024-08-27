@@ -556,7 +556,7 @@ p {
 	background-color: white;
 	border-radius: 10px;
 	width: 90%; /* 화면 크기에 맞게 조정 */
-	max-width: 600px; /* 최대 넓이 설정 */
+	max-widthde: 600px; /* 최대 넓이 설정 */
 	max-height: 93vh; /* 화면 높이의 80%로 제한 */
 	text-align: center;
 	/* 상대적 위치 설정 */
