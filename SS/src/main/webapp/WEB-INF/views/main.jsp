@@ -15,7 +15,7 @@
 <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 <link rel="shortcut icon"
 	href="${pageContext.request.contextPath}/assets/images/순토리1.png">
-<link rel="stylesheet" href="path/to/font-awesome.css">
+
 <link rel='stylesheet'
 	href='https://cdn-uicons.flaticon.com/2.5.1/uicons-thin-straight/css/uicons-thin-straight.css'>
 <link rel='stylesheet'
@@ -44,7 +44,7 @@ ul {
 					<!-- <ul class="list"> 부분 -->
 					<div class="spot">
 						<input class="idx" type="hidden" /> <img class="image-icon"
-							alt="장소사진" src="Image.png">
+							alt="장소사진" src="assets/images/image.png">
 						<div class="spot-name">장소1</div>
 					</div>
 				</div>
@@ -194,7 +194,7 @@ ul {
 						<h6 style="margin:3px;"></h6>
 							<img class="close-icon" alt="x" src="assets/images/close.svg">
 							<img class="image-icon1" alt="장소 이미지"
-								src="assets/images/${trip.name }.png">
+								src="assets/images/image.png">
 							
 							<div class="content-title">장소 1</div>
 							<div class="subtitle">
