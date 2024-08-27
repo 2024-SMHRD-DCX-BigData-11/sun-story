@@ -186,7 +186,7 @@ div.button-lookall:hover, div.button-lookall:hover button, .qrbutton:hover
 	background-color: #fff;
 	border-bottom: 1px solid #ebebeb;
 	box-sizing: border-box;
-	height: 6.5rem;
+	height: 6.35rem;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -322,12 +322,13 @@ div.button-lookall:hover, div.button-lookall:hover button, .qrbutton:hover
 	display: flex;
 	top: 4.938rem;
 	left: 3.563rem;
-	width: 31.5rem;
+	width: 28rem;
 	height: 19.938rem;
 	overflow: hidden;
 	object-fit: cover;
 	min-width: 10rem;
 	border-radius: 5px;
+	padding-top: 15px;
 }
 
 .content-title {
@@ -343,7 +344,7 @@ div.button-lookall:hover, div.button-lookall:hover button, .qrbutton:hover
 	font-family: 'KOTRA_GOTHIC';
 	font-weight: bold;
 	/* padding-left: 20px; */
-	padding-top: 20px;
+/* 	padding-top: 20px; */
 }
 
 .p {
@@ -385,8 +386,8 @@ div.button-lookall:hover, div.button-lookall:hover button, .qrbutton:hover
 
 .close-icon {
 	position: absolute;
-	top: -15px;
-	right: -10px;
+    top: 0px;
+    right: 0px;
 	cursor: pointer;
 }
 
@@ -473,6 +474,7 @@ div.button-lookall:hover, div.button-lookall:hover button, .qrbutton:hover
 	justify-content: center;
 	padding: 0.75rem;
 	box-sizing: border-box;
+	cursor: pointer;
 }
 
 .rectangle-using-info {
@@ -592,16 +594,16 @@ div.button-lookall:hover, div.button-lookall:hover button, .qrbutton:hover
 	background: rgba(122, 109, 116, 0.1); /*스크롤바 뒷 배경 색상*/
 	border-radius: 10px;
 }
-.content-p::-webkit-scrollbar {
+.p::-webkit-scrollbar {
 	width: 10px;
 }
 
-.content-p::-webkit-scrollbar-thumb {
+.p::-webkit-scrollbar-thumb {
 	background: rgb(86, 83, 84); /* 스크롤바 색상 */
 	border-radius: 10px; /* 스크롤바 둥근 테두리 */
 }
 
-.content-p::-webkit-scrollbar-track {
+.p::-webkit-scrollbar-track {
 	background: rgba(122, 109, 116, 0.1); /*스크롤바 뒷 배경 색상*/
 	border-radius: 10px;
 }
@@ -693,6 +695,8 @@ li {
 	position: relative;
 	letter-spacing: 0.1px;
 	line-height: 1.25rem;
+	white-space: nowrap;
+	font-size: 14px;
 }
 
 .state-layer {
@@ -794,12 +798,6 @@ li {
 	object-fit: cover;
 }
 
-.supporting-text {
-	position: relative;
-	letter-spacing: 0.5px;
-	line-height: 1.5rem;
-}
-
 .content {
 	align-self: stretch;
 	flex: 1;
@@ -871,6 +869,16 @@ li {
 	flex-direction: row;
 	align-items: center;
 	justify-content: flex-start;
+}
+.image-info, .image-location{
+	width:18px;
+	height:18px;
+	padding-right: 7px;
+}
+
+.subtitle-1, .subtitle-2{
+	display: flex;
+	align-items: center;
 }
 
 body {

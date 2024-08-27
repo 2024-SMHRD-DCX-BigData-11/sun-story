@@ -201,8 +201,14 @@ ul {
 							
 							<div class="content-title">장소 1</div>
 							<div class="subtitle">
-								<p class="p" id="subtitle">추천할만한 장소 1</p>
-								<p class="p" id="address">전남 순천시 XX면 XX로 XXX번길</p>
+								<div class="subtitle-1">
+									<img class="image-info" alt="소개이미지" src="assets/images/info.png">
+									<p class="p" id="subtitle" style="font-weight: bold;">추천할만한 장소 1</p>
+								</div>
+								<div class="subtitle-2">
+									<img class="image-location" alt="위치이미지" src="assets/images/location.png">
+									<p class="p" id="address">전남 순천시 XX면 XX로 XXX번길</p>
+								</div>
 							</div>
 							<div class="content-text">
 								<p class="p" id="content-p">장소 1은 순천시의 관광지로서 추천할만한 장소로, XX해서
