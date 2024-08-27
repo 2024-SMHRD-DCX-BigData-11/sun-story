@@ -243,8 +243,8 @@ function getData(type, text) {
 						data = res[i];
 						$(".image-icon1").attr("src", `assets/images/관광지/${res[i].tourphoto}.jpg`);
 						$(".content-title").text(`${res[i].toursite}`);
-						$(".subtitle .p:nth-child(1)").text(`${res[i].tourtitle}`);
-						$(".subtitle .p:nth-child(2)").text(`${res[i].touraddr}`);
+						$(".subtitle-1 .p").text(`${res[i].tourtitle}`);
+						$(".subtitle-2 .p").text(`${res[i].touraddr}`);
 						$(".content-text .p").text(`${res[i].tourdesc}`);
 						$(".use-time").text(`${res[i].tourtime}`);
 						$(".pay-text").text(`${res[i].fare}`);
