@@ -544,7 +544,7 @@ p {
 	left: 32rem;
 	width: 32%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5);
+	/* background-color: rgba(0, 0, 0, 0.5); */
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -570,7 +570,7 @@ p {
 	background-color: white;
 	border-radius: 10px;
 	width: 90%; /* 화면 크기에 맞게 조정 */
-	max-width: 600px; /* 최대 넓이 설정 */
+	max-widthde: 600px; /* 최대 넓이 설정 */
 	max-height: 93vh; /* 화면 높이의 80%로 제한 */
 	text-align: center;
 	/* 상대적 위치 설정 */
@@ -578,7 +578,7 @@ p {
 	overflow-y: auto; /* 세로 스크롤바 표시 */
 	
 	padding: 20px; /* 팝업 내부에 여백 추가 */
-	box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px;
+	/* box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px; */
 }
 
 .popup-content::-webkit-scrollbar {
@@ -780,7 +780,7 @@ li {
 .hashtag {
 	width: 6.25rem;
 	border-radius: 16px;
-	background-color: #D3D3D3;
+	background-color: #00bd9d;
 	height: 3.125rem;
 	overflow: hidden;
 	flex-shrink: 0;
