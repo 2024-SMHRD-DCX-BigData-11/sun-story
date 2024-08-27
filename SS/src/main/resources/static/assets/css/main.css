@@ -234,7 +234,7 @@ div.button-lookall:hover, div.button-lookall:hover button, .qrbutton:hover
 	left: 8.25rem;
 	background-color: #fff;
 	width: 23.8rem;
-	height: 38rem;
+	height: 34rem;
 	overflow-y: auto;
 	font-size: 2rem;
 	font-family: Inter;
@@ -677,7 +677,7 @@ li {
 }
 
 #submap {
-    width: 100%;
+    width: 400px;
     height: 150px;
     margin: 20px;
     border-radius: 10px;
@@ -787,7 +787,7 @@ li {
 	display : none;
 	align-self: stretch;
 	position: relative;
-	height: 18rem;
+	height: 13.5rem;
 	overflow-y: auto;
 	flex-shrink: 0;
 }
@@ -919,7 +919,7 @@ body {
 	padding: 20px;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
 	text-align: center;
-	width: 400px;
+	width: 350px;
 }
 
 #coverImage {
