@@ -100,6 +100,7 @@ $(".lookall").on("click", function() {
 })
 
 
+
 $(".repre").on("click", function() {
 	remove();
 	getData(2, "");
