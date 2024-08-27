@@ -550,6 +550,20 @@ p {
 	justify-content: center;
 	z-index: 1000;
 	overflow: hidden; /* 팝업 바깥쪽의 스크롤 방지 */
+	animation-duration: 2s;
+  	animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 20%;
+    width: 32%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 32%;
+  }
 }
 
 .popup-content {
