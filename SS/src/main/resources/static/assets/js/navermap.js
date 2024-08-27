@@ -1,5 +1,12 @@
 document.write('<script src="assets/js/TTS.js"></script>');
 document.write('<script src="assets/js/main.js"></script>');
+var clickEvent = (function() {
+  if ('ontouchstart' in document.documentElement === true) {
+    return 'touchend';
+  } else {
+    return 'click';
+  }
+})();
 
 let map = new naver.maps.Map("map", {
 	zoom: 10,
@@ -22,7 +29,7 @@ $(".supporting-text").keypress(function(e) {
 	}
 });
 
-$(".search-icon").on("click",function() {
+$(".search-icon").on(clickEvent,function() {
 		let text = $(".supporting-text").val();
 		remove();
 		getData(4,text);
@@ -94,18 +101,19 @@ var audioContext;
 
 getData(1, "");
 
-$(".lookall").on("click", function() {
+$(".lookall").on(clickEvent, function() {
 	remove();
 	getData(1, "");
 })
 
 
-$(".repre").on("click", function() {
+
+$(".repre").on(clickEvent, function() {
 	remove();
 	getData(2, "");
 })
 
-$(".tag").on("click", function() {
+$(".tag").on(clickEvent, function() {
 	if ($(".tag-list").css("display") == "none") {
 		$(".tag-list").css("display", "flex");
 	}
@@ -115,7 +123,7 @@ $(".tag").on("click", function() {
 });
 
 for (let i = 0; i < $(".hashtag").length; i++) {
-	$($(".hashtag")[i]).on("click", function() {
+	$($(".hashtag")[i]).on(clickEvent, function() {
 		remove();
 		let text = $($(".label-text")[i]).text();
 		console.log(text)
@@ -223,7 +231,7 @@ function getData(type, text) {
 			});
 
 
-			$('.spot').click(function() {
+			$('.spot').on(clickEvent,function() {
 				let idx_box = $(this).children(".idx");
 				let idx = $(idx_box).val();
 				console.log(idx);
