@@ -1,14 +1,22 @@
+var clickEvent = (function() {
+  if ('ontouchstart' in document.documentElement === true) {
+    return 'touchend';
+  } else {
+    return 'click';
+  }
+})();
+
 // 검색창 클릭 시 토글 나오는 기능
 var searchBarContainer = document.getElementById("searchBarContainer");
 if (searchBarContainer) {
-	searchBarContainer.addEventListener("click", function() {
+	searchBarContainer.addEventListener(clickEvent, function() {
 		togglePopup("searchlistContainer");
 	});
 }
 
 // 결과 리스트에서 항목 클릭 시 상세보기 페이지 팝업창
 
-$(".show-storytelling").off().on("click", function(e) {
+$(".show-storytelling").off().on(clickEvent, function(e) {
 	console.log("클릭");
 	console.log($("#audioPlayer").css("display"));
 	if ($("#audioPlayer").css("display") == "none") {
@@ -40,7 +48,7 @@ function togglePopup(popupId) {
 	// 클릭 이벤트를 통해 팝업 닫기
 	var closeIcon = popup.querySelector(".close-icon");
 	if (closeIcon) {
-		closeIcon.onclick = function() {
+		closeIcon.addEventListener(clickEvent,function() {
 			popupStyle.display = "none";
 			console.log("닫음.");
 			console.log(audio);
@@ -50,7 +58,7 @@ function togglePopup(popupId) {
 			if ($("#audioPlayer").css("display") != "none") {
 				$("#audioPlayer").css("display", "none");
 			}
-		};
+		});
 	}
 };
 

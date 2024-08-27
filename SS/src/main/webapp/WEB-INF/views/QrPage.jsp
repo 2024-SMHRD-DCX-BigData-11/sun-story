@@ -54,10 +54,10 @@ canvas {
 				</div>
 			</div>
 			<div style="width: 100%; height: 60px;">
-			<input type="button" id="button1" onclick="openCamera();"
+			<input type="button" id="open"
 				value="카메라 열기" style="width: 100%; height: 30px" />
 			<input type="button" id="close" value="카메라 닫기"
-				onclick="closeCamera();" style="width: 100%; height: 30px" />
+			 style="width: 100%; height: 30px" />
 			</div>
 		</div>
 	</div>
@@ -68,6 +68,19 @@ canvas {
 		var canvasElement = document.getElementById("canvas");
 		var canvas = canvasElement.getContext("2d");
 		var video;
+		var clickEvent = (function() {
+			  if ('ontouchstart' in document.documentElement === true) {
+			    return 'touchend';
+			  } else {
+			    return 'click';
+			  }
+			})();
+		var open = document.getElementById("open");
+		var close = document.getElementById("close");
+		console.log(open);
+		console.log(close);
+		open.addEventListener(clickEvent,openCamera);
+		close.addEventListener(clickEvent,closeCamera);
 
 		// 스캔
 		function startScan() {
