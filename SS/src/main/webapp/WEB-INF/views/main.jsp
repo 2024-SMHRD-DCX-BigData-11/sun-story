@@ -154,8 +154,9 @@ ul {
 				</div>
 			</div>
 			<div class="header">
+			<a href="main">
 				<img class="logo_sunstory" alt="순토리" src="assets/images/순토리1.png">
-
+			</a>
 				<div class="search-bar">
 					<!-- 검색창 -->
 					<div class="state-layer3">
@@ -213,8 +214,8 @@ ul {
 							</div>
 							<div class="rectangle-using-info">
 								<div class="show-storytelling">
-									<!--스토리텔링 보기(스토리텔링 장소 리스트 토글버튼)-->
-									<div class="show-storytelling-text">스토리텔링 보기</div>
+									<!--스토리텔링 듣기(스토리텔링 장소 리스트 토글버튼)-->
+									<div class="show-storytelling-text">스토리텔링 듣기</div>
 								</div>
 
 							</div>
