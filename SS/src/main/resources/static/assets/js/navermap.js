@@ -2,7 +2,7 @@ document.write('<script src="assets/js/TTS.js"></script>');
 document.write('<script src="assets/js/main.js"></script>');
 var clickEvent = (function() {
   if ('ontouchstart' in document.documentElement === true) {
-    return 'touchend';
+    return 'touchstart';
   } else {
     return 'click';
   }
@@ -15,7 +15,7 @@ let map = new naver.maps.Map("map", {
 	center: new naver.maps.LatLng(34.95057, 127.4874),
 	zoomControl: true,
 	zoomControlOptions: {
-		position: naver.maps.Position.TOP_LEFT,
+		position: naver.maps.Position.TOP_RIGHT,
 		style: naver.maps.ZoomControlStyle.SMALL
 	}
 });
@@ -148,7 +148,7 @@ function getData(type, text) {
 		url: "data",
 		data: { type, text },
 		success: function(res) {
-			map.setOptions('zoom', 11);
+			map.setOptions('zoom', 10);
 			map.setOptions('center', new naver.maps.LatLng(34.95057, 127.4874))
 			$(".spot-list").html("");
 			for (let i = 0, ii = res.length; i < ii; i++) {

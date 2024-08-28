@@ -1,6 +1,6 @@
 var clickEvent = (function() {
   if ('ontouchstart' in document.documentElement === true) {
-    return 'touchend';
+    return 'touchstart';
   } else {
     return 'click';
   }
@@ -47,6 +47,7 @@ function togglePopup(popupId) {
 
 	// 클릭 이벤트를 통해 팝업 닫기
 	var closeIcon = popup.querySelector(".close-icon");
+	console.log(closeIcon);
 	if (closeIcon) {
 		closeIcon.addEventListener(clickEvent,function() {
 			popupStyle.display = "none";
