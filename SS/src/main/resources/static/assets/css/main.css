@@ -37,7 +37,7 @@ p {
 	justify-content: center;
 }
 
-.lookall .repre .tag{
+.lookall .repre .tag {
 	width: 6.25rem;
 	border-radius: 16px;
 	background-color: #f77a00;
@@ -56,7 +56,6 @@ p {
 	transition: background-color 0.2s;
 	cursor: pointer;
 } */
-
 .state-layer button {
 	background-color: #ff7a00;
 	color: white; /* 글자색을 흰색으로 설정 (선택 사항) */
@@ -75,8 +74,7 @@ p {
 	justify-content: center;
 }
 
-.state-layer button:hover,
-.state-layer button:active {
+.state-layer button:hover, .state-layer button:active {
 	background-color: #ffb868;
 	transition: background-color 0.2s;
 	cursor: pointer;
@@ -165,7 +163,7 @@ p {
 }
 
 .header {
-/* 	top: 0rem;
+	/* 	top: 0rem;
 	left: 0rem; */
 	background-color: #fff;
 	border-bottom: 1px solid #d9d9d9;
@@ -337,7 +335,8 @@ p {
 	top: 0%;
 	right: 0%;
 	bottom: 0%;
-	left: 0%; border-radius : 20px;
+	left: 0%;
+	border-radius: 20px;
 	background-color: #fff;
 	flex-direction: column;
 	align-items: center;
@@ -372,7 +371,7 @@ p {
 	font-family: 'KOTRA_GOTHIC';
 	font-weight: bold;
 	/* padding-left: 20px; */
-/* 	padding-top: 20px; */
+	/* 	padding-top: 20px; */
 }
 
 .p {
@@ -415,8 +414,8 @@ p {
 
 .close-icon {
 	position: absolute;
-    top: 0px;
-    right: 0px;
+	top: 0px;
+	right: 0px;
 	cursor: pointer;
 }
 
@@ -552,19 +551,19 @@ p {
 	z-index: 1000;
 	overflow: hidden; /* 팝업 바깥쪽의 스크롤 방지 */
 	animation-duration: 1s;
-  	animation-name: slidein;
+	animation-name: slidein;
 }
 
-@keyframes slidein {
-  from {
-    margin-left: 20%;
-  }
-
-  to {
-    margin-left: 5px;
-  }
+@
+keyframes slidein {from { margin-left:20%;
+	
 }
 
+to {
+	margin-left: 5px;
+}
+
+}
 .popup-content {
 	background-color: white;
 	border-radius: 10px;
@@ -575,7 +574,6 @@ p {
 	/* 상대적 위치 설정 */
 	position: relative;
 	overflow-y: auto; /* 세로 스크롤바 표시 */
-	
 	padding: 20px; /* 팝업 내부에 여백 추가 */
 	/* box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px; */
 }
@@ -623,6 +621,7 @@ p {
 	background: rgba(122, 109, 116, 0.1); /*스크롤바 뒷 배경 색상*/
 	border-radius: 10px;
 }
+
 .tag-list::-webkit-scrollbar {
 	width: 10px;
 }
@@ -636,6 +635,7 @@ p {
 	background: rgba(122, 109, 116, 0.1); /*스크롤바 뒷 배경 색상*/
 	border-radius: 10px;
 }
+
 .p::-webkit-scrollbar {
 	width: 10px;
 }
@@ -649,6 +649,7 @@ p {
 	background: rgba(122, 109, 116, 0.1); /*스크롤바 뒷 배경 색상*/
 	border-radius: 10px;
 }
+
 button {
 	background-color: #e8e8e8;
 	border: 0;
@@ -681,7 +682,8 @@ li {
 .content-top {
 	display: flex;
 	flex-direction: column;
-	align-items: center; justify-content : center; /* 세로 중앙 정렬 */
+	align-items: center;
+	justify-content: center; /* 세로 중앙 정렬 */
 	gap: 10px; /* 자식 요소 간의 간격 조정 */
 	width: 100%; /* 부모 요소의 폭에 맞춤 */
 	height: 100%; /* 부모 요소의 높이에 맞춤 */
@@ -697,10 +699,10 @@ li {
 }
 
 #submap {
-    width: 450px;
-    height: 150px;
-    margin: 20px;
-    border-radius: 10px;
+	width: 450px;
+	height: 150px;
+	margin: 20px;
+	border-radius: 10px;
 }
 
 .pr-text {
@@ -805,7 +807,7 @@ li {
 }
 
 .tag-list {
-	display : none;
+	display: none;
 	align-self: stretch;
 	position: relative;
 	height: 18rem;
@@ -910,13 +912,14 @@ li {
 	align-items: center;
 	justify-content: flex-start;
 }
-.image-info, .image-location{
-	width:18px;
-	height:18px;
+
+.image-info, .image-location {
+	width: 18px;
+	height: 18px;
 	padding-right: 7px;
 }
 
-.subtitle-1, .subtitle-2{
+.subtitle-1, .subtitle-2 {
 	display: flex;
 	align-items: center;
 }
@@ -933,7 +936,7 @@ body {
 }
 
 #audioPlayer {
-	display : none;
+	display: none;
 	background-color: #fff; /* 플레이어 배경색 */
 	border: 2px solid #ff7f50; /* 주황색 테두리 */
 	border-radius: 10px; /* 모서리 둥글게 */
@@ -972,14 +975,44 @@ body {
 	{
 	color: white; /* 시간 표시를 흰색으로 */
 }
-@media (max-width: 575px) { 
+
+@media ( max-width : 575px) {
+	.mainpage {
+		flex-direction: column;
+	}
+	.spotlist-frame {
+		height: 75%;
+		width: 23.2rem;
+	}
+	.map {
+		height: 40%;
+		width: 100%;
+	}
+	.sidebar {
+		height: 38rem;
+	}
+	.tag-list {
+		z-index: 100;
+	}
+	.popup-overlay {
+		left: 0;
+		width: 100%;
+	}
+}
+
+@media (min-width: 576px) and (max-width: 765px) { 
 .mainpage{
 	flex-direction: column;
 }
 
 .spotlist-frame{
 	height: 75%;
-	width: 23.2rem;
+	width: 70%;
+	left: 20%;
+}
+
+.search-bar{
+	width: 70%;
 }
 
 .map{
@@ -988,16 +1021,31 @@ body {
 }
 .sidebar{
 	height: 38rem;
+	width: 20%;
 }
 
+.searchbar{
+	width: 100%;
+	}
+
 .tag-list{
+
 	z-index: 100;
+}
+
+.header{
+	width: 100%;
+}
+.image-icon{
+	width: 50%;
+}
+
+.spot-name{
+	width: 45%
 }
 
 .popup-overlay{
 	left : 0;
 	width: 100%;
 }
-
-
 	} 
