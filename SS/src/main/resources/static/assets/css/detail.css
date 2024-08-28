@@ -1,12 +1,14 @@
 .popup-overlay {
+	position: fixed;
 	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5);
+	height: 80%;
+	/* background-color: rgba(0, 0, 0, 0.5); */
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-left: 5px;
 	z-index: 1000;
-	overflow: hidden;
+	overflow: hidden; /* 팝업 바깥쪽의 스크롤 방지 */
 	 /* 팝업 바깥쪽의 스크롤 방지 */
 }
 
@@ -14,13 +16,16 @@
 	background-color: white;
 	border-radius: 10px;
 	width: 90%; /* 화면 크기에 맞게 조정 */
+	max-widthde: 600px; /* 최대 넓이 설정 */
+	max-height: 93vh; /* 화면 높이의 80%로 제한 */
 	text-align: center;
 	/* 상대적 위치 설정 */
 	position: relative;
 	overflow-y: auto; /* 세로 스크롤바 표시 */
 	
 	padding: 20px; /* 팝업 내부에 여백 추가 */
-	box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px;
+	/* box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px; */
+
 }
 
 .detail {
@@ -64,6 +69,22 @@
 	font-size: 19px;
 	border-radius: 20px;
 }
+
+#content-p {
+	overflow-y: auto;
+	max-height: 200px;
+}
+
+
+.logo_sunstory {
+	display: flex;
+	top: 2.375rem;
+	left: 1.313rem;
+	width: 90px;
+	height: 90px;
+	object-fit: cover;
+	margin-right: 45px;
+}
 .content-top {
 	display: flex;
 	flex-direction: column;
@@ -78,7 +99,7 @@
 	display: flex;
 	top: 4.938rem;
 	left: 3.563rem;
-	width: 80%;
+	width: 100%;
 	height: 19.938rem;
 	overflow: hidden;
 	object-fit: cover;
@@ -94,7 +115,7 @@
 	letter-spacing: 0.5px;
 	/* line-height: 1.5rem; */
 	/*     display: inline-block; */
-	width: 80%;
+	width: 100%;
 	/* height: 2.25rem; */
 	font-family: 'KOTRA_GOTHIC';
 	font-weight: bold;
@@ -109,8 +130,14 @@
 	letter-spacing: 0.5px;
 	line-height: 1.5rem;
 	display: inline-block;
-	width: 80%;
+	width: 100%;
+	height: 5.563rem;
 	/* padding-left: 20px; */
+}
+
+.content-title, .subtitle, .content-text, .using-info, .more-info {
+	width: 100%; /* 내용이 팝업 폭에 맞도록 조정 */
+	box-sizing: border-box; /* padding 포함 폭 계산 */
 }
 
 .subtitle-1, .subtitle-2{
@@ -125,7 +152,7 @@
 	letter-spacing: 0.5px;
 	line-height: 1.5rem;
 	/* display: inline-block; */
-	width: 80%;
+	width: 100%;
 	/* height: 6.313rem; */
 	flex-direction: column;
 	justify-content: center;
@@ -137,7 +164,7 @@
 	display: flex;
 	top: 41.313rem;
 	left: 2.5rem;
-	width: 100%;
+	width: 34.125rem;
 	font-size: 1.063rem;
 	font-family: Inter;
 	justify-content: center;
@@ -154,7 +181,7 @@
 	left: 1.5rem;
 	border-radius: 8px;
 	background-color: #ffd8aa;
-	width: 15rem;
+	width: 9.375rem;
 	overflow: hidden;
 	display: flex;
 	flex-direction: row;
@@ -173,7 +200,7 @@
 	padding: 20px;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
 	text-align: center;
-	width: 80%;
+	width: 90%;
 }
 
 #coverImage {
@@ -211,9 +238,23 @@
 	height:18px;
 	padding-right: 7px;
 }
+
+.p::-webkit-scrollbar {
+	width: 10px;
+}
+
+.p::-webkit-scrollbar-thumb {
+	background: rgb(86, 83, 84); /* 스크롤바 색상 */
+	border-radius: 10px; /* 스크롤바 둥근 테두리 */
+}
+
+.p::-webkit-scrollbar-track {
+	background: rgba(122, 109, 116, 0.1); /*스크롤바 뒷 배경 색상*/
+	border-radius: 10px;
+}
 #submap {
-    width: 80%;
-    height: 150px;
+    width: 100%;
+    height: 200px;
     margin: 20px;
     border-radius: 10px;
 }

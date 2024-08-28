@@ -31,6 +31,11 @@ ul {
 </style>
 </head>
 <body>
+	<div class="header">
+		<a href="main"> <img class="logo_sunstory" alt="순토리"
+			src="assets/images/순토리1.png">
+		</a>
+	</div>
 	<div id="detailContainer" class="popup-overlay">
 		<!--장소 상세보기-->
 		<div class="popup-content">
@@ -39,9 +44,9 @@ ul {
 					<div class="content-top">
 						<h6 style="margin: 3px;"></h6>
 						<img class="image-icon1" alt="장소 이미지"
-							src="assets/images/관광지/${list.tourphoto}.jpg">
-						<input type="hidden" id="lat" value="${list.lat }"/>
-						<input type="hidden" id="lon" value="${list.lon }"/>
+							src="assets/images/관광지/${list.tourphoto}.jpg"> <input
+							type="hidden" id="lat" value="${list.lat }" /> <input
+							type="hidden" id="lon" value="${list.lon }" />
 						<div class="content-title">${list.toursite }</div>
 						<div class="subtitle">
 							<div class="subtitle-1">
