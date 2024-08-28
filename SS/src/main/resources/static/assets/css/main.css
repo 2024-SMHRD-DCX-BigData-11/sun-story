@@ -559,9 +559,7 @@ p {
 	animation-name: slidein;
 }
 
-@
-keyframes slidein {from { margin-left:20%;
-	
+@keyframes slidein {from { margin-left:20%;	
 }
 
 to {
@@ -1076,5 +1074,4 @@ body {
 		left: 0;
 		width: 100%;
 	}
-}
 }
