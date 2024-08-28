@@ -39,124 +39,10 @@ ul {
 <body>
 	<div class="mainpage">
 		<div class="searchbar">
-			<div class="spotlist-frame">
-				<div class="spot-list">
-					<!-- <ul class="list"> 부분 -->
-					<div class="spot">
-						<input class="idx" type="hidden" /> <img class="image-icon"
-							alt="장소사진" src="assets/images/image.png">
-						<div class="spot-name">장소1</div>
-					</div>
-				</div>
-			</div>
-			<div class="sidebar">
-				<div class="categorybutton">
-					<a href="QrPage"><div class="qrbutton">
-							<!--QR버튼-->
-							<div class="label-text3">
-								<i class="fi fi-rs-qr"></i><p style="margin:0; font-size: 10px;"></p>
-							</div>
-						</div>
-						<div class="info" style="padding-top:0.4rem;">QR</div></a>
-					<div class="button-lookall">
-						<div class="state-layer">
-							<button class="lookall">
-								<i class="fi fi-tr-plane-alt" style="font-size: 25px"></i>
-							</button>
-						</div>
-					</div>
-					<div class="info">ALL</div>
-					<div class="button-lookall">
-						<div class="state-layer">
-							<button class="repre">
-								<i class="fi fi-ts-ranking-star" style="font-size: 25px"></i>
-							</button>
-						</div>
-					</div>
-					<div class="info">TOP</div>
-					<div class="button-lookall">
-						<div class="state-layer">
-							<button class="tag">
-								<i class="fi fi-tr-tags" style="font-size: 25px"></i>
-							</button>
-						</div>
-					</div>
-					<div class="info">TAG</div>
-				</div>
-				<div class="tag-list">
-					<div class="tags">
-						<div class="hashtag">
-							<div class="state-layer">
-								<b class="label-text">#관광지</b>
-							</div>
-						</div>
-						<div class="hashtag">
-							<div class="state-layer">
-								<b class="label-text">#자연</b>
-							</div>
-						</div>
-						<div class="hashtag">
-							<div class="state-layer">
-								<b class="label-text">#체험</b>
-							</div>
-						</div>
-						<div class="hashtag">
-							<div class="state-layer">
-								<b class="label-text">#사진찍기좋은곳</b>
-							</div>
-						</div>
-						<div class="hashtag">
-							<div class="state-layer">
-								<b class="label-text">#산책하기좋은곳</b>
-							</div>
-						</div>
-						<div class="hashtag">
-							<div class="state-layer">
-								<b class="label-text">#가족여행</b>
-							</div>
-						</div>
-						<div class="hashtag">
-							<div class="state-layer">
-								<b class="label-text">#역사</b>
-							</div>
-						</div>
-						<div class="hashtag">
-							<div class="state-layer">
-								<b class="label-text">#문화</b>
-							</div>
-						</div>
-						<div class="hashtag">
-							<div class="state-layer">
-								<b class="label-text">#힐링</b>
-							</div>
-						</div>
-						<div class="hashtag">
-							<div class="state-layer">
-								<b class="label-text">#불교</b>
-							</div>
-						</div>
-						<div class="hashtag">
-							<div class="state-layer">
-								<b class="label-text">#경치좋은곳</b>
-							</div>
-						</div>
-						<div class="hashtag">
-							<div class="state-layer">
-								<b class="label-text">#반려동물</b>
-							</div>
-						</div>
-						<div class="hashtag">
-							<div class="state-layer">
-								<b class="label-text">#맛집</b>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 			<div class="header">
-			<a href="main">
-				<img class="logo_sunstory" alt="순토리" src="assets/images/순토리1.png">
-			</a>
+				<a href="main"> <img class="logo_sunstory" alt="순토리"
+					src="assets/images/순토리1.png">
+				</a>
 				<div class="search-bar">
 					<!-- 검색창 -->
 					<div class="state-layer3">
@@ -175,7 +61,123 @@ ul {
 					</div>
 				</div>
 			</div>
-
+			<div class="inner">
+				<div class="sidebar">
+					<div class="categorybutton">
+						<a href="QrPage"><div class="qrbutton">
+								<!--QR버튼-->
+								<div class="label-text3">
+									<i class="fi fi-rs-qr"></i>
+									<p style="margin: 0; font-size: 10px;"></p>
+								</div>
+							</div>
+							<div class="info" style="padding-top: 0.4rem;">QR</div></a>
+						<div class="button-lookall">
+							<div class="state-layer">
+								<button class="lookall">
+									<i class="fi fi-tr-plane-alt" style="font-size: 25px"></i>
+								</button>
+							</div>
+						</div>
+						<div class="info">ALL</div>
+						<div class="button-lookall">
+							<div class="state-layer">
+								<button class="repre">
+									<i class="fi fi-ts-ranking-star" style="font-size: 25px"></i>
+								</button>
+							</div>
+						</div>
+						<div class="info">TOP</div>
+						<div class="button-lookall">
+							<div class="state-layer">
+								<button class="tag">
+									<i class="fi fi-tr-tags" style="font-size: 25px"></i>
+								</button>
+							</div>
+						</div>
+						<div class="info">TAG</div>
+					</div>
+					<div class="tag-list">
+						<div class="tags">
+							<div class="hashtag">
+								<div class="state-layer">
+									<b class="label-text">#관광지</b>
+								</div>
+							</div>
+							<div class="hashtag">
+								<div class="state-layer">
+									<b class="label-text">#자연</b>
+								</div>
+							</div>
+							<div class="hashtag">
+								<div class="state-layer">
+									<b class="label-text">#체험</b>
+								</div>
+							</div>
+							<div class="hashtag">
+								<div class="state-layer">
+									<b class="label-text">#사진찍기좋은곳</b>
+								</div>
+							</div>
+							<div class="hashtag">
+								<div class="state-layer">
+									<b class="label-text">#산책하기좋은곳</b>
+								</div>
+							</div>
+							<div class="hashtag">
+								<div class="state-layer">
+									<b class="label-text">#가족여행</b>
+								</div>
+							</div>
+							<div class="hashtag">
+								<div class="state-layer">
+									<b class="label-text">#역사</b>
+								</div>
+							</div>
+							<div class="hashtag">
+								<div class="state-layer">
+									<b class="label-text">#문화</b>
+								</div>
+							</div>
+							<div class="hashtag">
+								<div class="state-layer">
+									<b class="label-text">#힐링</b>
+								</div>
+							</div>
+							<div class="hashtag">
+								<div class="state-layer">
+									<b class="label-text">#불교</b>
+								</div>
+							</div>
+							<div class="hashtag">
+								<div class="state-layer">
+									<b class="label-text">#경치좋은곳</b>
+								</div>
+							</div>
+							<div class="hashtag">
+								<div class="state-layer">
+									<b class="label-text">#반려동물</b>
+								</div>
+							</div>
+							<div class="hashtag">
+								<div class="state-layer">
+									<b class="label-text">#맛집</b>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="spotlist-frame">
+					<div class="spot-list">
+						<!-- <ul class="list"> 부분 -->
+						<div class="spot">
+							<input class="idx" type="hidden" /> <img class="image-icon"
+								alt="장소사진" src="assets/images/image.png">
+							<div class="spot-name">장소1</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<!-- 좌측 배너 div 끝 부분 -->
@@ -192,19 +194,22 @@ ul {
 				<div class="detail">
 					<div class="detail-child">
 						<div class="content-top">
-						<h6 style="margin:3px;"></h6>
+							<h6 style="margin: 3px;"></h6>
 							<img class="close-icon" alt="x" src="assets/images/close.svg">
 							<img class="image-icon1" alt="장소 이미지"
 								src="assets/images/image.png">
-							
+
 							<div class="content-title">장소 1</div>
 							<div class="subtitle">
 								<div class="subtitle-1">
-									<img class="image-info" alt="소개이미지" src="assets/images/info.png">
-									<p class="p" id="subtitle" style="font-weight: bold;">추천할만한 장소 1</p>
+									<img class="image-info" alt="소개이미지"
+										src="assets/images/info.png">
+									<p class="p" id="subtitle" style="font-weight: bold;">추천할만한
+										장소 1</p>
 								</div>
 								<div class="subtitle-2">
-									<img class="image-location" alt="위치이미지" src="assets/images/location.png">
+									<img class="image-location" alt="위치이미지"
+										src="assets/images/location.png">
 									<p class="p" id="address">전남 순천시 XX면 XX로 XXX번길</p>
 								</div>
 							</div>
@@ -227,7 +232,7 @@ ul {
 							</div>
 						</div>
 						<div id="submap"></div>
-						
+
 					</div>
 				</div>
 

@@ -11,6 +11,13 @@ p, h1, h2, h3, h4, h5, h6, b, input, label-text3, div {
 	font-family: 'KOTRA_GOTHIC';
 }
 
+.inner {
+	display: flex;
+	flex-direction: row;
+	width: 32rem;
+	height: 32rem;
+}
+
 html {
 	font-family: 'KOTRA_GOTHIC';
 }
@@ -223,7 +230,6 @@ p {
 }
 
 .spot-list {
-	position: absolute;
 	top: 0rem;
 	left: 0rem;
 	width: 22.125rem;
@@ -234,11 +240,10 @@ p {
 }
 
 .spotlist-frame {
-	position: absolute;
 	top: 7.5rem;
 	left: 8.25rem;
 	background-color: #fff;
-	width: 23.8rem;
+	width: 26rem;
 	height: 38rem;
 	overflow-y: auto;
 	font-size: 2rem;
@@ -270,9 +275,9 @@ p {
 .searchbar {
 	display: flex;
 	width: 32rem;
-	position: relative;
 	background-color: #fff;
 	height: 100%;
+	flex-direction: column;
 }
 
 .map-frame-icon {
@@ -540,8 +545,8 @@ p {
 .popup-overlay {
 	position: fixed;
 	top: 0;
-	left: 32rem;
-	width: 32%;
+	left: 31.5rem;
+	width: 30rem;
 	height: 100%;
 	/* background-color: rgba(0, 0, 0, 0.5); */
 	display: flex;
@@ -568,7 +573,7 @@ to {
 	background-color: white;
 	border-radius: 10px;
 	width: 90%; /* 화면 크기에 맞게 조정 */
-	max-widthde: 600px; /* 최대 넓이 설정 */
+	max-width: 600px; /* 최대 넓이 설정 */
 	max-height: 93vh; /* 화면 높이의 80%로 제한 */
 	text-align: center;
 	/* 상대적 위치 설정 */
@@ -793,22 +798,18 @@ li {
 }
 
 .tags {
-	position: absolute;
-	top: 0rem;
-	left: 0.15rem;
 	width: 7rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
-	padding: 0.625rem 0rem 0rem 0.9rem;
 	box-sizing: border-box;
 	gap: 0.625rem;
+	margin-left: 10px;
 }
 
 .tag-list {
 	display: none;
-	align-self: stretch;
 	position: relative;
 	height: 18rem;
 	overflow-y: auto;
@@ -816,13 +817,10 @@ li {
 }
 
 .sidebar {
-	position: absolute;
-	top: 7.375rem;
-	left: 0rem;
 	background-color: #fff;
 	border-right: 1px solid #d9d9d9;
 	box-sizing: border-box;
-	width: 8.25rem;
+	width: 8rem;
 	height: 38rem;
 	overflow: hidden;
 	display: flex;
@@ -976,13 +974,92 @@ body {
 	color: white; /* 시간 표시를 흰색으로 */
 }
 
-@media ( max-width : 575px) {
+@media ( min-width : 769px) and (max-width: 991px) {
+	.header {
+		width: 25.5rem;
+	}
+	.inner{
+		width: 26rem;
+	}
+	.sidebar{
+		width: 6.5rem;
+	}
+	.tags{
+		width: 5.5rem;
+	}
+	.qrbutton{
+		width: 5.5rem;
+	}
+	.button-lookall{
+		width: 5.5rem;
+	}
+	.hashtag{
+	width: 5rem}
+	.searchbar {
+		width: 25.5rem;
+	}
+	.spotlist-frame {
+		width: 19rem;
+	}
+	.search-bar {
+		width: 14rem;
+	}
+	.supporting-text {
+		width: 9rem;
+	}
+	.spot-list {
+		width: 18rem;
+	}
+	.image-icon {
+		width: 25%;
+	}
+	.spot {
+		width: 18rem;
+		gap: 0;
+	}
+	.popup-overlay {
+		left: 25rem;
+		width: 25rem;
+	}
+	.popup-content {
+		width: 30rem;
+	}
+	.spot-name{
+		font-size: 14px;
+	}
+	.detail {
+		width: 30rem;
+	}
+}
+
+@media ( max-width : 769px) {
+	.header{
+		width: 100%;
+	}
 	.mainpage {
 		flex-direction: column;
 	}
+	.inner{
+	width:100%;
+	height: 75%;
+	}
+	.searchbar{
+	height: 60%;
+	width: 100%;
+	}
 	.spotlist-frame {
-		height: 75%;
-		width: 23.2rem;
+		height: 100%;
+		width: 75%;
+	}
+	
+	
+	.spot {
+		width: 100%;
+	}
+	
+
+	.spot-list {
+		width: 100%;
 	}
 	.map {
 		height: 40%;
@@ -990,6 +1067,7 @@ body {
 	}
 	.sidebar {
 		height: 38rem;
+		width: 25%;
 	}
 	.tag-list {
 		z-index: 100;
@@ -999,53 +1077,4 @@ body {
 		width: 100%;
 	}
 }
-
-@media (min-width: 576px) and (max-width: 765px) { 
-.mainpage{
-	flex-direction: column;
 }
-
-.spotlist-frame{
-	height: 75%;
-	width: 70%;
-	left: 20%;
-}
-
-.search-bar{
-	width: 70%;
-}
-
-.map{
-	height: 40%;
-	width: 100%;
-}
-.sidebar{
-	height: 38rem;
-	width: 20%;
-}
-
-.searchbar{
-	width: 100%;
-	}
-
-.tag-list{
-
-	z-index: 100;
-}
-
-.header{
-	width: 100%;
-}
-.image-icon{
-	width: 50%;
-}
-
-.spot-name{
-	width: 45%
-}
-
-.popup-overlay{
-	left : 0;
-	width: 100%;
-}
-	} 
