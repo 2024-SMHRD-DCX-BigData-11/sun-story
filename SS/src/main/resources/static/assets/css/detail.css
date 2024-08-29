@@ -83,7 +83,7 @@
 	width: 90px;
 	height: 90px;
 	object-fit: cover;
-	margin-right: 45px;
+	margin-bottom: 10px;
 }
 .content-top {
 	display: flex;
@@ -131,8 +131,12 @@
 	line-height: 1.5rem;
 	display: inline-block;
 	width: 100%;
-	height: 5.563rem;
+	height: 7rem;
 	/* padding-left: 20px; */
+}
+
+#address{
+	margin:0;
 }
 
 .content-title, .subtitle, .content-text, .using-info, .more-info {
@@ -258,3 +262,4 @@
     margin: 20px;
     border-radius: 10px;
 }
+
