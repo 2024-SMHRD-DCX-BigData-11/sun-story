@@ -627,7 +627,7 @@ to {
 }
 
 .tag-list::-webkit-scrollbar {
-	width: 10px;
+	width: 6px;
 }
 
 .tag-list::-webkit-scrollbar-thumb {
@@ -813,6 +813,7 @@ li {
 	height: 18rem;
 	overflow-y: auto;
 	flex-shrink: 0;
+	width: 100%;
 }
 
 .sidebar {
