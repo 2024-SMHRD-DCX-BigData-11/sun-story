@@ -227,6 +227,7 @@ p {
 	justify-content: flex-start;
 	padding: 0.625rem;
 	gap: 1.25rem;
+	cursor: pointer;
 }
 
 .spot-list {
