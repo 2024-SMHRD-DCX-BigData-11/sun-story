@@ -7,9 +7,23 @@
 <title>QR scan test</title>
 <script src="assets/js/jsQR.js"></script>
 <style type="text/css">
+@font-face {
+	font-family: 'KOTRA_GOTHIC';
+	src:
+		url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/KOTRA_GOTHIC.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+*{
+	font-family: 'KOTRA_GOTHIC';
+}
+
 body {
 	width: 100%;
 	height: 100%;
+	padding: 0;
+	margin: 0;
 }
 
 .main_page {
@@ -26,15 +40,30 @@ body {
 }
 
 div#frame {
-	border: 2px solid #005666;
+	border: 3px solid #ff6e00;
 	background-color: #FFFFFF;
+	width: 70%;
+    height: 500px;
+    border-radius: 25px;
+}
+
+input {
+	background-color: #ff6e00;
+	color: #FFFFFF;
+	width: 130px; 
+	height: 55px;
+	border-radius: 20px;
+	border: 0;
+	margin: 10px;
+	font-size: 17px;
+	cursor: pointer;
 }
 
 .header {
 	/* 	top: 0rem;
 	left: 0rem; */
 	background-color: #fff;
-	border-bottom: 1px solid #d9d9d9;
+	/* border-bottom: 1px solid #d9d9d9; */
 	box-sizing: border-box;
 	width: 30.375rem;
 	height: 7.5rem;
@@ -62,8 +91,15 @@ div#outputLayer {
 }
 
 canvas {
-	width: 75%;
+	width: 100%;
+    height: 100%;
+    border-radius: 25px;
 }
+
+#loadingMessage{
+	margin : 10px;
+}
+
 </style>
 </head>
 <body>
@@ -82,10 +118,9 @@ canvas {
 						<canvas id="canvas"></canvas>
 					</div>
 				</div>
-				<div style="width: 100%; height: 60px;">
-					<input type="button" id="open" value="카메라 열기"
-						style="width: 100%; height: 30px" /> <input type="button"
-						id="close" value="카메라 닫기" style="width: 100%; height: 30px" />
+				<div style="width: 100%; height: 60px; padding-top: 20px;">
+					<input type="button" id="open" value="카메라 열기" /> 
+					<input type="button" id="close" value="카메라 닫기" />
 				</div>
 			</div>
 		</div>
