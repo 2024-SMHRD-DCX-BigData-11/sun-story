@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.smhrd.NormalClass.response;
 import com.smhrd.entity.tb_tour_site;
 import com.smhrd.repository.NormalRepository;
 
