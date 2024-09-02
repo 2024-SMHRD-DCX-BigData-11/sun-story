@@ -36,16 +36,17 @@ public class NormalController {
 	public String goQrPage() {
 		return "QrPage";
 	}
-	@RequestMapping("/audio1")
-	public String audio1() {
-		return "audio1";
-	}
-	
+
 	@RequestMapping("/Story")
 	public String StoryPage(Model model,int idx) {
 		List<tb_tour_site> list = repo.findById(idx);
 		model.addAttribute("list", list.get(0));
 		return "StoryPage";
+	}
+	
+	@RequestMapping("/audio1")
+	public String audio1() {
+		return "audio1";
 	}
 
 }
