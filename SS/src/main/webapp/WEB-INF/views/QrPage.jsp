@@ -206,7 +206,7 @@ canvas {
 
 								console.log(code.data)
 
-								// QR코드 메시지 출력
+								// QR코드 주소로 이동
 								location.href = code.data;
 
 								// return을 써서 함수를 빠져나가면 QR코드 프로그램이 종료된다.
