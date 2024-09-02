@@ -8,10 +8,14 @@ var clickEvent = (function() {
 
 $(".show-storytelling").off().on(clickEvent, function(e) {
 	console.log("클릭");
+	var audio = $('#audio').get(0);
 	console.log($("#audioPlayer").css("display"));
 	if ($("#audioPlayer").css("display") == "none") {
 		$("#audioPlayer").css("display", "block");
 	} else if ($("#audioPlayer").css("display") == "block") {
+		if (audio.paused == false) {
+			audio.pause();
+		}
 		$("#audioPlayer").css("display", "none");
 	}
 });

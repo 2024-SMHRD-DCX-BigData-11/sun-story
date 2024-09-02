@@ -19,10 +19,15 @@ if (searchBarContainer) {
 $(".show-storytelling").off().on(clickEvent, function(e) {
 	console.log("클릭");
 	console.log($("#audioPlayer").css("display"));
+	var audio = $('#audio').get(0);
 	if ($("#audioPlayer").css("display") == "none") {
 		$("#audioPlayer").css("display", "block");
 	} else if ($("#audioPlayer").css("display") == "block") {
+		if(audio.paused == false){
+			audio.pause();
+		}
 		$("#audioPlayer").css("display", "none");
+		
 	}
 });
 

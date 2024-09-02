@@ -1,11 +1,11 @@
 document.write('<script src="assets/js/TTS.js"></script>');
 document.write('<script src="assets/js/main.js"></script>');
 var clickEvent = (function() {
-  if ('ontouchstart' in document.documentElement === true) {
-    return 'touchstart';
-  } else {
-    return 'click';
-  }
+	if ('ontouchstart' in document.documentElement === true) {
+		return 'touchstart';
+	} else {
+		return 'click';
+	}
 })();
 
 let map = new naver.maps.Map("map", {
@@ -24,16 +24,16 @@ $(".supporting-text").keypress(function(e) {
 	if (e.keyCode == 13) {
 		let text = $(".supporting-text").val();
 		remove();
-		getData(4,text);
+		getData(4, text);
 		$(".supporting-text").val("");
 	}
 });
 
-$(".search-icon").on(clickEvent,function() {
-		let text = $(".supporting-text").val();
-		remove();
-		getData(4,text);
-		$(".supporting-text").val("")
+$(".search-icon").on(clickEvent, function() {
+	let text = $(".supporting-text").val();
+	remove();
+	getData(4, text);
+	$(".supporting-text").val("")
 });
 
 
@@ -231,13 +231,17 @@ function getData(type, text) {
 			});
 
 
-			$('.spot').on(clickEvent,function() {
+			$('.spot').on(clickEvent, function() {
 				let idx_box = $(this).children(".idx");
 				let idx = $(idx_box).val();
 				console.log(idx);
-				
+
 				let data;
 				for (let i = 0; i < res.length; i++) {
+					var audio = $('#audio').get(0);
+					if (audio.paused == false) {
+						audio.pause();
+					}
 					if (idx == res[i].touridx) {
 						console.log("123")
 						data = res[i];
@@ -251,7 +255,7 @@ function getData(type, text) {
 						TTS(res[i].touridx);
 					}
 				}
-				
+
 				submarker.setMap(null);
 				submarker.setIcon({
 					content: [
@@ -273,7 +277,7 @@ function getData(type, text) {
 				submap.setCenter(new naver.maps.LatLng(data.lat, data.lon));
 				console.log("클릭");
 				togglePopup("detailContainer");
-				
+
 			});
 
 
