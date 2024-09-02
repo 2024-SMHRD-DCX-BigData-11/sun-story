@@ -1,8 +1,6 @@
 function TTS(idx) {
 	navigator.mediaDevices.getUserMedia({ audio: true })
 		.then(() => {
-			AudioContext = window.AudioContext || window.webkitAudioContext;
-			audioContext = new AudioContext();
 			audioPlay(idx);
 		})
 		.catch(e => {
@@ -11,18 +9,18 @@ function TTS(idx) {
 		});
 };
 
-async function audioPlay(idx) {
+function audioPlay(idx) {
 	$.ajax({
 		url: "audio",
 		data: { idx: idx },
-		type: "post"
-	}).done(function(response) {
-
-		if (response.resultCode == 200) {
-			console.log(response.result);
-
-		} else {
-			// Error handling
+		type: "post",
+		success:function(res){
+			console.log("통신성공")
+			console.log(res[0].scenariovoice);
+			$("#audio").attr("src",res[0].scenariovoice);
+		},
+		error: function() {
+			console.log("통신에러");
 		}
 	});
 }

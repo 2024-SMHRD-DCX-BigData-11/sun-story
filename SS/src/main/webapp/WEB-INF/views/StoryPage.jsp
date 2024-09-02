@@ -43,7 +43,8 @@ ul {
 				<div class="detail-child">
 					<div class="content-top">
 						<h6 style="margin: 3px;"></h6>
-						<img class="image-icon1" alt="장소 이미지"
+						<input type="hidden" id="idx" value="${list.touridx }" /> <img
+							class="image-icon1" alt="장소 이미지"
 							src="assets/images/관광지/${list.tourphoto}.jpg"> <input
 							type="hidden" id="lat" value="${list.lat }" /> <input
 							type="hidden" id="lon" value="${list.lon }" />
@@ -87,5 +88,9 @@ ul {
 	<script type="text/javascript"
 		src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=gd84en4c8l"></script>
 	<script type="text/javascript" src="assets/js/Story.js"></script>
+	<script type="text/javascript" src="assets/js/TTS.js"></script>
+	<script>
+		TTS($("#idx").val());
+	</script>
 </body>
 </html>

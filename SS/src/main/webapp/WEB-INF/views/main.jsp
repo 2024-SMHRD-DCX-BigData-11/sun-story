@@ -170,11 +170,14 @@ ul {
 				<div class="spotlist-frame">
 					<div class="spot-list">
 						<!-- <ul class="list"> 부분 -->
+						<c:forEach var="trip" items="${list}">
 						<div class="spot">
-							<input class="idx" type="hidden" /> <img class="image-icon"
-								alt="장소사진" src="assets/images/image.png">
-							<div class="spot-name">장소1</div>
+							<input class="idx" type="hidden" value="${trip.touridx }" /> 
+							<img class="image-icon"
+								alt="장소사진" src="assets/images/관광지/${trip.tourphoto }.jpg">
+							<div class="spot-name">${trip.toursite }</div>
 						</div>
+						</c:forEach>
 					</div>
 				</div>
 			</div>

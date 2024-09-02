@@ -54,41 +54,4 @@ public class NormalRestController {
 		return result;
 	}
 	
-	@RequestMapping("/audio")
-	public response audio(
-			@RequestParam( value="idx" ) int idx
-			) throws IOException{
-		
-		response response = new response();
-		String text = "";
-		int resultCode = 0;
-		String mem = "1";
-		
-		if( mem != null ) {
-			text = "1";
-			if( text != null && !text.equals("") ) {
-				text = repo.getdetail(idx);
-				
-				String result = URLEncoder.encode(text, "UTF-8")
-		        .replaceAll("\\+", "%20")
-		        .replaceAll("\\%21", "!")
-		        .replaceAll("\\%27", "'")
-		        .replaceAll("\\%28", "(")
-		        .replaceAll("\\%29", ")")
-		        .replaceAll("\\%7E", "~");
-				
-				response.setResult( "http://localhost:5000/tts-server/api/infer-glowtts?text=" + result );
-				resultCode = 200;
-			} else {
-				resultCode = -200;
-			}
-		} else {
-			resultCode = -200;
-		}
-		
-		
-		response.setResultCode(resultCode);
-		return response;
-	}
-	
 }
