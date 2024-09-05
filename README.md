@@ -96,13 +96,26 @@
 <b>김성현</b> : Crawling, DB 데이터 관리, Back-end 서브<br>
 <b>전승주</b> : Back-end 메인, Naver API, QR코드 연결<br>
 <table align="center">
-  <tbody>
-    <tr>
-      <td align="center"><a href="https://github.com/hecki1206"><img src="https://github.com/user-attachments/assets/13673b51-fae3-40af-8dab-05394ca04729" width="100px;" height="100px;" alt=""/><br /><sub><b>팀장 : 장희종</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/hwangjuhwi"><img src="https://github.com/user-attachments/assets/68006eb5-9ab7-4367-ad19-6c268e510186" width="100px;" height="100px;" alt=""/><br /><sub><b> 팀원 : 황주휘</b></sub></a><br /></td>
-      <td align="center"><a href=""><img src="https://github.com/user-attachments/assets/b3702490-f5e9-4145-8421-5c5f86219461" width="100px;" height="100px;" alt=""/><br /><sub><b>팀원 : 위건</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/kimseonghyeon-cmd"><img src="https://github.com/user-attachments/assets/409d3768-bf2a-4d3d-9f73-e2ea2588df64" width="100px;" height="100px;" alt=""/><br /><sub><b>팀원 : 김성현</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/seungju1212"><img src="https://github.com/user-attachments/assets/fdee2811-7587-4a08-ba1e-c11e72366840" width="100px;" height="100px;" alt=""/><br /><sub><b>팀원 : 전승주</b></sub></a><br /></td>
-    </tr>
-  </tbody>
+  <tr>
+    <td align="center"><img src="https://github.com/user-attachments/assets/13673b51-fae3-40af-8dab-05394ca04729" width="100" height="100"/></td>
+    <td align="center"><img src="https://github.com/user-attachments/assets/68006eb5-9ab7-4367-ad19-6c268e510186" width="100" height="100"/></td>
+    <td align="center"><img src="https://github.com/user-attachments/assets/b3702490-f5e9-4145-8421-5c5f86219461" width="100" height="100"/></td>
+    <td align="center"><img src="https://github.com/user-attachments/assets/409d3768-bf2a-4d3d-9f73-e2ea2588df64" width="100" height="100"/></td>
+    <td align="center"><img src="https://github.com/user-attachments/assets/fdee2811-7587-4a08-ba1e-c11e72366840" width="100" height="100"/></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/qwer010310" target='_blank'><strong>장희종</strong></a></td>
+    <td align="center"><a href="https://github.com/qwer010310" target='_blank'><strong>황주휘</strong></a></td>
+    <td align="center"><a href="https://github.com/qwer010310" target='_blank'><strong>위건</strong></a></td>
+    <td align="center"><a href="https://github.com/qwer010310" target='_blank'><strong>김성현</strong></a></td>
+    <td align="center"><a href="https://github.com/qwer010310" target='_blank'><strong>전승주</strong></a></td>
+  </tr>
+  <tr>
+    <td align="center"><b>PM&AI&PT</b></td>
+    <td align="center"><b>Front&PPT</b></td>
+    <td align="center"><b>Front&Design</b></td>
+    <td align="center"><b>DB&Crawling</b></td>
+    <td align="center"><b>Backend&DB</b></td>
+  </tr>
 </table>
+<br><br>
