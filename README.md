@@ -24,23 +24,38 @@
     </tr>
     <tr>
       <td>Front</td>
-      <td><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"></td>
+      <td>
+        <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">&nbsp;
+        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white">&nbsp;
+        <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+      </td>
     </tr>
     <tr>
       <td>Back</td>
-      <td></td>
+      <td>
+        <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">&nbsp;
+        <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+      </td>
     </tr>
     <tr>
       <td>DB</td>
-      <td></td>
+      <td><img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white"></td>
     </tr>
     <tr>
       <td>IDE</td>
-      <td></td>
+      <td>
+        <img src="https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252">&nbsp;
+        <img src="https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=eclipse&logoColor=white">&nbsp;
+        <img src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white">
+      </td>
     </tr>
     <tr>
       <td>ETC</td>
-      <td></td>
+      <td>
+        <img src="https://namu.wiki/w/%EB%84%A4%EC%9D%B4%EB%B2%84%20%EC%A7%80%EB%8F%84">
+        <img src="">
+        <img src="">
+      </td>
     </tr>
   </tbody>
 </table>
