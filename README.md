@@ -16,46 +16,36 @@
 <br><br>
 
 ## 🧑🏻‍💻 기술스택
+### Front
+<img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">&nbsp;
+<img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white">&nbsp;
+<img alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+
+### Back
+<img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">&nbsp;
+<img alt="Spring" src="https://img.shields.io/badge/Spring Boot-6DB33F?style=for-the-badge&logo=Spring Boot&logoColor=white">    
+
+### Database
+<img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white">
+
+### IDE
+<img alt="Colab"  src="https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252">&nbsp;
+<img alt="Eclipse" src="https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=eclipse&logoColor=white">&nbsp;
+<img alt="VS Code" src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white">
+
+### API
+<img alt="Navermap API" src="https://img.shields.io/badge/Navermap-03C75A?style=for-the-badge&logo=Naver&logoColor=white">
+<br><br>
+
+## 👨‍👩‍👧‍👦 팀원소개
 <table>
   <tbody>
     <tr>
-      <td>분야</td>
-      <td>개발도구</td>
-    </tr>
-    <tr>
-      <td>Front</td>
-      <td>
-        <img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">&nbsp;
-        <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white">&nbsp;
-        <img alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
-      </td>
-    </tr>
-    <tr>
-      <td>Back</td>
-      <td>
-        <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">&nbsp;
-        <img alt="Spring" src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
-      </td>
-    </tr>
-    <tr>
-      <td>DB</td>
-      <td><img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white"></td>
-    </tr>
-    <tr>
-      <td>IDE</td>
-      <td>
-        <img alt="Colab"  src="https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252">&nbsp;
-        <img alt="Eclipse" src="https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=eclipse&logoColor=white">&nbsp;
-        <img alt="VS Code" src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white">
-      </td>
-    </tr>
-    <tr>
-      <td>ETC</td>
-      <td>
-        Navermap API
-      </td>
+      <td align="center"><a href="https://github.com/hecki1206"><img src="" width="100px;" alt=""/><br /><sub><b>팀장 : 장희종</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/hwangjuhwi"><img src="" width="100px;" alt=""/><br /><sub><b> 팀원 : 황주휘</b></sub></a><br /></td>
+      <td align="center"><a href=""><img src="" width="100px;" alt=""/><br /><sub><b>팀원 : 위건</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/kimseonghyeon-cmd"><img src="" width="100px;" alt=""/><br /><sub><b>팀원 : 김성현</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/seungju1212"><img src="" width="100px;" alt=""/><br /><sub><b>팀원 : 전승주</b></sub></a><br /></td>
     </tr>
   </tbody>
 </table>
-
-<br><br>
