@@ -1,4 +1,4 @@
-# 🗺️👂🏻 sun-story
+# 🗺️👂🏻 Sun-Story
 <p align="center">
   <img src="https://github.com/2024-SMHRD-DCX-BigData-11/sun-story/blob/main/SS/src/main/resources/static/assets/images/%EC%88%9C%ED%86%A0%EB%A6%AC1.png" width="40%" height="40%">
 </p>
