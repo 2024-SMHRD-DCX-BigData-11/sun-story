@@ -52,9 +52,7 @@
     <tr>
       <td>ETC</td>
       <td>
-        <img src="https://namu.wiki/w/%EB%84%A4%EC%9D%B4%EB%B2%84%20%EC%A7%80%EB%8F%84">
-        <img src="">
-        <img src="">
+        Navermap API
       </td>
     </tr>
   </tbody>
