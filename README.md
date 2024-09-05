@@ -38,7 +38,9 @@
 
 ### API
 <img alt="Navermap API" src="https://img.shields.io/badge/Navermap-03C75A?style=for-the-badge&logo=Naver&logoColor=white">
-<br><br>
+
+### Design
+<img alt="Figma" src="https://img.shields.io/badge/Figma-f24e1e?style=for-the-badge&logo=Figma&logoColor=white">
 
 ## 🖥️ 프로젝트 세부 개발
 <h3>관광지 리스트 조회 및 검색</h3>
