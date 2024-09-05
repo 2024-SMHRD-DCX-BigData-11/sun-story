@@ -40,8 +40,26 @@
 <img alt="Navermap API" src="https://img.shields.io/badge/Navermap-03C75A?style=for-the-badge&logo=Naver&logoColor=white">
 <br><br>
 
-## 
+## 프로젝트 세부 개발
+<h3>관광지 리스트 조회 및 검색</h3>
+<p>
+  <img src="https://github.com/user-attachments/assets/c947495d-89b4-45cd-a143-b0770b4d350d" width="600" height="450"/>
+</p>
+<hr>
 
+<h3>QR코드 인식</h3>
+<p>
+  <img src="https://github.com/user-attachments/assets/09a9a5a3-68db-47f1-949c-1a86bf647faa" width="600" height="450"/>
+</p>
+
+<h3>상세페이지 화면</h3>
+<p>
+  <img src="#">
+</p>
+<br><br>
+
+## 프로젝트 아키텍처
+![프로젝트 아키텍처](https://github.com/user-attachments/assets/a5b82e51-3292-4543-9c12-5f643bbd403d)
 
 ## 📜 참고자료
 - 대한민국 구석구석 : https://korean.visitkorea.or.kr/main/main.do
@@ -57,7 +75,7 @@
 <b>위&nbsp;&nbsp;&nbsp;건</b> : 로고 디자인, UX/UI 디자인, Front-end 서브, 화면설계<br>
 <b>김성현</b> : Crawling, DB 데이터 관리, Back-end 서브<br>
 <b>전승주</b> : Back-end 메인, Naver API, QR코드 연결<br>
-<table>
+<table align="center">
   <tbody>
     <tr>
       <td align="center"><a href="https://github.com/hecki1206"><img src="https://github.com/user-attachments/assets/13673b51-fae3-40af-8dab-05394ca04729" width="100px;" height="100px;" alt=""/><br /><sub><b>팀장 : 장희종</b></sub></a><br /></td>
