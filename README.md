@@ -40,26 +40,46 @@
 <img alt="Navermap API" src="https://img.shields.io/badge/Navermap-03C75A?style=for-the-badge&logo=Naver&logoColor=white">
 <br><br>
 
-## 프로젝트 세부 개발
+## 🖥️ 프로젝트 세부 개발
 <h3>관광지 리스트 조회 및 검색</h3>
 <p>
   <img src="https://github.com/user-attachments/assets/c947495d-89b4-45cd-a143-b0770b4d350d" width="600" height="450"/>
 </p>
 <hr>
-
 <h3>QR코드 인식</h3>
 <p>
   <img src="https://github.com/user-attachments/assets/09a9a5a3-68db-47f1-949c-1a86bf647faa" width="600" height="450"/>
 </p>
-
+<hr>
 <h3>상세페이지 화면</h3>
 <p>
   <img src="#">
 </p>
 <br><br>
 
-## 프로젝트 아키텍처
+## 🖼️ 프로젝트 아키텍처
 ![프로젝트 아키텍처](https://github.com/user-attachments/assets/a5b82e51-3292-4543-9c12-5f643bbd403d)
+<br><br>
+
+## 🕹️ 화면 구성
+### 메인페이지
+![메인페이지](https://github.com/user-attachments/assets/f196a350-7a05-4871-9d95-80f154ba38c9)
+
+### 관광지검색
+![관광지검색](https://github.com/user-attachments/assets/f18bdbd8-93f3-4860-8f12-9f370b8696ef)
+
+### 상세페이지(1)
+![상세페이지(1)](https://github.com/user-attachments/assets/5fd0d0f2-a7f2-4aaa-b0db-db33baaa6897)
+
+### 상세페이지(2)
+![상세페이지(2)](https://github.com/user-attachments/assets/e9c4ff5e-40aa-4250-9634-760aa46d9c6b)
+
+### QR코드 인식
+![QR코드 인식](https://github.com/user-attachments/assets/b0f3bcdc-40d6-4ee7-b52f-6b21cb73ed3c)
+
+### QR인식 후 화면
+![QR인식 후 화면](https://github.com/user-attachments/assets/c8cbfc41-ba64-4862-b20d-6ae4ccf6f5ea)
+
 
 ## 📜 참고자료
 - 대한민국 구석구석 : https://korean.visitkorea.or.kr/main/main.do
