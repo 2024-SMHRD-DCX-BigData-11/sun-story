@@ -110,7 +110,7 @@
     <td align="center"><a href="https://github.com/qwer010310" target='_blank'><strong>황주휘</strong></a></td>
     <td align="center"><a href="https://github.com/qwer010310" target='_blank'><strong>위건</strong></a></td>
     <td align="center"><a href="https://github.com/qwer010310" target='_blank'><strong>김성현</strong></a></td>
-    <td align="center"><a href="https://github.com/qwer010310" target='_blank'><strong>전승주</strong></a></td>
+    <td align="center"><a href="https://github.com/seungju1212" target='_blank'><strong>전승주</strong></a></td>
   </tr>
   <tr>
     <td align="center"><b>PM&AI&PT</b></td>
